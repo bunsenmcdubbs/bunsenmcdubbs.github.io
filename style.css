@@ -1,0 +1,283 @@
+body
+{
+padding: 0 0 0 0px;
+margin: 0 0 0 0px;
+background-color: #eee;
+height:100%;
+border-width:15px;
+border-color:#FF9200;
+border-top-style:solid;
+}
+
+/*
+****************************
+============================
+Header/Title area
+============================
+****************************
+*/
+
+header
+{
+border-width:15px;
+border-color:#0B61A4;
+border-top-style:solid;
+padding-top: 20px;
+margin: 0 0 0 0px;
+}
+
+.title
+{
+color:#444;
+font-family:"Josefin Sans", Arial, sans-serif;
+text-align:center;
+padding: 0 0 0 0px;
+margin: 0 0 0 0px;
+}
+
+/*
+=========================
+Main Title (Andrew Dai)
+=========================
+*/
+
+h1.title
+{
+width: 9em;
+font-size:75px;
+letter-spacing:20px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: -19px;
+-webkit-transition: all 0.14s ease-out;
+-moz-transition: all 0.14s ease-out;
+-o-transition: all 0.14s ease-out;
+}
+
+h1.title:hover
+{
+color:#eee;
+text-shadow: 1px 1px #0B61A4, 2px 2px #0B61A4, 3px 3px #0B61A4, 4px 4px #0B61A4, 5px 5px #0B61A4, 6px 6px #0B61A4, 7px 7px #0B61A4, 8px 8px #0B61A4;
+position: relative; top: -8px; left: -8px;
+}
+
+/*
+=========================
+Subtitle
+=========================
+*/
+
+h2.title
+{
+color:#eee;
+font-size:32px;
+letter-spacing: 5px;
+margin-bottom: -9px;
+text-decoration: lowercase;
+}
+
+span.flyout
+{
+-webkit-transition: all 0.12s ease-out;
+-moz-transition: all 0.12s ease-out;
+-o-transition: all 0.12s ease-out;
+}
+
+span.flyout:hover
+{
+position: relative; top: -7px; left: -7px;
+text-shadow: 1px 1px #FF9200, 2px 2px #FF9200, 3px 3px #FF9200, 4px 4px #FF9200, 5px 5px #FF9200, 6px 6px #FF9200;
+}
+
+#wrap
+{
+background-image:url('images/background.png');
+background-repeat:repeat;
+padding-bottom: 15px;
+width: 60em;
+margin: auto;
+}
+
+/*
+****************************
+============================
+Content/Column area
+============================
+****************************
+*/
+
+#content
+{
+border-top-style:ridge;
+border-color:#eee;
+border-top-width:30px;
+width:50em;
+margin:auto;
+}
+
+.column
+{
+border-top-style:ridge;
+border-color:#444;
+border-top-width:30px;
+background-image:url('images/transpBlack50.png');
+padding:10px;
+width:15em;
+font-family:"Crimson Text", "Times New Roman", serif;
+color:#eee;
+}
+
+p
+{
+margin: 0px;
+}
+
+h3
+{
+font-family:"Tinos", "Garamond", "Times New Roman", serif;
+text-decoration: none;
+margin: 0px;
+margin-bottom:5px;
+}
+
+/*
+=========================
+Individual Columns
+=========================
+*/
+
+/*================
+Left Column (about me)
+================*/
+
+#left
+{
+float:left;
+text-align:right;
+}
+
+.highlight
+{
+font-style: italic;
+background-color: #FF9200;
+color: #444;
+}
+
+/*================
+Right Column (links)
+================*/
+
+#right
+{
+float:right;
+text-align:left;
+width: 10em;
+}
+
+p
+{
+margin: 0px;
+padding: 0px;
+}
+
+a
+{
+text-decoration: none;
+font-style:italic;
+color: #000;
+}
+
+a:hover
+{
+color:#FF9200;
+}
+
+#contact
+{
+border-top-style: solid;
+border-top-width: 1px;
+border-color: #444;
+}
+
+#email
+{
+}
+
+/*================
+Center Column (Photo gallery)
+================*/
+
+#photos
+{
+text-align: center;
+float: right;
+width: 20em;
+margin-right: .625em;
+}
+
+#gallery
+{
+background-image:url('images/transpBlack50.png');
+padding-top: -10px;
+}
+
+/*
+=========================
+Footer area
+=========================
+*/
+
+footer
+{
+font-size:18px;
+color:#888;
+text-shadow:1px 1px black, 2px 2px gray;
+position:fixed;
+right:5px;
+bottom:0px;
+margin:0;
+line-height:0px;
+}
+
+h5
+{
+font-size:17px;
+}
+
+#sym
+{
+font-family:'Josefin Sans', arial, serif;
+line-height: 0px;
+font-size: 25px;
+-webkit-transition: all 0.12s ease-out;
+-moz-transition: all 0.12s ease-out;
+-o-transition: all 0.12s ease-out;
+}
+
+#sym:hover
+{
+position: relative; top: -2px; left: -2px;
+text-shadow: 1px 1px #0B61A4, 2px 2px #0B61A4, 3px 3px #0B61A4, 4px 4px #0B61A4;
+color: #eee;
+}
+
+#year
+{
+font-family: "Tinos", "Garamond", "Times New Roman", serif;
+}
+
+#name
+{
+font-size:20px;
+font-family:'Josefin Sans', arial, serif;
+-webkit-transition: all 0.12s ease-out;
+-moz-transition: all 0.12s ease-out;
+-o-transition: all 0.12s ease-out;
+}
+
+#name:hover
+{
+color:#444;
+position: relative; top: -2px; left: -2px;
+text-shadow: 1px 1px #FF9200, 2px 2px #FF9200, 3px 3px #FF9200, 4px 4px #FF9200;
+}
