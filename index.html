@@ -1,67 +1,38 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<link href="/images/favicon.png" rel="shortcut icon" type="image/png">
-	<title>Andrew Dai aka Bunsen McDubbs geek, photographer and teen</title>
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-	<!--Loading Fonts API from Google-->
-	<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic|Tinos|Josefin+Sans:100&v2' rel='stylesheet' type='text/css'>
-	<!--Loading Galleria-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-	<script src="galleria/galleria-1.2.4.min.js"></script>
-	<script src="galleria/plugins/flickr/galleria.flickr.min.js"></script>
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-20508277-3']);
-		_gaq.push(['_setDomainName', 'andrewdai.co']);
-		_gaq.push(['_trackPageview']);
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
- 		})();
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-</script>
-</head>
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
-<body>
-	<header>
-		<h1 class="title">Andrew Dai</h1>
-	</header>
-	<div id="wrap">
-		<h2 class="title">Amateur <span class="flyout">Photographer</span> and <span class="flyout">Geek</span></h2>
-		<div id="content">
-			<div class="column" id="left">
-				<h3>Who is this man?</h3>
-				<p>Why it's Andrew Dai.</p>
-				<p>You can also call him Bunsen McDubbs</p>
-				<p>If you didn't read the big words above, he is an <span class="highlight">amateur photographer and geek.</span> Recently he has also be using his <span class="highlight">new DLSR</span> to venture into <span class="highlight">video</span> (and building DIY rigs). Also <span class="highlight">easing into programming and web design</span> he is struggling establish his <span class="highlight">geek cred.</span> When he is AFK, he is also a devoted <span class="highlight">swimmer</span>. Oh, and he has to deal with <span class="highlight">High School.</span></p>
-			</div>
-			<div class="column" id="right">
-				<h3>Stalk him elsewhere</h3>
-				<p>He is often addressed by the title: "Bunsen McDubbs". More pictures, like the ones to the left, are found on his <a href="http://flickr.com/photos/andyswim96">Flickr.</a> He is also on <a href="http://twitter.com/a_geek">Twitter.</a> But be warned, it's rarely updated. You can go to his <a href="https://plus.google.com/u/2/110059524210604324267/posts">Google Plus</a> for more interaction. For video, you can go to his <a href="http://youtube.com/user/bunsenmcdubbs">Youtube</a> or <a href="http://www.vimeo.com/bunsenmcdubbs">Vimeo.</a> (He hasn't figured out how to differentiate.)</p>
-				<p id="contact">If those don't work for you, there is also this electronic mail address: <i>contact[at]andrewdai.co</i></p>
-			</div>
-			<div class="column" id="photos">
-				<h3>Frozen Light</h3>
-				<div id="gallery">
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer>
-		<h5><span id='sym'>&copy;</span><span id='year'>MMXII</span> by <span id='name'>Andrew Dai</span></h5>
-	</footer>
-<!--Starts and runs Galleria-->
-	<script>
-		Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js')
-		$("#gallery").galleria({
-			flickr: 'user:andyswim96',
-			height: 300,
-			lightbox: true,
-			initialTransition: 'fade',
-			showCounter: false,
-		});
-	</script>
-</body>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <p>Hello world! This is HTML5 Boilerplate.</p>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
 </html>
