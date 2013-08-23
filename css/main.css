@@ -60,10 +60,20 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-#wrapper{
+#title{
     display: block;
-    margin: auto;
-    width: 70%;
+    float: left;
+    padding: 0 1em 0 1em;
+    margin: 0;
+    text-align: right;
+    font-size: 70px;
+    font-family: League Gothic;
+}
+
+ul {
+    font-family: Ostrich Sans;
+    list-style-type: none;
+    padding: 0px;
 }
 
 
