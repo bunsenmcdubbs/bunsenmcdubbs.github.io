@@ -60,7 +60,11 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
+#wrapper{
+    display: block;
+    margin: auto;
+    width: 70%;
+}
 
 
 
