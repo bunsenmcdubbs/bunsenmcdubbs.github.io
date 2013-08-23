@@ -1,0 +1,39 @@
+/* Regular */
+@font-face {
+    font-family: 'Source Sans';
+    src: url('SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: regular;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Source Sans Black';
+    src: url('SourceSansPro-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: regular;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Source Sans Bold';
+    src: url('SourceSansPro-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: regular;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Source Sans Light';
+    src: url('SourceSansPro-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: regular;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Source Sans Extra Light';
+    src: url('SourceSansPro-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: regular;
+}

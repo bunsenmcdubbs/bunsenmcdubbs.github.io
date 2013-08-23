@@ -71,11 +71,13 @@ textarea {
 }
 
 ul {
-    font-family: Ostrich Sans;
     list-style-type: none;
     padding: 0px;
 }
 
+#content{
+    font-family: Source Sans Light;
+}
 
 
 
