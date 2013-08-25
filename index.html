@@ -22,10 +22,22 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        <script src="js/vendor/jquery-1.10.1.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-        <div id = "title">
-        	<span class='slabtext'><h1>Hello world.<br>This is Andrew Dai.<br>This site is<br>under construction</h1></span>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/bigtext.js"></script>
+        
+        <div id = "bigtext">
+        	<div>Hello world.</div>
+        	<div>This is Andrew Dai.</div>
+        	<div>This site is</div>
+        	<div>under construction.</div>
        	</div>
+       	<script>
+			$('#bigtext').bigtext();
+		</script>
         
         <div id = "content">
             <p id = "subtitle">I code, I tinker, I photograph.</p>
@@ -33,26 +45,8 @@
             	<li>Co-founder of <a href = "http://aa2photo.smugmug.com">A&amp;A Photography.</a></li>
             	<li><a href = "http://github.com/BunsenMcDubbs">Recreational Programmer.</a></li>
         	</ul>
-        	<p>I am a high school senior in Eastern Massachusetts interested in computer science and anything technology related. Swim team captian, yearbook editor, sports and portrait photographer</p>
+        	<p>I am a high school senior in Eastern Massachusetts interested in computer science and anything technology related. Swim team captain, yearbook editor, sports and portrait photographer</p>
         </div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!--<script type="text/javascript">
-            
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-20508277-4']);
-            _gaq.push(['_trackPageview']);
-            
-            (function() {
-             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-             })();
-            
-        </script>-->
+        
     </body>
 </html>
