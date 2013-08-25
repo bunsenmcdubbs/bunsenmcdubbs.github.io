@@ -22,22 +22,14 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        <script src="js/vendor/jquery-1.10.1.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/bigtext.js"></script>
         
-        <div id = "bigtext">
-        	<span>Hello world.</span>
-        	<span>This is Andrew Dai.</span>
-        	<span>This site is</span>
-        	<span>under construction.</span>
+        
+        <div id = "title">
+        	<div id = "tp1">Hello world.</div>
+        	<div id = "tp2">This is Andrew Dai.</div>
+        	<div id = "tp3">This site is</div>
+        	<div id = "tp4">under construction.</div>
        	</div>
-       	<script>
-			$('#bigtext').bigtext();
-		</script>
         
         <div id = "content">
             <p id = "subtitle">I code, I tinker, I photograph.</p>
@@ -47,6 +39,15 @@
         	</ul>
         	<p>I am a high school senior in Eastern Massachusetts interested in computer science and anything technology related. Swim team captain, yearbook editor, sports and portrait photographer</p>
         </div>
+        
+        <script src="js/vendor/jquery-1.10.1.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/bigtext.js"></script>
+        
+        <script>
+			$('#title').bigtext();
+		</script>
         
     </body>
 </html>
