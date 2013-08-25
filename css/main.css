@@ -75,6 +75,8 @@ textarea {
     border-color: #222;
 	margin-right: .25em;
 	
+	width: 6em;
+	
 }
 
 ul {
@@ -110,22 +112,27 @@ ul {
 	padding: 0px 12px 1px 12px;
 }
 
-
-
-#tp1{
-	line-height: .9;
-}
-#tp2{
-	line-height:;
-}
-#tp3{
-	line-height: .9;
-}
-#tp4{
+.tp{
 	line-height: .9;
 }
 
+.tp #title div:nth-child(1){
+		
+}
+.tp #title div:nth-child(2){
+	
+}
+.tp #title div:nth-child(3){
+	
+}
+.tp #title div:nth-child(4){
+	
+}
 
+.amp{
+	font-family: Baskerville, Palatino, "Book Antiqua", League Gothic, sans;
+	font-style: italic;
+}
 
 
 
