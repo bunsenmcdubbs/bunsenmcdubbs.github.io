@@ -102,8 +102,8 @@ ul {
 
 #subtitle{
 	font-family: Source Sans Pro, sans serif;
-    font-style: none;
-    font-weight: 300;
+    font-style: italic;
+    font-weight: 400;
 }
 
 #content a{
@@ -119,7 +119,7 @@ ul {
 
 #content a:hover{
 	background: #2F4167;
-	padding: 0px 12px 1px 12px;
+	font-style: normal;
 }
 
 .tp{
@@ -148,6 +148,8 @@ ul {
 	display: inline;
 	background-color: #a8134a;
 	color: white;
+	font-family: Garamond, serif;
+	font-style: italic;
 }
 
 
