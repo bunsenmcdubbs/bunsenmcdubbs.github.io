@@ -7,17 +7,17 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #ededed;
     font-family: Source Sans Pro;
-    font-style: regular;
     font-weight: 300;
 }
 
 body {
-    font-size: 1em;
+    font-size: 0.9em;
     line-height: 1.4;
-    max-width: 1000px;
+    max-width: 600px;
     margin: 2em auto 0px 5em;
+    background-color: #4F5962;
 }
 
 ::-moz-selection {
@@ -65,6 +65,14 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+a{
+    color: inherit;
+}
+
+a:hover{
+    background-color: #727A81;
+    text-decoration: none;
+}
 
 #title{
     display: block;
@@ -76,33 +84,16 @@ textarea {
     border-right-style: solid;
     border-width: 10px;
     border-color: #222;
-	margin-right: 20px;
+    margin-right: 20px;
 }
 
-ul {
+pre{
+    display: inline-block;
+    background: #434343;
+    padding: 1em 3em;
+    border-style: dotted;
+    border-width: 2px;
 }
-
-#content{
-    display: block;
-    margin: 0 20px;
-}
-
-#content a{
-	font-style: italic;
-	text-decoration: none;
-	color: #fff;
-	font-weight: 300;
-	
-	background: #555;
-	
-	padding: 0px 3px 1px 6px;
-}
-
-#content a:hover{
-	background: #2F4167;
-	font-style: normal;
-}
-
 
 .amp{
 	font-family: Baskerville, Palatino, "Book Antiqua", cursive, serif;

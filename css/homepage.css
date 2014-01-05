@@ -15,7 +15,7 @@ body{
     font-size: 100px;
     border-right-style: solid;
     border-width: 10px;
-    border-color: #222;
+    border-color: #ededed;
     margin-right: 20px;
 }
 
@@ -42,19 +42,19 @@ ul {
 }
 
 #content a{
-	font-style: italic;
-	text-decoration: none;
-	color: #fff;
-	font-weight: 300;
+	//font-style: italic;
+	//text-decoration: none;
+	//color: #fff;
+	//font-weight: 300;
 	
-	background: #555;
+	//background: #555;
 	
-	padding: 0px 3px 1px 6px;
+	//padding: 0px 3px 1px 6px;
 }
 
 #content a:hover{
-	background: #2F4167;
-	font-style: normal;
+	background: #727A81;
+	//font-style: normal;
 }
 
 .tp{
