@@ -1,10 +1,15 @@
-<p><head>
-<title>Senior Project: The BeagleCar</title>
-</head></p>
 <h1>The BeagleCar</h1>
 <h2>An Autonomous RC Car Controlled by a Beaglebone Black</h2>
-<p>I'm making a self driving RC car for my senior project. It will be guided by GPS waypoints and utilize GPS data as well as inertial movement readings to accurately localize itself. I am also currently toying with the idea of cameras and distance sensors so the car/robot won't be so "blind". But that is a stretch goal far beyond my current capacities (need to get the car to move first).</p>
-<p>My previous (brief) experience with Arduino equipped me with a false sense of confidence when I bought a Beaglebone Black and started my project. Embedded Linux is something I have absolutely no experience with; but regardless, time for the fun to begin.</p>
+<p>I'm making a self driving RC car for my senior project. It will be guided by
+GPS waypoints and utilize GPS data as well as inertial movement readings to
+accurately localize itself. I am also currently toying with the idea of
+cameras and distance sensors so the car/robot won't be so "blind". But that is
+a stretch goal far beyond my current capacities (need to get the car to move
+first).</p>
+<p>My previous (brief) experience with Arduino equipped me with a false sense of
+confidence when I bought a Beaglebone Black and started my project. Embedded
+Linux is something I have absolutely no experience with; but regardless, time
+for the fun to begin.</p>
 <p>For the project I have:</p>
 <ul>
 <li><a href="http://beagleboard.org/Products/BeagleBone%20Black">Beaglebone Black</a></li>
@@ -12,7 +17,8 @@
 <li><a href="http://www.adafruit.com/products/746">Adafruit "Ultimate" GPS Breakout</a></li>
 <li>and a used toy RC Car</li>
 </ul>
-<p>A lot of this project is inspired by <a href="http://www.transistor.io/tag/autonomous-car.html">Jason Dorweiler's Autonomous Car</a>.</p>
+<p>A lot of this project is inspired by <a href="http://www.transistor.io/tag/autonomous-car.html">Jason Dorweiler's Autonomous
+Car</a>.</p>
 <h2>Gameplan (rough and semi-overlapping)</h2>
 <ol>
 <li><em>Get the sensors working with the BBB.</em> I want to be able to get proper readings as well as play with some of the extra features of the two sensors.</li>
@@ -27,7 +33,10 @@
 <h2>Sensors and Interfaces</h2>
 <h3>MPU-6050</h3>
 <h4>Connecting the board</h4>
-<p>I started with the 6 axis accelerometer/gyroscope. It communicates via an <a href="http://youtu.be/nMZJwspSkAc?t=2m57s">I2C interface</a>. Careful reading of Sparkfun and <a href="http://elinux.org/File:BeagleBone_p9_pinout.jpg">Beaglebone</a> documentation helped me wire up the board.</p>
+<p>I started with the 6 axis accelerometer/gyroscope. It communicates via an <a href="http://youtu.be/nMZJwspSkAc?t=2m57s">I2C
+interface</a>. Careful reading of Sparkfun
+and <a href="http://elinux.org/File:BeagleBone_p9_pinout.jpg">Beaglebone</a>
+documentation helped me wire up the board.</p>
 <p>To connect the IMU to I2C bus 1:</p>
 <ul>
 <li><a href="http://en.wikipedia.org/wiki/IC_power_supply_pin">VDD</a> to Pin 9_3 (3.3V)</li>
@@ -37,7 +46,11 @@
 <li>SDA to Pin 9_20 (I2C Bus 1 Serial Data)</li>
 </ul>
 <h4>Probing with i2c-tools</h4>
-<p>I tested this connection with the i2c-tools already installed in the default Angstrom distribution. <em>i2cdetect</em> looks for any I2C devices connected to a specified bus (in our case i2c bus 1). <em>i2cdump</em> reads all of the information from a specified I2C device; i2cget and i2cset work in the same way on specific memory registers on a device.</p>
+<p>I tested this connection with the i2c-tools already installed in the default
+Angstrom distribution. <em>i2cdetect</em> looks for any I2C devices connected to a
+specified bus (in our case i2c bus 1). <em>i2cdump</em> reads all of the information
+from a specified I2C device; i2cget and i2cset work in the same way on
+specific memory registers on a device.</p>
 <pre><code>root@beaglebone:~# i2cdetect -y -r 1
   0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
@@ -68,9 +81,21 @@ d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
 e0: 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00    ...........@....
 f0: 00 00 00 00 00 68 00 00 00 00 00 00 00 00 00 00    .....h..........
 </code></pre>
-<p>Reading through the <a href="http://invensense.com/mems/gyro/documents/RM-MPU-6000A.pdf">Invensense documentation</a> reveals that bit 6 on register 0x6b must be set to 0 for the device to exit sleep mode. Currently register 0x6b is 0x40 or 0b0100000, meaning that the 6th bit is 1 and the device is sleeping (bits are counted right to left with the right-most bit being bit 0 and the left-most bit 7). Using <code>i2cset -y 1 0x68 0x6b 0x00</code> sets the register to all zeros and then a call to <code>i2cdump -y 1 0x68</code> shows that the sensor is active.</p>
+<p>Reading through the <a href="http://invensense.com/mems/gyro/documents/RM-MPU-6000A.pdf">Invensense
+documentation</a>
+reveals that bit 6 on register 0x6b must be set to 0 for the device to exit
+sleep mode. Currently register 0x6b is 0x40 or 0b0100000, meaning that the 6th
+bit is 1 and the device is sleeping (bits are counted right to left with the
+right-most bit being bit 0 and the left-most bit 7). Using <code>i2cset -y 1 0x68
+0x6b 0x00</code> sets the register to all zeros and then a call to <code>i2cdump -y 1
+0x68</code> shows that the sensor is active.</p>
 <h4>Test script</h4>
-<p>I wrote this little test script to at least get some meaningful values from the sensor. It uses the <a href="http://learn.adafruit.com/setting-up-io-python-library-on-beaglebone-black">Adafruit_BBIO library</a> to do the I2C interface heavy lifting. All it does is print the acceleration on the x axis in g's to the console. The code is also on my <a href="https://github.com/BunsenMcDubbs/BeagleCar/blob/master/src/test/xaccel.py">github</a>.</p>
+<p>I wrote this little test script to at least get some meaningful values from
+the sensor. It uses the <a href="http://learn.adafruit.com
+/setting-up-io-python-library-on-beaglebone-black">Adafruit_BBIO library</a> to do the I2C interface
+heavy lifting. All it does is print the acceleration on the x axis in g's to
+the console. The code is also on my <a href="https://github.com/BunsenMcDubbs/
+BeagleCar/blob/master/src/test/xaccel.py">github</a>.</p>
 <pre><code>from Adafruit_I2C import Adafruit_I2C
 from time import sleep
 
