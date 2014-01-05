@@ -1,0 +1,84 @@
+#twrap{
+	max-width: 50%;
+}
+
+#title{
+    display: block;
+    float: left;
+    padding: 0 20px 0 0px;
+    text-align: justify;
+    font-family: League Gothic;
+    font-size: 100px;
+    border-right-style: solid;
+    border-width: 10px;
+    border-color: #222;
+	margin-right: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#content{
+	
+	display: block;
+
+    font-family: Source Sans Pro, sans serif;
+    font-style: regular;
+    font-weight: 300;
+    
+    margin: 0 20px;
+}
+
+#subtitle{
+	font-family: Source Sans Pro, sans serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#content a{
+	font-style: italic;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 300;
+	
+	background: #555;
+	
+	padding: 0px 3px 1px 6px;
+}
+
+#content a:hover{
+	background: #2F4167;
+	font-style: normal;
+}
+
+.tp{
+	line-height: .9;
+}
+
+.tp #title div:nth-child(1){
+		
+}
+.tp #title div:nth-child(2){
+	
+}
+.tp #title div:nth-child(3){
+	
+}
+.tp #title div:nth-child(4){
+	
+}
+
+.amp{
+	font-family: Baskerville, Palatino, "Book Antiqua", cursive, serif;
+	font-style: italic;
+}
+
+.indev{
+	display: inline;
+	background-color: #a8134a;
+	color: white;
+	font-family: Garamond, serif;
+	font-style: italic;
+}
