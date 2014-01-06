@@ -88,11 +88,17 @@ a:hover{
 }
 
 pre{
-    //display: inline-block;
-    //background: #434343;
-    //padding: 1em 3em;
-    //border-style: dotted;
-    //border-width: 2px;
+    overflow: auto;
+    display: inline-block;
+    background: #3F474E;
+    padding: 1em 3em;
+    border-style: dotted;
+    border-width: 1px;
+    white-space: pre;
+}
+
+code {
+	word-wrap: normal;
 }
 
 .amp{
