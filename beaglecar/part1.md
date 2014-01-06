@@ -27,38 +27,8 @@ specified bus (in our case i2c bus 1). `i2cdump` reads all of the information
 from a specified I2C device; `i2cget` and `i2cset` work in the same way on
 specific memory registers on a device.
 
+<script src="https://gist.github.com/BunsenMcDubbs/8278364.js"></script>
     
-    root@beaglebone:~# i2cdetect -y -r 1
-      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
-    00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
-    10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-    20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-    30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-    40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-    50: -- -- -- -- UU UU UU UU -- -- -- -- -- -- -- -- 
-    60: -- -- -- -- -- -- -- -- 68 -- -- -- -- -- -- -- 
-    70: -- -- -- -- -- -- -- -- 
-    root@beaglebone:~# i2cdump -y 1 0x68
-    No size specified (using byte-data access)
-         0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
-    00: 81 7d 00 1d 3c cd fc ae 05 44 08 5c 28 8f 6e 90    ?}.?<????D?\(?n?
-    10: d4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ?...............
-    20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
-    30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
-    40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
-    50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
-    60: 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00    ...........@....
-    70: 00 00 00 00 00 68 00 00 00 00 00 00 00 00 00 00    .....h..........
-    80: 81 7d 00 1d 3c cd fc ae 05 44 08 5c 28 8f 6e 90    ?}.?<????D?\(?n?
-    90: d4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ?...............
-    a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
-    b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
-    c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
-    d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
-    e0: 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00    ...........@....
-    f0: 00 00 00 00 00 68 00 00 00 00 00 00 00 00 00 00    .....h..........
-    
-
 Reading through the [Invensense
 documentation](http://invensense.com/mems/gyro/documents/RM-MPU-6000A.pdf)
 reveals that bit 6 on register 0x6b must be set to 0 for the device to exit
@@ -77,36 +47,7 @@ heavy lifting. All it does is print the acceleration on the x axis in g's to
 the console. The code is also on my [github](https://github.com/BunsenMcDubbs/
 BeagleCar/blob/master/src/test/xaccel.py).
 
-    
-    from Adafruit_I2C import Adafruit_I2C
-    from time import sleep
-    
-    # initialize i2c connection to MPU6050
-    # i2c address is 0x68
-    i2c = Adafruit_I2C(0x68)
-    
-    # wake up the device (out of sleep mode)
-    # bit 6 on register 0x6B set to 0
-    i2c.write8(0x6B, 0)
-    
-    print("X axis accelerations (in g's)")
-    
-    # read and print acceleration on x axis
-    # Most significant byte on 0x3b
-    # Least significant byte on 0x3c
-    # Combined to obtain raw acceleration data
-    for x in range(0, 5):
-        # getting values from the registers
-        b = i2c.readS8(0x3b)
-        s = i2c.readU8(0x3c)
-        # converting 2 8 bit words into a 16 bit
-        # signed "raw" value
-        raw = b * 256 + s
-        # still needs to be converted into G-forces
-        g = raw / 16384.
-        print (str(g))
-        sleep(0.2)
-    
+<script src="https://gist.github.com/BunsenMcDubbs/8278435.js"></script>
 
 ### References
 
