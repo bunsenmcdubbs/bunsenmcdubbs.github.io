@@ -10,7 +10,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
        	
-        <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/homepage.css">
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic' rel='stylesheet' type='text/css'>
@@ -26,27 +25,37 @@
         
         <div id = "wrapper">
         
-        <section id = "twrap">
+        <div id = "twrap">
         	<div id = "title">
         		<div class="tp">Hello world.</div>
         		<div class="tp">This is Andrew Dai.</div>
         		<div class="tp">Coder, Maker <span class = "amp">&amp;</span></div>
         		<div class="tp">Photographer.</div>
        		</div>
-       	</section>
+       	</div>
         
-        <section id = "content">
-            <!-- <p id = "subtitle">I code, I tinker, I photograph.</p> -->
-            <ul>
-            	<li>Co-founder of <a href = "http://aa2photo.smugmug.com">A&amp;A Photography.</a></li>
-            	<li><a href = "http://github.com/BunsenMcDubbs">Recreational Programmer.</a></li>
+        <div id = "content">
+		<!-- <p id = "subtitle">I code, I tinker, I photograph.</p> -->
+		<ul id="outlinks">
+			<li>Co-founder of <a href = "http://aa2photo.smugmug.com">A&amp;A Photography.</a></li>
+			<li><a href = "http://github.com/BunsenMcDubbs">Recreational Programmer.</a></li>
         	</ul>
         	<p>I am a high school senior interested in computer science and anything technology related.
         		In my free time I like to tinker with electronics, program and going outside.
         		<!-- <br><br>Hailed (once) as a "part-time genius" I spend the rest of my time preparing for that moment of glory. -->
            		<br><br>Swim team captain, yearbook editor, sports and portrait photographer and summer intern in the RF Coil Lab at the Martinos Center for Biomedical Imaging at MGH.</p>
-        	<p class = "indev">Site is definitely still under construction. Expect breaking, incomplete-ness, spelling errors and terrifying designs.<br>and maybe evil monsters.</p>
-        </section>
+        	<!-- <p class = "indev">Site is definitely still under construction. Expect breaking, incomplete-ness, spelling errors and terrifying designs.<br>and maybe evil monsters.</p> -->
+		<div id="projectwrapper">
+			<h3 class="projects">Writings:</h3>
+			<ul class="projects">
+				<li><a href="./beaglecar/intro.html">BeagleCar</a>
+					<ul class="projects">
+						<li><a href="./beaglecar/part1.html">I2C Interface and the Beaglebone Black</a>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
         
         </div>
         <script src="js/vendor/jquery-1.10.1.min.js"></script>

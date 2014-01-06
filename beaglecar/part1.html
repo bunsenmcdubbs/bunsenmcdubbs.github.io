@@ -1,0 +1,131 @@
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Andrew Dai|BunsenMcDubbs</title>
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../fonts/leaguegothic/webfonts/stylesheet.css">
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<header>
+<a href="../index.html">Andrew Dai aka Bunsen McDubbs</a>
+</header>
+
+
+<div id = content>
+<h1>Part 1: Sensors and Interfaces</h1>
+<p>written on 1/5/2014</p>
+<h2>MPU-6050</h2>
+<h3>Connecting the board</h3>
+<p>I started with the 6 axis accelerometer/gyroscope. It communicates via an <a href="http://youtu.be/nMZJwspSkAc?t=2m57s">I2C
+interface</a>. Careful reading of Sparkfun
+and <a href="http://elinux.org/File:BeagleBone_p9_pinout.jpg">Beaglebone</a>
+documentation helped me wire up the board.</p>
+<p>To connect the IMU to I2C bus 1:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/IC_power_supply_pin">VDD</a> to Pin 9_3 (3.3V)</li>
+<li>VIO to Pin 9_3 (3.3V)</li>
+<li>Gnd to Pin 9_1</li>
+<li>SCL to Pin 9_19 (I2C Bus 1 Serial Clock)</li>
+<li>SDA to Pin 9_20 (I2C Bus 1 Serial Data)</li>
+</ul>
+<h3>Probing with i2c-tools</h3>
+<p>I tested this connection with the <code>i2c-tools</code> already installed in the default
+Angstrom distribution. <code>i2cdetect</code> looks for any I2C devices connected to a
+specified bus (in our case i2c bus 1). <code>i2cdump</code> reads all of the information
+from a specified I2C device; <code>i2cget</code> and <code>i2cset</code> work in the same way on
+specific memory registers on a device.</p>
+<pre><code>root@beaglebone:~# i2cdetect -y -r 1
+  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- UU UU UU UU -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- 68 -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- -- 
+root@beaglebone:~# i2cdump -y 1 0x68
+No size specified (using byte-data access)
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+00: 81 7d 00 1d 3c cd fc ae 05 44 08 5c 28 8f 6e 90    ?}.?&lt;????D?\(?n?
+10: d4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ?...............
+20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+60: 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00    ...........@....
+70: 00 00 00 00 00 68 00 00 00 00 00 00 00 00 00 00    .....h..........
+80: 81 7d 00 1d 3c cd fc ae 05 44 08 5c 28 8f 6e 90    ?}.?&lt;????D?\(?n?
+90: d4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ?...............
+a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+e0: 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00    ...........@....
+f0: 00 00 00 00 00 68 00 00 00 00 00 00 00 00 00 00    .....h..........
+</code></pre>
+<p>Reading through the <a href="http://invensense.com/mems/gyro/documents/RM-MPU-6000A.pdf">Invensense
+documentation</a>
+reveals that bit 6 on register 0x6b must be set to 0 for the device to exit
+sleep mode. Currently register 0x6b is 0x40 or 0b0100000, meaning that the 6th
+bit is 1 and the device is sleeping (bits are counted right to left with the
+right-most bit being bit 0 and the left-most bit 7). Using <code>i2cset -y 1 0x68
+0x6b 0x00</code> sets the register to all zeros and then a call to <code>i2cdump -y 1
+0x68</code> shows that the sensor is active.</p>
+<h3>Test script</h3>
+<p>I wrote this little test script to at least get some meaningful values from
+the sensor. It uses the <a href="http://learn.adafruit.com
+/setting-up-io-python-library-on-beaglebone-black">Adafruit_BBIO library</a> to do the I2C interface
+heavy lifting. All it does is print the acceleration on the x axis in g's to
+the console. The code is also on my <a href="https://github.com/BunsenMcDubbs/
+BeagleCar/blob/master/src/test/xaccel.py">github</a>.</p>
+<pre><code>from Adafruit_I2C import Adafruit_I2C
+from time import sleep
+
+# initialize i2c connection to MPU6050
+# i2c address is 0x68
+i2c = Adafruit_I2C(0x68)
+
+# wake up the device (out of sleep mode)
+# bit 6 on register 0x6B set to 0
+i2c.write8(0x6B, 0)
+
+print("X axis accelerations (in g's)")
+
+# read and print acceleration on x axis
+# Most significant byte on 0x3b
+# Least significant byte on 0x3c
+# Combined to obtain raw acceleration data
+for x in range(0, 5):
+    # getting values from the registers
+    b = i2c.readS8(0x3b)
+    s = i2c.readU8(0x3c)
+    # converting 2 8 bit words into a 16 bit
+    # signed "raw" value
+    raw = b * 256 + s
+    # still needs to be converted into G-forces
+    g = raw / 16384.
+    print (str(g))
+    sleep(0.2)
+</code></pre>
+<h3>References</h3>
+<ul>
+<li>Ben Heck's Introduction to Interfaces video on <a href="http://youtu.be/nMZJwspSkAc?t=2m57s">Youtube</a></li>
+<li>Derek Molloy's <a href="http://derekmolloy.ie/beaglebone/beaglebone-an-i2c-tutorial-interfacing-to-a-bma180-accelerometer/">I2C Beaglebone Tutorial</a></li>
+<li><a href="http://www.lm-sensors.org/wiki/i2cToolsDocumentation">I2C Tools Documentation</a></li>
+<li>I2C Device Library's <a href="http://www.i2cdevlib.com/devices/mpu6050">MPU 6050 Documentation</a></li>
+<li>BeagleBoard's email list on <a href="https://groups.google.com/d/topic/beagleboard/hqqecmOjpTU/discussion">I2C and Invensense MPU6050 Driver</a></li>
+</ul></div>
+<footer>
+<p>This site is hosted on <a href="http://pages.github.com/">GitHub Pages</a>. View the Markdown source of articles by replacing ".html" with ".md". The source for this site is also on <a href="https://github.com/BunsenMcDubbs/bunsenmcdubbs.github.com">Github</a>.
+</footer>
+</html>
+
+</body>

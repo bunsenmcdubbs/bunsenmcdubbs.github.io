@@ -30,14 +30,14 @@ ul {
     display: block;
 
     font-family: Source Sans Pro, sans serif;
-    font-style: regular;
     font-weight: 300;
+    width: 30%;
+    float: left;
     
-    margin: 0 20px;
 }
 
 #subtitle{
-	font-family: Source Sans Pro, sans serif;
+    font-family: Source Sans Pro, sans serif;
     font-style: italic;
     font-weight: 400;
 }
@@ -75,15 +75,20 @@ ul {
 	
 }
 
+#projectwrapper {
+	margin: 1em 0;
+}
+
+.projects {
+	margin: 0;
+}
+
+.projects ul {
+	padding-left: 2em;
+}
+
 .amp{
 	font-family: Baskerville, Palatino, "Book Antiqua", cursive, serif;
 	font-style: italic;
 }
 
-.indev{
-	display: inline;
-	background-color: #a8134a;
-	color: white;
-	font-family: Garamond, serif;
-	font-style: italic;
-}

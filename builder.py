@@ -83,10 +83,11 @@ def main(argv):
 	header = loadHeader()
 	footer = loadFooter()
 	html = combine(content, header, footer)
+	outfile = argv[0].partition(".")[0].strip() + ".html"
 	if len(argv) == 2:
-		write(html, argv[1])
-	else:
-		print html
+		outfile = argv[1]
+	write(html, outfile)
+	print outfile
 
 if __name__ == "__main__":
 	main(sys.argv[1:])
