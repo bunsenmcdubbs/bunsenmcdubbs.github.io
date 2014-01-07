@@ -4,16 +4,16 @@ body{
 }
 
 #twrap{
-    max-width: 50%;
+    //max-width: 50%;
 }
 
 #title{
     display: block;
     float: left;
     padding: 0 20px 0 0px;
-    text-align: justify;
+    text-align: center;
     font-family: League Gothic;
-    font-size: 100px;
+    font-size: 6em;
     border-right-style: solid;
     border-width: 10px;
     border-color: #ededed;
@@ -28,18 +28,11 @@ ul {
 #content{
 	
     display: block;
-
-    font-family: Source Sans Pro, sans serif;
+    font-family: inherit;
     font-weight: 300;
     width: 30%;
     float: left;
     
-}
-
-#subtitle{
-    font-family: Source Sans Pro, sans serif;
-    font-style: italic;
-    font-weight: 400;
 }
 
 #content a{

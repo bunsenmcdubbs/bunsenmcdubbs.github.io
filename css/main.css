@@ -8,7 +8,7 @@ input,
 select,
 textarea {
     color: #ededed;
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, sans-serif;
     font-weight: 300;
 }
 
