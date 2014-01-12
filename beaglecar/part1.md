@@ -1,6 +1,6 @@
 # Part 1: Sensors and Interfaces
 
-written on 1/5/2014
+written on 1/5/2014 updated 1/12/2014
 
 ## MPU-6050
 
@@ -104,6 +104,82 @@ BeagleCar/blob/master/src/test/xaccel.py).
             print (str(g))
             sleep(0.2)
 
+## Adafruit Ultimate GPS Breakout (v3)
+
+Adafruit's breakout is 5 volt tolerant which is a bonus for Arduino
+compatibility but not necessary for this project since the Beaglebone is a 3.3
+volt device. It communicates over a serial UART connection and is fairly easy 
+to setup with the BBB.
+
+(After encountering numerous issues with [gpsd](http://catb.org/gpsd/) I 
+chose to reflash the BBB with Ubuntu. Maybe I'll write a guide in the future
+but just Google'ing "beaglebone flash ubuntu" should be sufficient)
+
+My plan is to use gpsd to do the dirty work of interpretting the raw NMEA 
+messages from the breakout and then use the Python interface to write a client
+to handle all the data and control the robot (and even pass it into ROS ... if
+I can get it to install on UbuntuARM 13.04).
+
+### Wiring up the GPS
+
+The breakout as numerous additional features but for now I'm just trying to get
+basic funcationlity out of the device. UART is just serial communication.
+This just means that a wire connects the transmit (TX) pin of one device to the
+receive (RX) pin of the other and vice versa. Knowing this, I connected TX on 
+the breakout to RX of UART1 (pin 9_26)  on the Beaglebone and RX to TX (pin 
+9_24).
+
+### Installing and Using gpsd
+
+Sidenote: The Beaglebone community is still fairly small right now and it is
+often easier to search for and follow guides for the Raspberry Pi, especially
+after installing Ubuntu or Debian because of the Pi's Debian-based OS.
+
+gpsd is a Linux daemon to parse the NMEA sentences coming from GPS devices. 
+By using it, I can concentrate on using the GPS data rather than dealing with
+the nitty gritty details of parsing text (and opens up the possibility of using
+other GPS devices that have slightly different formats - yay portability!).
+
+gpsd comes in several packages. `gpsd` is the core package containing the
+daemon, `gpsd-clients` has several test clients, and `python-gps` installs
+the Python library to communicate with gpsd (I know for a fact that 
+`python-gps` is not a package available on Angstrom - it is under a different
+name). 
+
+After running into a [brick wall](http://pastie.org/8597750) with gpsd on
+Angstrom, I elected to switch to Ubuntu and reflashed the BBB. 
+
+On Ubuntu, I installed gpsd with
+
+    sudo apt-get install gpsd gpsd-clients python-gpsd
+
+Then with the breakout board wired up (TX and RX as well as VIN to 3.3V and GND
+to ground), I started gpsd and pointed it to UART1 where the device lived.
+
+    gpsd -n /dev/ttyO1 -F /var/run/gpsd.sock
+    cgps
+
+  * `-n` tells gpsd not to wait for client requests and immediately start
+posting GPS data. This is useful for testing and debugging. If power consumption
+ is important, you might consider leaving out that option.
+
+  * `/dev/ttyO1` (that is an "O" not "0") is the location of the serial
+connection. gpsd defaults to `/dev/USB0` for USB devices.
+
+  * `-F /var/run/gpsd.sock` ... I don't actually know why this is necessary...
+maybe defaults sometimes aren't correct?
+
+  * `cgps` is a console gps test client to test if everything is working. Keep 
+in mind that GPS devices take a while to lock on a signal. If you just plugged
+in the device it might not be able to display any location information for 
+upto 15 minutes.
+
+If that doesn't work...
+
+  * Visit the 
+[gpsd troubleshooting page](http://www.catb.org/gpsd/troubleshooting.html)
+  * And if you are still on Angstrom, install Ubuntu.
+
 ### References
 
   * Ben Heck's Introduction to Interfaces video on [Youtube](http://youtu.be/nMZJwspSkAc?t=2m57s)
@@ -111,4 +187,5 @@ BeagleCar/blob/master/src/test/xaccel.py).
   * [I2C Tools Documentation](http://www.lm-sensors.org/wiki/i2cToolsDocumentation)
   * I2C Device Library's [MPU 6050 Documentation](http://www.i2cdevlib.com/devices/mpu6050)
   * BeagleBoard's email list on [I2C and Invensense MPU6050 Driver](https://groups.google.com/d/topic/beagleboard/hqqecmOjpTU/discussion)
-
+  * [gpsd](http://www.catb.org/gpsd/)
+  * [Adafruit's Guide for GPS Breakout and Raspberry Pi](http://learn.adafruit.com/adafruit-ultimate-gps-on-the-raspberry-pi)

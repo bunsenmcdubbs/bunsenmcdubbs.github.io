@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Part 1: Sensors and Interfaces Andrew Dai|BunsenMcDubbs</title>
+    <title>Part 1: Sensors and Interfaces - Andrew Dai|BunsenMcDubbs</title>
     <link rel="stylesheet" href="../css/normalize.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic' rel='stylesheet' type='text/css'>
@@ -20,7 +20,7 @@
 
 <div id = content>
 <h1>Part 1: Sensors and Interfaces</h1>
-<p>written on 1/5/2014</p>
+<p>written on 1/5/2014 updated 1/12/2014</p>
 <h2>MPU-6050</h2>
 <h3>Connecting the board</h3>
 <p>I started with the 6 axis accelerometer/gyroscope. It communicates via an <a href="http://youtu.be/nMZJwspSkAc?t=2m57s">I2C
@@ -115,6 +115,75 @@ for x in range(0, 5):
         print (str(g))
         sleep(0.2)
 </code></pre>
+<h2>Adafruit Ultimate GPS Breakout (v3)</h2>
+<p>Adafruit's breakout is 5 volt tolerant which is a bonus for Arduino
+compatibility but not necessary for this project since the Beaglebone is a 3.3
+volt device. It communicates over a serial UART connection and is fairly easy 
+to setup with the BBB.</p>
+<p>(After encountering numerous issues with <a href="http://catb.org/gpsd/">gpsd</a> I 
+chose to reflash the BBB with Ubuntu. Maybe I'll write a guide in the future
+but just Google'ing "beaglebone flash ubuntu" should be sufficient)</p>
+<p>My plan is to use gpsd to do the dirty work of interpretting the raw NMEA 
+messages from the breakout and then use the Python interface to write a client
+to handle all the data and control the robot (and even pass it into ROS ... if
+I can get it to install on UbuntuARM 13.04).</p>
+<h3>Wiring up the GPS</h3>
+<p>The breakout as numerous additional features but for now I'm just trying to get
+basic funcationlity out of the device. UART is just serial communication.
+This just means that a wire connects the transmit (TX) pin of one device to the
+receive (RX) pin of the other and vice versa. Knowing this, I connected TX on 
+the breakout to RX of UART1 (pin 9_26)  on the Beaglebone and RX to TX (pin 
+9_24).</p>
+<h3>Installing and Using gpsd</h3>
+<p>Sidenote: The Beaglebone community is still fairly small right now and it is
+often easier to search for and follow guides for the Raspberry Pi, especially
+after installing Ubuntu or Debian because of the Pi's Debian-based OS.</p>
+<p>gpsd is a Linux daemon to parse the NMEA sentences coming from GPS devices. 
+By using it, I can concentrate on using the GPS data rather than dealing with
+the nitty gritty details of parsing text (and opens up the possibility of using
+other GPS devices that have slightly different formats - yay portability!).</p>
+<p>gpsd comes in several packages. <code>gpsd</code> is the core package containing the
+daemon, <code>gpsd-clients</code> has several test clients, and <code>python-gps</code> installs
+the Python library to communicate with gpsd (I know for a fact that 
+<code>python-gps</code> is not a package available on Angstrom - it is under a different
+name). </p>
+<p>After running into a <a href="http://pastie.org/8597750">brick wall</a> with gpsd on
+Angstrom, I elected to switch to Ubuntu and reflashed the BBB. </p>
+<p>On Ubuntu, I installed gpsd with</p>
+<pre><code>sudo apt-get install gpsd gpsd-clients python-gpsd
+</code></pre>
+<p>Then with the breakout board wired up (TX and RX as well as VIN to 3.3V and GND
+to ground), I started gpsd and pointed it to UART1 where the device lived.</p>
+<pre><code>gpsd -n /dev/ttyO1 -F /var/run/gpsd.sock
+cgps
+</code></pre>
+<ul>
+<li>
+<p><code>-n</code> tells gpsd not to wait for client requests and immediately start
+posting GPS data. This is useful for testing and debugging. If power consumption
+ is important, you might consider leaving out that option.</p>
+</li>
+<li>
+<p><code>/dev/ttyO1</code> (that is an "O" not "0") is the location of the serial
+connection. gpsd defaults to <code>/dev/USB0</code> for USB devices.</p>
+</li>
+<li>
+<p><code>-F /var/run/gpsd.sock</code> ... I don't actually know why this is necessary...
+maybe defaults sometimes aren't correct?</p>
+</li>
+<li>
+<p><code>cgps</code> is a console gps test client to test if everything is working. Keep 
+in mind that GPS devices take a while to lock on a signal. If you just plugged
+in the device it might not be able to display any location information for 
+upto 15 minutes.</p>
+</li>
+</ul>
+<p>If that doesn't work...</p>
+<ul>
+<li>Visit the 
+<a href="http://www.catb.org/gpsd/troubleshooting.html">gpsd troubleshooting page</a></li>
+<li>And if you are still on Angstrom, install Ubuntu.</li>
+</ul>
 <h3>References</h3>
 <ul>
 <li>Ben Heck's Introduction to Interfaces video on <a href="http://youtu.be/nMZJwspSkAc?t=2m57s">Youtube</a></li>
@@ -122,6 +191,8 @@ for x in range(0, 5):
 <li><a href="http://www.lm-sensors.org/wiki/i2cToolsDocumentation">I2C Tools Documentation</a></li>
 <li>I2C Device Library's <a href="http://www.i2cdevlib.com/devices/mpu6050">MPU 6050 Documentation</a></li>
 <li>BeagleBoard's email list on <a href="https://groups.google.com/d/topic/beagleboard/hqqecmOjpTU/discussion">I2C and Invensense MPU6050 Driver</a></li>
+<li><a href="http://www.catb.org/gpsd/">gpsd</a></li>
+<li><a href="http://learn.adafruit.com/adafruit-ultimate-gps-on-the-raspberry-pi">Adafruit's Guide for GPS Breakout and Raspberry Pi</a></li>
 </ul></div>
 <footer>
 <p>This site is hosted on <a href="http://pages.github.com/">GitHub Pages</a>. View the Markdown source of articles by replacing ".html" with ".md". The source for this site is also on <a href="https://github.com/BunsenMcDubbs/bunsenmcdubbs.github.com">Github</a>.
