@@ -60,13 +60,14 @@ def loadFooter():
 	return html
 
 def combine(content, header, footer):
-	html = "<body>\n"
+	html = ""
 	html += header + "\n"
+	html += "<body>\n"
 	html += "<div id = content>\n"
 	html += content
 	html += "</div>\n"
-	html += footer + "\n"
 	html += "</body>\n"
+	html += footer + "\n"
 	#print html
 	return html
 
