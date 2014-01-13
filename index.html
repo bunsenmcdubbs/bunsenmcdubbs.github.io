@@ -1,72 +1,13 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Andrew Dai|Bunsen McDubbs</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-       	
-        <link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/homepage.css">
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="fonts/leaguegothic/webfonts/stylesheet.css">
-        
+---
+layout: default
+title: Your New Jekyll Site
+---
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <div id = "wrapper">
-        
-        <div id = "twrap">
-        	<div id = "title">
-        		<div class="tp">Hello world.</div>
-        		<div class="tp">This is Andrew Dai.</div>
-        		<!--<div class="tp">Coder, Maker <span class = "amp">&amp;</span></div>-->
-			<div class="tp">Coder, Maker and</div>
-        		<div class="tp">Photographer.</div>
-       		</div>
-       	</div>
-        
-        <div id = "content">
-		<!-- <p id = "subtitle">I code, I tinker, I photograph.</p> -->
-		<ul id="outlinks">
-			<li>Co-founder of <a href = "http://aa2photo.smugmug.com">A&amp;A Photography.</a></li>
-			<li><a href = "http://github.com/BunsenMcDubbs">Recreational Programmer.</a></li>
-        	</ul>
-        	<p>I am a high school senior interested in computer science and anything technology related.
-        		In my free time I like to tinker with electronics, program and going outside.
-        		<!-- <br><br>Hailed (once) as a "part-time genius" I spend the rest of my time preparing for that moment of glory. -->
-           		<br><br>Swim team captain, yearbook editor, sports and portrait photographer and summer intern in the RF Coil Lab at the Martinos Center for Biomedical Imaging at MGH.</p>
-        	<!-- <p class = "indev">Site is definitely still under construction. Expect breaking, incomplete-ness, spelling errors and terrifying designs.<br>and maybe evil monsters.</p> -->
-		<div id="projectwrapper">
-			<h3 class="projects">Writings:</h3>
-			<ul class="projects">
-				<li><a href="./beaglecar/intro.html">BeagleCar</a>
-					<ul class="projects">
-						<li><a href="./beaglecar/part1.html">Part 1: Sensors and Interfaces</a>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-        
-        </div>
-        <script src="js/vendor/jquery-1.10.1.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/bigtext.js"></script>
-        
-        <script>
-			$('#title').bigtext();
-		</script>
-        
-    </body>
-</html>
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
