@@ -5,11 +5,11 @@ catagory: beaglecar
 tags: [rc car]
 ---
 
-The entire first part of this tutorial/post can be skipped with the use of a
-hobby-grade RC Car. This can be easily identified by either the price tag
-or the high quality interchangable parts in the car itself. The mods outlined
-here are to upgrade cheaper toy-grade RC cars to resemble the functionality
-of their hobby-grade counterparts.
+This entire tutorial/post can be skipped with the use of a hobby-grade RC Car.
+They can easily be identified by either the price tag or high quality
+interchangable parts in the car itself. The mods outlined here are to upgrade
+cheaper toy-grade RC cars to resemble the functionality of their hobby-grade
+counterparts.
 
 # Choosing a car
 
@@ -32,8 +32,16 @@ Locate the major components (and seperate if desired).
 
 # Modifications
 
-There are several modifications necesary to emulate the driving functionality
+There are several moddifications necesary to emulate the driving functionality
 of a real car. First, as mentioned above, is a speed/motor controller. This way
 the toy has more speeds than just 100% forwards, 100% backwards and neutral.
 Similarly, a servo-based steering control replaces the binary left-right
 steering on the toy and allows for (gasp) intermediate turning angles.
+
+## Motor Controller
+
+<stuff>
+
+## Servo Steering
+
+<more stuff!>
