@@ -40,8 +40,8 @@ steering on the toy and allows for (gasp) intermediate turning angles.
 
 ## Motor Controller
 
-<stuff>
+\<stuff\>
 
 ## Servo Steering
 
-<more stuff!>
+\<more stuff!\>
