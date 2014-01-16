@@ -6,7 +6,15 @@ categories: beaglecar
 tags: [beaglebone, i2c, uart]
 ---
 
-# MPU-6050
+The BeagleCar needs sense of location and direction. This is where the GPS
+and IMU (accelerator/gyroscope) come into play. The GPS gives noisy readings
+in the current absolute position while the IMU can give rapid and fairly
+accurate readings on relative position. The GPS is also fairly slow 1-10 hz
+while the IMU can update much faster. Together, they combine both absolute
+position with rapid relative updates to yield (hopefully) sufficiently 
+accurate location readings.
+
+# The Inertial Measurement Unit: Invensense MPU-6050
 
 ## Connecting the board
 
