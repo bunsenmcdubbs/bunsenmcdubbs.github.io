@@ -31,6 +31,8 @@ Pretty self explanatory. Take off the fluff and outer shells. Keep the
 electronics in place (for now). Get to the core ("chassis") of the toy.
 Locate the major components (and seperate if desired).
 
+![Picture of the bare RC car without cover](../images/LabeledParts.jpg)
+
 # Modifications
 
 There are several modifications necessary to emulate the driving functionality
