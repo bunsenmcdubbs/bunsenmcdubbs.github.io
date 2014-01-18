@@ -93,6 +93,10 @@ footer a {
 /*
 /*****************************************************************************/
 
+#posttitle{
+  margin-top: 0;
+}
+
 /* standard */
 .post pre {
   border: 1px solid #ddd;
