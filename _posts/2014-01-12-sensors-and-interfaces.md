@@ -142,10 +142,14 @@ The breakout has numerous additional features but for now I'm just trying to get
 basic funcationlity out of the device. UART is just serial communication.
 This just means that a wire connects the transmit (TX) pin of one device to the
 receive (RX) pin of the other and vice versa. Knowing this, I connected TX on 
-the breakout to RX of UART1 (pin 9_26) on the Beaglebone and RX to TX (pin 
-9_24). VIN connects to 3.3v (pin 9_3) and Gnd to ground (pin 9_1)
+the breakout to RX of UART1 (pin 9\_26) on the Beaglebone and RX to TX (pin 
+9\_24). VIN connects to 3.3v (pin 9\_3) and Gnd to ground (pin 9\_1)
 
-## Installing and Using gpsd
+[<img src="{{ site.url }}/images/GPS_to_BBB_bb.png" alt="Schematic showing how
+to connect the GPS to a Beaglebone Black" height ="500">]
+({{ site.url }}/images/GPS_to_BBB_bb.png)
+
+## Installing and Using gpsd 
 
 Sidenote: The Beaglebone community is still fairly small right now and it is
 often easier to search for and follow guides for the Raspberry Pi, especially
