@@ -14,17 +14,17 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: Source Sans Pro;
+  font-size: 14px;
   margin: 3em auto 2em auto;
   line-height: 1.5em;
-  width: 60%
+  width: 50em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
-
-h1 { margin: 1em 0; }
+  font-family: Bree Serif;
+  margin: 1em 0;
+}
 
 p { margin: 1em 0; }
 
@@ -46,12 +46,6 @@ a:visited { color: #a0a; }
   line-height: 1.75em;
 }
 
-.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
-}
-
 /*****************************************************************************/
 /*
 /* Site
@@ -65,7 +59,6 @@ a:visited { color: #a0a; }
 
 .title {
   display: inline-block;
-  font: Futura;
 }
 
 .title a {
@@ -78,6 +71,8 @@ a:visited { color: #a0a; }
 
 .meta {
   color: #aaa;
+  font-family: Monaco, "Courier New", monospace;
+  font-size: 80%;
 }
 
 footer {
@@ -86,11 +81,6 @@ footer {
   border-top: 4px solid #eee;
   margin-top: 1em;
   overflow: hidden;
-}
-
-footer .contact {
-  float: left;
-  margin-right: 3em;
 }
 
 footer a {
