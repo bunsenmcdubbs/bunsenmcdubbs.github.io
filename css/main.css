@@ -14,7 +14,7 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
+  font: 14px Source Sans Pro, Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
 }
@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
 h1 { margin-bottom: 1em; }
+
 p { margin: 1em 0; }
 
 a         { color: #00a; }
@@ -49,6 +50,17 @@ a:visited { color: #a0a; }
   font-size: 80%;
 }
 
+/*
+#info {
+  width: 40%;
+  float: left;
+}
+
+#home {
+  width: 60%;
+  float: right;
+}
+*/
 /*****************************************************************************/
 /*
 /* Site
@@ -71,6 +83,7 @@ a:visited { color: #a0a; }
 .title {
   display: inline-block;
   margin-bottom: 2em;
+  font: Futura;
 }
 
 .title a {
