@@ -3,16 +3,14 @@ layout: default
 title: Andrew Dai | BunsenMcDubbs
 ---
 
-<div id="info">
-  <ul id="outlinks">
-    <li>Co-founder of <a href = "http://aa2photo.smugmug.com">A&amp;A Photography.</a></li>
-    <li><a href = "http://github.com/BunsenMcDubbs">Recreational Programmer.</a></li>
-    <li>High school senior</li>
-  </ul>
-</div>
+<ul class="outlinks">
+  <li>Co-founder of <a href = "http://aa2photo.smugmug.com">A&amp;A Photography.</a></li>
+  <li><a href = "http://github.com/BunsenMcDubbs">Recreational Programmer.</a></li>
+  <li>High school senior</li>
+</ul>
 
 <div id="home">
-  <h2>Writings</h2>
+  <h3>Writings</h3>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span class="meta">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>

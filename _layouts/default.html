@@ -31,18 +31,26 @@
     <body>
 
         <header>
-          <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+          <nav>
+            <h1 id="hero" class="title"><a href="/">{{ site.name }}</a></h1>
+            <h1 class="title"><a href="/about/">about</a></h1>
+            <h1 class="title"><a href="/">blog</a></h1>
+            <h1 class="title"><a href="#">projects</a></h1>
+          </nav>
         </header>
 
-        {{ content }}
+        <div id="content">
+          {{ content }}
+        </div>
+
+        <a href="https://github.com/bunsenmcdubbs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
         <footer>
           <p><a href="https://github.com/bunsenmcdubbs">Coder</a>, 
              Maker, 
              <a href="http://aa2photo.smugmug.com">Photographer</a>.
              Also known as BunsenMcDubbs.
-             contact [at] andrewdai.co
-          </p>
+             contact [at] andrewdai.co</p>
         </footer>
 
     </body>
