@@ -38,7 +38,7 @@ a:hover   { text-decoration: underline; }
 /*
 /*****************************************************************************/
 
-ul {
+.posts {
   list-style-position: outside;
   margin-left: 2em;
   list-style-type: none;
@@ -107,6 +107,7 @@ footer a {
 
 .post ul, .post ol {
   margin-left: 1.35em;
+  list-style-type: inherit;
 }
 
 .post code {
