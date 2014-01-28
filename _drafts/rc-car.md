@@ -52,4 +52,15 @@ on and off.
 
 ## Servo Steering
 
-\<more stuff!\>
+Toy RC cars are extremely limited in their steering options, typically only
+turning hard left or right from center. When the car is going forwards
+(not turning left or right), the front wheels are pulled to the center with springs.
+By using a servo that constantly maintains control over steering angle, the car
+has a much stronger and finer grip on steering.
+
+To install the servo, I tore out the existing motor and used a thin piece of
+aluminum as a flat baseplate. Small strips of brass connected the servo horn
+to the steering rack on the car.
+
+![Servo steering modification on toy rc car]
+({{ site.url }}/images/Steering-top.jpg)
