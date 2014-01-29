@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "RC Car Mods"
+title: "RC Car Modifications"
 catagory: beaglecar
 tags: [rc car]
 ---
@@ -45,6 +45,20 @@ steering on the toy and allows for (gasp) varying turning angles.
 
 #### Motor Controller
 
+Rather than trying to reverse engineer the electronics inside the the car, I 
+choose to start over. I got a [TI SN754410 dual H-bridge]
+(http://datasheet.octopart.com/L293NE-Texas-Instruments-datasheet-8627554.pdf)
+from [Sparkfun](https://www.sparkfun.com/products/315).
+
+[NYU](http://itp.nyu.edu/physcomp/Labs/DCMotorControl) has a really nice
+tutorial on how to use this chip with an Arduino.
+
+I wired up the H-bridge and tested it with my DIY lab bench power supply and
+everything worked perfectly. The problem is that the inputs must be 5v and up.
+Since the Beaglebone has a 3v3 logic level, I will have to use transistors to
+amplify the 3v3 from the BBB to 5v for the H Bridge. From there I can input
+whatever voltage I need (probably ~6v aka 4 AA batteries) and drive the motors.
+
 #### Servo Steering
 
 Toy RC cars are extremely limited in their steering options, typically only
@@ -68,3 +82,7 @@ an optional 1k ohm resistor.
 
 [<img src="{{ site.url }}/images/SteeringServoSchematic.jpg" alt="servo wiring
 schematic" height="500">]({{ site.url }}/images/SteeringServoSchematic.jpg)
+
+The servo can now turn the wheels back and forth.
+Now I will need to encode some kind of hard limits on the PWM signal so the
+servos don't oversteer and trash itself. Maybe a limit switch of some kind...
