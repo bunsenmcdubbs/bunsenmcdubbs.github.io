@@ -31,7 +31,8 @@ Pretty self explanatory. Take off the fluff and outer shells. Keep the
 electronics in place (for now). Get to the core ("chassis") of the toy.
 Locate the major components (and seperate if desired).
 
-![Picture of the bare RC car without cover]
+[<img src="{{ site.url }}/images/LabeledParts.jpg" alt="Bare RC Car without
+cover" height="400" width="600">]
 ({{ site.url }}/images/LabeledParts.jpg)
 
 # Modifications
@@ -43,12 +44,6 @@ Similarly, a servo-based steering control will replace the binary left-right
 steering on the toy and allows for (gasp) varying turning angles.
 
 ## Motor Controller
-
-Rather than build a motor controller from scratch, I opted to use the
-existing circuitry on the car. A little bit of finagling and hunting with a
-multimeter revealed where the signal from the RC reciever was turning the
-[H-Bridge](http://www.talkingelectronics.com/projects/H-Bridge/H-Bridge-1.html)
-on and off.
 
 ## Servo Steering
 
@@ -62,5 +57,6 @@ To install the servo, I tore out the existing motor and used a thin piece of
 aluminum as a flat baseplate. Small strips of brass connected the servo horn
 to the steering rack on the car.
 
-![Servo steering modification on toy rc car]
+[<img src="{{ site.url }}/images/Steering-top.jpg" alt="Servo steering
+modification on a toy rc car" height="400" width="600">]
 ({{ site.url }}/images/Steering-top.jpg)
