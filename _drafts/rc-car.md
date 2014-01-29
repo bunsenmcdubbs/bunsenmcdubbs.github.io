@@ -11,7 +11,7 @@ interchangable parts in the car itself. The mods outlined here are to upgrade
 cheaper toy-grade RC cars to resemble the functionality of their hobby-grade
 counterparts.
 
-# Choosing a car
+### Choosing a car
 
 In my experience, it is far easier to use a smaller or regular sized RC car
 rather than the enormous (1:6 scale+) toys. The larger toys are both more
@@ -25,7 +25,7 @@ switch slower than transistors. This makes speed control far more
 inaccurate and difficult since it needs a rapid on/off cycle to mix
 speeds (aka PWM - pulse width modulated signal).
 
-# Tearing Apart the Car
+### Tearing Apart the Car
 
 Pretty self explanatory. Take off the fluff and outer shells. Keep the
 electronics in place (for now). Get to the core ("chassis") of the toy.
@@ -35,7 +35,7 @@ Locate the major components (and seperate if desired).
 cover" height="400" width="600">]
 ({{ site.url }}/images/LabeledParts.jpg)
 
-# Modifications
+### Modifications
 
 There are several modifications necessary to emulate the driving functionality
 of a real car. First, as mentioned above, is the motor controller. This way
@@ -43,9 +43,9 @@ the toy has more controls than just 100% forwards, 100% backwards and neutral.
 Similarly, a servo-based steering control will replace the binary left-right
 steering on the toy and allows for (gasp) varying turning angles.
 
-## Motor Controller
+#### Motor Controller
 
-## Servo Steering
+#### Servo Steering
 
 Toy RC cars are extremely limited in their steering options, typically only
 turning hard left or right from center. When the car is going forwards
@@ -60,3 +60,11 @@ to the steering rack on the car.
 [<img src="{{ site.url }}/images/Steering-top.jpg" alt="Servo steering
 modification on a toy rc car" height="400" width="600">]
 ({{ site.url }}/images/Steering-top.jpg)
+
+Next the servo needed to be connected to the Beaglebone. An external 5v power
+supply is used to power the servo and common ground is shared between the
+Beaglebone and the power supply. The PWM signal is connected to pin 8_13 via
+an optional 1k ohm resistor.
+
+[<img src="{{ site.url }}/images/SteeringServoSchematic.jpg" alt="servo wiring
+schematic" height="500">]({{ site.url }}/images/SteeringServoSchematic.jpg)
