@@ -2,7 +2,7 @@
 layout: post
 title:  "Sensors and Interfaces with the Beaglebone Black"
 date:   2014-01-12
-categories: beaglecar
+category: beaglecar
 tags: [beaglebone, i2c, uart]
 ---
 
