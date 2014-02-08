@@ -10,8 +10,6 @@ dependency issues I had the first time around seem to have been resolved
 (collada wasn't available on UbuntuARM). Installing ROS was painless, but
 involved.
 
-### My setup
-
 My Beaglebone Black is tethered to a desktop Ubuntu machine through a USB
 connection. I access the BBB exclusively through SSH'ing. (Note: the Ubuntu
 image I flashed onto the BBB did not have avahi installed so SSH'ing with
@@ -21,6 +19,6 @@ To access the internet I hacked together a shell script adapted from
 instructions I [found online.]
 (http://robotic-controls.com/learn/beaglebone/beaglebone-internet-over-usb-only)
 
-TODO upload scripts to gist and link here.
-
-
+Then careful reading of the [installation guide]
+(http://wiki.ros.org/hydro/Installation/UbuntuARM) led to a lengthy but
+relatively simple install.
