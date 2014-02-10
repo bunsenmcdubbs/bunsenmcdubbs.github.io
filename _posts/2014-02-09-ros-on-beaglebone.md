@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ROS on UbuntuARM 13.04 on Beaglebone"
+date: 2014-02-09 20:33 UTC +5
 category: beaglecar
 tags: [beaglebone, ROS, ubuntu]
 ---
