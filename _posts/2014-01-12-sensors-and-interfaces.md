@@ -86,8 +86,7 @@ I wrote this little test script to at least get some meaningful values from
 the sensor. It uses the [Adafruit_BBIO library](http://learn.adafruit.com
 /setting-up-io-python-library-on-beaglebone-black) to do the I2C interface
 heavy lifting. All it does is print the acceleration on the x axis in g's to
-the console. The code is also on my [github](https://github.com/BunsenMcDubbs/
-BeagleCar/blob/master/src/test/xaccel.py).
+the console. The code is also on my [github](https://github.com/BunsenMcDubbs/BeagleCar/blob/master/src/test/xaccel.py).
 
 {% highlight python %}
 from Adafruit_I2C import Adafruit_I2C
