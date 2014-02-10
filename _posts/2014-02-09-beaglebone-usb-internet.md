@@ -8,7 +8,7 @@ tags: [beaglebone, ubuntu]
 
 _The following scripts are adapted from instructions on [Robotic Controls.](http://robotic-controls.com/learn/beaglebone/beaglebone-internet-over-usb-only)_
 
-These scripts (one for the Beaglbone and one for the computer) will
+These scripts (one for the Beaglebone and one for the computer) will
 allow the computer to forward network traffic to the BBB. This way you only
 need one cable - USB - to communicate with a networked BBB (I use this in lieu
 of ethernet because I am nowhere near my router).
