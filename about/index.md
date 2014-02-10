@@ -10,7 +10,7 @@ and vim user.
 
   - Github/[bunsenmcdubbs](http://github.com/bunsenmcdubbs)
   - FTC Robotics Team/[ART-3938](http://art-3938.github.io)
-  - [A&A Photography](http://aa2photo.smugmug.com)
+  - Co-founder/[A&A Photography](http://aa2photo.smugmug.com)
   - Flickr/[bunsenmcdubbs](http://flickr.com/photos/andyswim96)
   - Email/contact@andrewdai.co
 
