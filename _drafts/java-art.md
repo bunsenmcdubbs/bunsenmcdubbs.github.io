@@ -43,8 +43,8 @@ to write my own code - a habit I seek to break.
 
 I decided that I would try to rotate a wireframe cube (solving the hidden 
 surface problem was beyond the scope of what I wanted to do). First was the
-orthagonal view. After working out the rotation math (and discovering rotation
-matrices by luck), I quickly hacked together an orthangonal 3D view. You can 
+orthogonal view. After working out the rotation math (and discovering rotation
+matrices by luck), I quickly hacked together an orthogonal 3D view. You can 
 easily make a 3D mapping without perspective by just dropping the 3rd coordinate
 (depth).
 
