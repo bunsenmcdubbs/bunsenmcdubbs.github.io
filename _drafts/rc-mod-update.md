@@ -5,9 +5,14 @@ category: beaglecar
 tags: [beaglecar, beaglebone, rc car, servo, motor controller]
 ---
 
+_This is an update to a [previous post on my RC car modifications](rc-car.html)_
+
+With the servos, IMU, and GPS wired to the Beaglebone and ROS installed, it's
+time to put the pieces together!
+
 ### Servo-Gyro Test
 
-After [isntalling ROS](ros-on-beaglebone.html), I familiarized myself with the
+After [installing ROS](ros-on-beaglebone.html), I familiarized myself with the
 framework by writing some small tests. First I tried turning a servo using
 rotation, measured by a gyro. After several servo-abusing mistakes in my
 code, everything was up and running. There wasn't any lag in my initial testing
