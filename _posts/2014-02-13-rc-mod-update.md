@@ -61,6 +61,8 @@ The Beaglebone, unlike an Arduino, does not have the power to run a motor. Thus,
 VCC2 - motor power supply - must use an external source. For testing, I used my 
 lab bench power supply that made from an old computer PSU.
 
+[<img src="/images/motor-gyro.jpg" alt="Motor and gyro connected to the Beaglebone" height="400" width="600">](/images/motor-gyro.jpg)
+
 For this initial test, I only ran the motor one way. The rotation rates from the
 gyro control the PWM signal - and thus the speed - of the motor. To run the 
 motor in both directions, there needs to be two PWM lines connected to the BBB.
