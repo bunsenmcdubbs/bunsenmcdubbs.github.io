@@ -38,12 +38,10 @@ cumulative measurement error.
 
 ### Motor Controller and Motor-Gyro Test
 
-Driving the motor controller is suprisingly similar to the servo. Barring
-transmissions and other fancy features, the only way to control the speed of an
-electric motor is by varying the voltage. This is fairly hard to do on its
-own. Instead I will use pulse width modulated signals, or PWM. By pulsing the
-power on and off faster than the motor can react, the PWM signals effectively
-simulate a varying voltage source.
+Driving the motor controller is surprisingly similar to the servo. For these simple motors, the only way to control the speed of an electric motor is by varying
+the voltage. This is pretty hard to do on its own. Instead I will use pulse
+width modulated signals, or PWM. By pulsing the power on and off faster than the
+motor can react, the PWM signals simulate a varying voltage source.
 
 At first I was concerned that the TI SN754410 used 5v logic levels since the
 Beaglebone Black had 3v3 logic. But it turns out that 3v3 was designed to be
@@ -56,18 +54,17 @@ WARNING: Just because 3v3 works with 5v inputs does NOT mean it works the other
 way. A 5v source can easily fry a 3v3 input. Look into a logic level converter
 if you come across this issue.
 
-Even though the inputs were connected to the Beaglebone's 3v3 ports, VCC1 - the
-power for logic - still must be tied to 5v.
+Even though the inputs connect to the Beaglebone's 3v3 ports, VCC1 - logic power
+- still must be tied to 5v.
 
-The Beaglebone, unlike an Arduino, does not have the power to actually run a 
-motor so VCC2 - motor power supply - must be powered with an external source.
-For testing, I used my lab bench power supply that made from an old computer
-PSU.
+The Beaglebone, unlike an Arduino, does not have the power to run a motor. Thus,
+VCC2 - motor power supply - must use an external source. For testing, I used my 
+lab bench power supply that made from an old computer PSU.
 
 For this initial test, I only ran the motor one way. The rotation rates from the
 gyro control the PWM signal - and thus the speed - of the motor. To run the 
 motor in both directions, there needs to be two PWM lines connected to the BBB.
-Somewhere in the code there will be a switch to change the acitve PWM line and
+Somewhere in the code there will be a switch to change the active PWM line and
 tie the other line to ground.
 
 ### Next Steps
