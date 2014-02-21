@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Using an Xbox Controller on Ubuntu and ROS"
-category: beaglecar
 tags: [joystick, ros, ubuntu]
 ---
 
@@ -9,7 +8,7 @@ Curiosity struck again and so I decided to try and use an wired Xbox controller
 I had laying around for an alternate input method (typing in numbers wasn't
 doing it for me anymore).
 
-### xboxdrv
+### [xboxdrv](http://pingus.seul.org/~grumbel/xboxdrv/)
 
 Thankfully most of the hard-work has already been done for me. Although Ubuntu
 (LTS 12.04 on my testing desktop and 13.04 ARM on the Beaglebone Black) already

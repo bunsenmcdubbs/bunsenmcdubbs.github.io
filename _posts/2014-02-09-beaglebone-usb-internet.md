@@ -2,7 +2,6 @@
 layout: post
 title: "Beaglebone Internet Access Through USB"
 date: 2014-02-09
-category: beaglecar
 tags: [beaglebone, ubuntu]
 ---
 
