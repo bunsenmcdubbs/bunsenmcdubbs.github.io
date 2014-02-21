@@ -14,7 +14,7 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: Raleway, Source Sans Pro, Helvetica, Arial, sans-serif;
   font-size: 14px;
   margin: 3em auto 2em auto;
   line-height: 1.5em;
@@ -23,7 +23,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Bree Serif, Palatino, Helvetica Neue, Helvetica, sans-serif;
+  font-family: Roboto Slab, Helvetica Neue, Helvetica, sans-serif;
   margin: 1em 0;
 }
 
