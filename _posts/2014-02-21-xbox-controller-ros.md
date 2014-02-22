@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Using an Xbox Controller on Ubuntu and ROS"
+date: 2014-02-21 20:30 UTC+5
+category: beaglecar
 tags: [joystick, ros, ubuntu]
 ---
 
@@ -140,4 +142,8 @@ or just cloning my repository into the `src` folder of the workspace
 
         # starting the "translator" node (in another new window)
         rosrun beaglecar turtle_teleop_joy.py
+
+_2014-02-21: I haven't actually tested this code on the Beaglebone yet since the
+BBB's install of ROS doesn't include `turtlesim` or any of the graphical tools._
+
 
