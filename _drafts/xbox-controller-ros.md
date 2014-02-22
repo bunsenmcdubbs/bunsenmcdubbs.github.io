@@ -67,9 +67,77 @@ unable to claim the device. Trying a different USB port solved the problem.
 ### Joy of ROS
 
 And with ROS, once again the hard-work has already been done for me. The ROS
-package `joy` translates Xbox (old/360) (wired/wireless) inputs into ROS
-messages in the `joy/joy` topic. I had trouble following the tutorial on setting
+package joy translates Xbox (old/360) (wired/wireless) inputs into ROS
+messages in the `joy` topic. I had trouble following the tutorial on setting
 up the `turtlesim` demo since it was written for `groovy` and also a general
-lack of familiarity with `C++`.
+lack of familiarity with C++.
 
+Using the ROS tutorials on writing publishers and subscribers, I wrote a node
+that converted Xbox controller inputs from `joy` into commands for the 
+`turtlesim` node.
+
+{% highlight python %}
+#!/usr/bin/env python
+import rospy
+from geometry_msgs.msg import Twist
+from sensor_msgs.msg import Joy
+
+# Author: Andrew Dai
+# This ROS Node converts Joystick inputs from the joy node
+# into commands for turtlesim
+
+# Receives joystick messages (subscribed to Joy topic)
+# then converts the joysick inputs into Twist commands
+# axis 1 aka left stick vertical controls linear speed
+# axis 0 aka left stick horizonal controls angular speed
+def callback(data):
+    twist = Twist()
+    twist.linear.x = 4*data.axes[1]
+    twist.angular.z = 4*data.axes[0]
+    pub.publish(twist)
+
+# Intializes everything
+def start():
+    # publishing to "turtle1/cmd_vel" to control turtle1
+    global pub
+    pub = rospy.Publisher('turtle1/cmd_vel', Twist)
+    # subscribed to joystick inputs on topic "joy"
+    rospy.Subscriber("joy", Joy, callback)
+    # starts the node
+    rospy.init_node('Joy2Turtle')
+    rospy.spin()
+
+if __name__ == '__main__':
+    start()
+{% endhighlight %}
+
+_Also on my [Github](https://raw.github.com/BunsenMcDubbs/beaglecar/master/src/joystick-tests/turtle_teleop_joy.py)_
+
+#### Actually running the test
+
+1. Install ROS and setup the catkin workspace
+
+2. Making a new project with the right dependencies (rospy, std_msgs, joy)
+or just cloning my repository into the `src` folder of the workspace
+
+3. Installing `xboxdrv`
+
+4. Make sure the node is executable. `chmod +x src/joystick-tests/turtle\_teleop\_joy.py`
+
+5. Start everything!
+
+        # starting ROS
+        roscore
+
+        # xboxdrv in silent mode (in a new console window)
+        sudo xboxdrv --silent
+
+        # starting the joy node (in another new window)
+        rosrun joy joy_node
+
+        # starting turtlesim (in another new window)
+        rosrun turtlesim turtlesim_node
+
+        # starting the "translator" node (in another new window)
+        rosrun beaglecar turtle_teleop_joy.py
 
