@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using an Xbox Controller on Ubuntu and ROS"
-date: 2014-02-21 20:30 UTC+5
+date: 2014-02-21 20:30 UTC-5
 tags: [joystick, ros, ubuntu]
 ---
 

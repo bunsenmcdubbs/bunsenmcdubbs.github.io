@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RC Car Modifications Update 1"
-date: 2014-02-13 22:30 UTC +5
+date: 2014-02-13 22:30 UTC -5
 category: beaglecar
 tags: [beaglecar, beaglebone, rc car, servo, motor controller]
 ---
