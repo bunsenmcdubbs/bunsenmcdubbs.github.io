@@ -60,22 +60,42 @@ a:hover   { text-decoration: underline; }
 /*
 /*****************************************************************************/
 
+.info {
+  list-style-position: inside;
+  list-style-type: none;
+}
+
 .posts {
   list-style-position: outside;
   list-style-type: none;
 }
 
-li {
-  line-height: 1.75em;
+.posts li {
+  display: block;
+  background: #5EA5FF;
+  margin: 1em, 0;
 }
 
-blockquote {
+.excerpt {
+  border-top: 4px double #ccc;
+  border-bottom: 4px double #ccc;
+  margin-left: 1.5em;
+  margin-top: .75em;
+  font-size: 85%;
+}
+
+.excerpt p {
+  margin: 3px 0;
+}
+
+blockquote, .posts li {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
+
 blockquote:before {
   color: #ccc;
   content: open-quote;
@@ -84,6 +104,7 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
+
 blockquote:after {
   color: #ccc;
   content: close-quote;
@@ -92,7 +113,8 @@ blockquote:after {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
-blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4{
+
+blockquote p {
   display: inline;
 }
 
