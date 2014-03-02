@@ -11,7 +11,7 @@ _This is an update to a [previous post on my RC car modifications](rc-car.html)_
 With the servos, IMU, and GPS wired to the Beaglebone and ROS installed, it's
 time to put the pieces together!
 
-### Servo-Gyro Test
+<a name="servo-gyro" href="#servo-gyro"><h3>Servo Gyro Test</h3></a>
 
 After [installing ROS](ros-on-beaglebone.html), I familiarized myself with the
 framework by writing some small tests. First I tried turning a servo using
@@ -36,9 +36,10 @@ effects in this small scale test because this is more of a proof-of-concept.
 My later tests and final project will require a way to deal with the drift and
 cumulative measurement error.
 
-### Motor Controller and Motor-Gyro Test
+<a name="motor-gyro" href="#motor-gyro"><h3>Motor Controller and Motor-Gyro Test</h3></a>
 
-Driving the motor controller is surprisingly similar to the servo. For these simple motors, the only way to control the speed of an electric motor is by varying
+Driving the motor controller is surprisingly similar to the servo. For these 
+simple motors, the only way to control the speed of an electric motor is by varying
 the voltage. This is pretty hard to do on its own. Instead I will use pulse
 width modulated signals, or PWM. By pulsing the power on and off faster than the
 motor can react, the PWM signals simulate a varying voltage source.

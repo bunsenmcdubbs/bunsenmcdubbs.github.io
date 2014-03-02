@@ -9,13 +9,13 @@ Curiosity struck again and so I decided to try and use an wired Xbox controller
 I had laying around as an alternate input method (typing in numbers wasn't
 doing it for me anymore).
 
-### [xboxdrv](http://pingus.seul.org/~grumbel/xboxdrv/)
+<a name="xboxdrv" href="#xboxdrv"><h3>xboxdrv</h3></a>
 
 Thankfully most of the hard-work has already been done for me. Although Ubuntu
 (LTS 12.04 on my testing desktop and 13.04 ARM on the Beaglebone Black) already
 has default drivers for joysticks/gamepads and the Xbox controller specifically,
 general internet consensus is that a third-party user-space driver called
-`xboxdrv` is a much better alternative.
+[xboxdrv](http://pingus.seul.org/~grumbel/xboxdrv/) is a much better alternative.
 
 #### Disabling and blacklisting the kernel driver
 
@@ -65,7 +65,7 @@ quite sure why but my Xbox 360 wired controller only worked when it was plugged
 into a certain USB port on my computer. I had an error saying that xboxdrv was
 unable to claim the device. Trying a different USB port solved the problem.
 
-### Joy of ROS
+<a name="rosjoy" href="rosjoy"><h3>Joy of ROS</h3></a>
 
 And with ROS, once again the hard-work has already been done for me. The ROS
 package joy translates Xbox (old/360) (wired/wireless) inputs into ROS
