@@ -65,7 +65,7 @@ quite sure why but my Xbox 360 wired controller only worked when it was plugged
 into a certain USB port on my computer. I had an error saying that xboxdrv was
 unable to claim the device. Trying a different USB port solved the problem.
 
-<a name="rosjoy" href="rosjoy"><h3>Joy of ROS</h3></a>
+<a name="rosjoy" href="#rosjoy"><h3>Joy of ROS</h3></a>
 
 And with ROS, once again the hard-work has already been done for me. The ROS
 package joy translates Xbox (old/360) (wired/wireless) inputs into ROS
