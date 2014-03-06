@@ -1,0 +1,48 @@
+/* Customize container - narrower */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+/* Custom header */
+header h3, .articleInfo {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 40px;
+}
+
+/* Custom footer */
+footer {
+	padding-top: 20px;
+	border-top: 1px solid #e5e5e5;
+}
+
+/* Article info */
+.articleInfo {
+	margin-bottom: 1em;
+}
+
+/* Custom post listings */
+.posts li {
+	display: block;
+	margin: .75em 0;
+	padding-top: 0.5em;
+	
+	background-color: #eee;
+	border-left: 15px solid #ccc;
+	padding-left: 10px;
+}
+
+.meta {
+	font-family: Courier;
+	font-size: 90%;
+}
+
+.excerpt {
+	display: block;
+	font-size: 90%;
+	font-style: italic;
+	padding: .75em .5em .5em 3em;
+}
