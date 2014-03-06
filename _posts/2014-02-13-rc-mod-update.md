@@ -13,12 +13,13 @@ time to put the pieces together!
 
 <a name="servo-gyro" href="#servo-gyro"><h3>Servo Gyro Test</h3></a>
 
-After [installing ROS](ros-on-beaglebone.html), I familiarized myself with the
-framework by writing some small tests. First I tried turning a servo using
-rotation, measured by a gyro. After several servo-abusing mistakes in my
-code, everything was up and running. There wasn't any lag in my initial testing
-so I'm not quite sure what caused the stuttering that appears in parts of the
-video. Hopefully this doesn't become an issue later on as I add more complexity.
+After [installing ROS]({{ site.url }}/ros-on-beaglebone.html), I familiarized my
+self with the framework by writing some small tests. First I tried turning a 
+servo using rotation, measured by a gyro. After several servo-abusing mistakes 
+in my code, everything was up and running. There wasn't any lag in my initial 
+testing so I'm not quite sure what caused the stuttering that appears in parts 
+of the video. Hopefully this doesn't become an issue later on as I add more 
+complexity.
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/Js2NODN_0wM" frameborder="0" allowfullscreen></iframe>
 
