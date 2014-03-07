@@ -1,0 +1,16 @@
+---
+layout: default
+title: Adventures
+---
+
+<div id="home">
+	<h1>Listings <small>one bit at a time</small></h1>
+	<ul class="posts list-unstyled">
+		{% for post in site.posts %}
+		<li>
+			<span class="meta">{{ post.date | date_to_string }}</span> &raquo; <b><a href="{{ post.url }}">{{ post.title }}</a></b>
+			<!-- <div class="excerpt well">{{ post.excerpt }}</div> -->
+		</li>
+		{% endfor %}
+	</ul>
+</div>

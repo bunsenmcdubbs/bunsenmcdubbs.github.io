@@ -3,20 +3,23 @@ layout: default
 title: BunsenMcDubbs
 ---
 
-<ul class="info list-unstyled">
-  <li>Co-founder of <a href = "http://aa2photo.smugmug.com">A&amp;A Photography.</a></li>
-  <li><a href = "http://github.com/BunsenMcDubbs">Recreational Programmer.</a></li>
-  <li>High school senior</li>
-</ul>
+<!-- <div class="jumbotron">
+	<h1>Hello! <small>I am Andrew Dai</small></h1>
+	<ul class="info list-unstyled">
+	<li>Co-founder of <a href = "http://aa2photo.smugmug.com">A&amp;A Photography</a></li>
+	<li><a href = "http://github.com/BunsenMcDubbs">Recreational Programmer</a></li>
+	<li>and High school senior</li>
+	</ul>
+</div> -->
 
 <div id="home">
-  <h1>Adventures</h1>
-  <ul class="posts list-unstyled">
-	{% for post in site.posts %}
-	  <li>
-	    <span class="meta">{{ post.date | date_to_string }}</span> &raquo; <b><a href="{{ post.url }}">{{ post.title }}</a></b>
-	    <div class="excerpt">{{ post.excerpt }}</div>
-	  </li>
-	{% endfor %}
-  </ul>
+	<h1>Adventures <small>one bit at a time</small></h1>
+	<ul class="posts list-unstyled">
+		{% for post in site.posts %}
+		<li>
+			<span class="meta">{{ post.date | date_to_string }}</span> &raquo; <b><a href="{{ post.url }}">{{ post.title }}</a></b>
+			<div class="excerpt well">{{ post.excerpt }}</div>
+		</li>
+		{% endfor %}
+	</ul>
 </div>

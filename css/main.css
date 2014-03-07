@@ -1,8 +1,13 @@
 /* Customize container - narrower */
 @media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+	.container {
+		max-width: 730px;
+	}
+}
+
+/* Custom Jumbotron */
+.jumbotron {
+	text-align: center;
 }
 
 /* Custom header */
@@ -29,10 +34,6 @@ footer {
 	display: block;
 	margin: .75em 0;
 	padding-top: 0.5em;
-	
-	background-color: #eee;
-	border-left: 15px solid #ccc;
-	padding-left: 10px;
 }
 
 .meta {
@@ -44,5 +45,6 @@ footer {
 	display: block;
 	font-size: 90%;
 	font-style: italic;
+	margin-top: 0.7em;
 	padding: .75em .5em .5em 3em;
 }
