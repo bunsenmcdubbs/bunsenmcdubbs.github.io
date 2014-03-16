@@ -22,7 +22,7 @@ p {
 header,
 footer,
 h1, h2, h3{
-	font-family: 'Roboto Slab', "Helvetica Neue", Helvetica, Arial;
+	font-family: Futura, "Roboto Slab", "Helvetica Neue", Helvetica, Arial;
 }
 
 /* Custom header */
@@ -35,8 +35,10 @@ header h3, .articleInfo {
 
 /* Custom footer */
 footer {
+	text-align: center;
 	padding-top: 20px;
 	border-top: 1px solid #e5e5e5;
+	padding-bottom: 20px;
 }
 
 /* Article info */
