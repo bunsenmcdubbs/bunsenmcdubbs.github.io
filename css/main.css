@@ -65,3 +65,9 @@ footer {
 	margin-top: 0.7em;
 	padding: .75em .5em .5em 3em;
 }
+
+/* Code snippets */
+pre {
+	max-height: 45em;
+	overflow: scroll;
+}
