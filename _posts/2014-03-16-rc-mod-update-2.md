@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "RC Car Modifications Update 2"
+date: 2014-03-16 23:00 UTC-5
 category: beaglecar
 tags: [beaglebone, servo, ros, motor]
 ---
