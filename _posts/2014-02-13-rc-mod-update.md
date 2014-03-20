@@ -6,8 +6,6 @@ category: beaglecar
 tags: [beaglecar, beaglebone, rc car, servo, motor controller]
 ---
 
-_This is an update to a [previous post on my RC car modifications](rc-car.html)_
-
 With the servos, IMU, and GPS wired to the Beaglebone and ROS installed, it's
 time to put the pieces together!
 
