@@ -18,6 +18,11 @@ p {
 	text-align: center;
 }
 
+.jumbotron h1, nav {
+	font-family: "Roboto Slab", Futura, "Helvetica Neue", Helvetica, Arial;
+}
+
+
 .jumbotron,
 header,
 footer,
