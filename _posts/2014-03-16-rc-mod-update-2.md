@@ -6,11 +6,13 @@ category: beaglecar
 tags: [beaglebone, servo, ros, motor]
 ---
 
+<p class="lead">
 I've "finished" a "functional" rc car, basically rebuilding the toy car I took
 apart months earlier but with in a more fine tuned but limited fashion.
 Currently it can drive (servo steering and motor control) under the direction of
 an Xbox 360 controller but it's total range of motion is ~7 inches since it is
 still tethered to the power supply (and Beaglebone-USB-Computer).
+</p>
 
 In order to enable that funtionality I made quite a bit of progress on the car
 and I'm nearing completion of the working, driving car (albiet dependant on a
