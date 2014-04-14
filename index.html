@@ -17,8 +17,8 @@ title: BunsenMcDubbs
 	<ul class="posts list-unstyled">
 		{% for post in site.posts %}
 		<li>
-			<span class="meta">{{ post.date | date_to_string }}</span> &raquo; <b><a href="{{ post.url }}">{{ post.title }}</a></b>
-			<div class="excerpt well">{{ post.excerpt }}</div>
+			<span class="listing"><span class="meta">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></span>
+			<div class="excerpt">{{ post.excerpt }}</div>
 		</li>
 		{% endfor %}
 	</ul>

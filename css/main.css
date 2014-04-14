@@ -46,13 +46,20 @@ footer {
 	padding-bottom: 20px;
 }
 
-/* Article info */
+/* listing info */
+.listing {
+	font-size: 20px;
+	/*font-weight: 200;*/
+}
+
+/* Article info on post page*/
 .articleInfo {
 	margin-bottom: 1em;
+	font-size: 20px;
 }
 
 /* custom lede paragraphs (copying bootstrap lede style)*/
-article p:first-of-type {
+article > p:first-child {
 	font-size: 16px;
 	margin-bottom: 20px;
 	font-weight: 200;
@@ -60,7 +67,7 @@ article p:first-of-type {
 }
 
 @media (min-width: 768px){
-	article p:first-of-type {
+	article > p:first-child {
 		font-size: 21px;
 	}
 }
@@ -80,14 +87,16 @@ article p:first-of-type {
 
 .excerpt {
 	display: block;
-	font-style: italic;
 	margin-top: 0.7em;
-	padding: .75em .5em .5em 3em;
+	padding: .75em .5em .5em 1.5em;
 }
 
 .excerpt p {
-	font-size: inherit;
+	font-style: normal;
+	font-size: 100%;
 	margin-bottom: 0;
+	border-left: 11px solid #ddd;
+	padding-left: 1.2em;
 }
 
 /* Code snippets */
