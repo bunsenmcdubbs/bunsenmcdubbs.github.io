@@ -51,6 +51,21 @@ footer {
 	margin-bottom: 1em;
 }
 
+/* custom lede paragraphs (copying bootstrap lede style)*/
+article p:first-of-type {
+	font-size: 16px;
+	margin-bottom: 20px;
+	font-weight: 200;
+	line-height: 1.4;
+}
+
+@media (min-width: 768px){
+	article p:first-of-type {
+		font-size: 21px;
+	}
+}
+
+
 /* Custom post listings */
 .posts li {
 	display: block;
@@ -65,10 +80,14 @@ footer {
 
 .excerpt {
 	display: block;
-	font-size: 90%;
 	font-style: italic;
 	margin-top: 0.7em;
 	padding: .75em .5em .5em 3em;
+}
+
+.excerpt p {
+	font-size: inherit;
+	margin-bottom: 0;
 }
 
 /* Code snippets */
