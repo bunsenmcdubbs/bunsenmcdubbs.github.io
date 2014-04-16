@@ -13,12 +13,12 @@ much finishing as much of the work as I can before I start untethering the car.
 Since soldering together the motor and servo controllers [last week]
 ({{ site.url }}/beaglecar/2014-04-11-journal1.html), I've been continuing to
 test the circuit and finish up some components. Last time I finished the motor
-contoller section and soldered together the servo connections as well as the
+controller section and soldered together the servo connections as well as the
 power and ground for the IMU. This week I've added in the final components for
 the limit switches (pull up resistors) as well as the data connections.
 
-Built into this build process is a constant test and debug cycle. The first
-time I plugged in the circuit I actually shorted the power supply (PSU). I got
+Built into this process is a constant test and debug cycle. The first
+time I plugged in the circuit I actually shorted my power supply (PSU). I got
 a pinching tingling feeling (electric shock) and broke the fuses in the 5v and
 ground lines in the PSU. I had to replace the fuses and check for more shorts
 before finishing the motor controller.
