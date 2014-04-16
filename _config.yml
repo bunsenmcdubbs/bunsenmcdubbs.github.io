@@ -3,3 +3,4 @@ author: Andrew Dai
 markdown: redcarpet
 pygments: true
 permalink: none
+paginate: 5
