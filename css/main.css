@@ -104,3 +104,9 @@ pre {
 	max-height: 45em;
 	overflow: scroll;
 }
+
+/* fixing up images */
+img {
+	display: block;
+	margin: 1.5em auto;
+}
