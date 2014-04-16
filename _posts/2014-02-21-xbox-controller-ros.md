@@ -142,7 +142,10 @@ or just cloning my repository into the `src` folder of the workspace
         # starting the "translator" node (in another new window)
         rosrun beaglecar turtle_teleop_joy.py
 
+<strike>
 _2014-02-21: I haven't actually tested this code on the Beaglebone yet since the
 BBB's install of ROS doesn't include `turtlesim` or any of the graphical tools._
-
+</strike><br>I tested this by writing a [teleop test]
+({{ site.url }}/beaglecar/rc-mod-update-2.html) for my beaglecar. Spoiler: it 
+works!
 
