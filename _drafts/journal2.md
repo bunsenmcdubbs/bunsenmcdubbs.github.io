@@ -1,0 +1,71 @@
+---
+layout: post
+title: "Journal 2: Week of April 17th"
+category: beaglecar
+---
+
+This week I continued testing and fixing some of the problems from last week as
+well as adding to my main board and finalizing the code for driving. I'm pretty
+much finishing as much of the work as I can before I start untethering the car.
+
+## Main circuit board
+
+Since soldering together the motor and servo controllers [last week]
+({{ site.url }}/beaglecar/2014-04-11-journal1.html), I've been continuing to
+test the circuit and finish up some components. Last time I finished the motor
+contoller section and soldered together the servo connections as well as the
+power and ground for the IMU. This week I've added in the final components for
+the limit switches (pull up resistors) as well as the data connections.
+
+Built into this build process is a constant test and debug cycle. The first
+time I plugged in the circuit I actually shorted the power supply (PSU). I got
+a pinching tingling feeling (electric shock) and broke the fuses in the 5v and
+ground lines in the PSU. I had to replace the fuses and check for more shorts
+before finishing the motor controller.
+<a href="{{ site.url }}/images/PerfboardTest1.jpg">
+<img src="{{ site.url }}/images/PerfboardTest1.jpg" height="300" width="auto">
+</a>
+Since the indicator lights on my PSU is on a seperate circuit, I actually had 
+no way of telling if the fuse was broken or if the power supply was functioning
+normally. Because of this, I had to use a multimeter to read the voltage being
+outputted by the 5v line on the PSU. This is what you see above. Any wild
+fluctuations or sudden drops in voltage would signal a problem in the circuit.
+<a href="{{ site.url }}/images/PerfboardTest2.jpg">
+<img src="{{ site.url }}/images/PerfboardTest2.jpg" height="300" width="auto">
+</a>
+To avoid burning up my relatively delicate Beaglebone Black with a short or
+improperly wired connection, I avoided using it in the first stage of testing.
+Instead, I used the PSU and a breadboard to provide the input voltages for
+the motor controller. I even took the extra step of using the 3v3 line for
+"data" rather than just use 5v to more closely match the Beaglebone's 3v3 data
+voltages.
+
+I've decided to leave the GPS off of the main circuit board to maintain maximum
+flexibility on placement. Because I do not plan on buying an external antenna,
+I might need to put the GPS chip on the top of the car or even extend it above
+the top. Instead of soldering it to the board, I'm just going to leave pins to
+plug in an extension cable.
+
+Currently I'm making all the inter-circuit connections with individual hook-up
+wires but in the future I plan on utilizing more organized and
+professional-looking ribbon cable scavenged from old computers. I also need to
+get some heat shrink tubing to protect some of the connections I've made.
+
+## Programming - the magic behind the scenes
+
+Now that the bulk of the code is complete, I've been moving (making copies)
+the code for servo control, motor control, limit switches and teleop out of the
+"test" folders. This way the files are more organized, self documenting and
+easy to find.
+
+I also finished up the ROS node for reading IMU values. The node reads from the
+MPU 6050 via i2c and publishes it to a topic that later will be read in turn by
+the localization/navigation node(s). Rather than publish acceleration and
+rotation seperately or split by axis, I'm publishing all 6 axes of information
+in the same message. This makes the code simpler and easier to manage.
+
+One potential problem the frequency of IMU updates. Unlike the slower GPS which
+runs at 1 hertz (I think I can up it to 10 hz), the IMU can run much much
+faster. Although guessing arbitrary frequencies might work, I'm weary of
+overloading the Beaglebone's CPU with too many updates or having too
+infrequent updates cause incomplete and inaccurate data.
