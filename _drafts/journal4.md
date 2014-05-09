@@ -48,6 +48,36 @@ trust in the jumpy GPS data. Over time, since I still use the GPS data (just
 less), the estimate wanders back towards the raw GPS again and then the trust
 returns to normal.
 
+The location estimates are published by the localization node.
+
 ## Navigation: PID control
 
+The navigation node is really just a steering program. Its main job is to point
+the car in the direction of the next waypoint. It does this by taking the
+difference in current position and target position in the x and y direction and
+taking the arctan.
 
+Simple trigonometry gives us the angle of the line drawn between current
+position and target position. The `arctan2` function is extremely convienent
+for this purpose. Rather than the semi-ambiguous `arctan` function, `arctan2`
+takes 2 arguments (y and x) so it knows what quadrant the answer should be
+in and shifts the radian answer to match. I used this function in the
+localization node as well to find the current heading from estimate to estimate.
+
+Knowing both the desired heading and the current heading, I take the difference
+and send that to the PID controller. Just turning the car's "steering wheel" to 
+point directly at the target doesn't actually work (just think about doing that
+in real life) because it will result in an extremely wobbly and aggressive
+steering strategy. Instead the difference (aka the amount I have to turn the 
+steering wheel from 0/straight forward) is multiplied by a constant (0 to 1) to
+scale down the "severity" of the steering and allow for a more sane and smooth
+drive. By taking a proportion of the actual difference, that was the "P" of
+"PID" control.
+
+Sometimes just a proportional control isn't enough. Imagine driving and
+unfamiliar car. You don't know how tight the steering is. Exactly how far do you
+have to turn the wheel for the car to make that 90 degree turn? My program
+doesn't know this either. That's where the derivative ("D" of "PID") comes in.
+By taking the rate of change of heading, we can add that to the P part to make
+a "PD" controller. The "I" is for integral and I won't be using it for right
+now.
