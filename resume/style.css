@@ -1,0 +1,111 @@
+body {
+  font-family: Georgia;
+  font-size: 14px;
+  padding: 0 4em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.6em;
+}
+
+header {
+  text-align: center;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+}
+
+header li {
+  display: inline-block;
+}
+
+header li::after{
+  content: " |";
+}
+
+header li:last-child::after {
+  content: "";
+}
+
+header .label::after {
+  content: ": ";
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+  margin: 0;
+}
+
+section {
+  margin: 2em 0;
+}
+
+h2 {
+  /*text-decoration: underline;*/
+  font-style: italic;
+  /*font-weight: bold;*/
+  border-bottom: 1px solid black;
+  /*margin-bottom: 1.5em;*/
+
+  font-family: Trebuchet MS;
+}
+
+.container ul {
+  margin-top: .1em;
+  margin-bottom: .1em;
+  padding-left: 20px;
+}
+
+.entry {
+  margin: 1.5em 0;
+}
+
+.entry h3 {
+  display: inline-block;
+  font-weight: bold;
+  /*text-decoration: underline;*/
+  /*border-bottom: 1px solid;*/
+}
+
+.entry .role {
+  /*font-style: italic;*/
+}
+
+.entry .role::before {
+  content: "(";
+}
+
+.entry .role::after {
+  content: ")";
+}
+
+.entry .loc {
+  font-style: italic;
+}
+
+.entry .date {
+  float: right;
+}
+
+.entry .des {
+  margin-top: .1em;
+  font-style: italic;
+}
+
+.resume-skills .label {
+  /*text-decoration: underline;*/
+  border-bottom: 1px solid;
+}
+
+.meta {
+}
