@@ -47,7 +47,7 @@ h1, h2, h3, h4 {
 }
 
 section {
-  margin: 2em 0;
+  margin: 1.6em 0;
 }
 
 h2 {
@@ -70,7 +70,7 @@ h2 {
   margin: 1.2em 0;
 }
 
-.entry h3 {
+h3 {
   display: inline-block;
   font-weight: bold;
   /*text-decoration: underline;*/
@@ -100,6 +100,17 @@ h2 {
 .entry .des {
   margin-top: .1em;
   font-style: italic;
+}
+
+.resume-project .project-name {
+  /*text-decoration: underline;*/
+  /*border-bottom: 1px solid;*/
+  font-weight: bold;
+  line-height: 1.6em;
+}
+
+.resume-project h3 {
+  font-size: 100%;
 }
 
 .resume-skills .label {
