@@ -37,6 +37,10 @@ header li:last-child::after {
   content: "";
 }
 
+header .label {
+  font-style: italic;
+}
+
 header .label::after {
   content: ": ";
 }
@@ -44,6 +48,11 @@ header .label::after {
 h1, h2, h3, h4 {
   font-weight: normal;
   margin: 0;
+}
+
+.container .label {
+  /*text-decoration: underline;*/
+  border-bottom: 1px solid;
 }
 
 section {
@@ -111,16 +120,6 @@ h3 {
 
 .resume-project h3 {
   font-size: 100%;
-}
-
-.resume-skills .label {
-  /*text-decoration: underline;*/
-  border-bottom: 1px solid;
-}
-
-.resume-activities .label {
-  /*text-decoration: underline;*/
-  border-bottom: 1px solid;
 }
 
 .meta {
