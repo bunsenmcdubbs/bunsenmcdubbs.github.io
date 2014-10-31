@@ -64,9 +64,9 @@ h2 {
   font-style: italic;
   /*font-weight: bold;*/
   border-bottom: 1px solid grey;
-  /*margin-bottom: 1.5em;*/
+  margin-bottom: .5em;
 
-  font-family: Trebuchet MS;
+  /*font-family: Trebuchet MS;*/
 }
 
 .container ul {
@@ -76,7 +76,7 @@ h2 {
 }
 
 .entry {
-  margin: 1.2em 0;
+  margin: .75em 0;
 }
 
 h3 {
