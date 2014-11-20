@@ -2,13 +2,12 @@
 layout: post
 title:  "Pickl at HackNashville6"
 date: 2014-11-20
-category: hackathon
 tags: [hackathon, hacknashville, pickl, node]
 ---
 
 In late October we (Michael, Nick and I) saw a post on the GTHackers group on
 Facebook promoting HackNashville. Almost as a spur of the moment decision, we
-all signed up and less than a month later we were on a van to Nashville.
+all signed up and less than a month later we were on a van to Nashville. This is what we did.
 
 ## The Idea
 
