@@ -7,6 +7,42 @@ title: "My Projects"
 	<h1>Projects</h1><h2>more or less, past and future</h2>
 </div>
 
+<div class="project-entry">
+<h3>NCEduVis: <small>North Carolina Education Visualization <span class="text-info">[In Limbo]</span></small></h3>
+<p>Despite the clunky name we tried to make an attractive data visualization to analyse the
+	relative cost effectiveness of various school districts. Churned out at HackDuke, this
+	project was a labor of learning d3.js and processing megabytes of shoddily formatted
+	government Excel spreadsheets.</p>
+<p>This project may be revisted in the future and fine tuned for more functionality and
+	more rigorous methodology for our metrics. Critique the hacked-together source on
+	<a href="http://github.com/AlternativeHeroes/nceduvis">Github</a></p>
+</div>
+
+<div class="project-entry">
+<h3>Pickl: <small>instead of money, bet away your dignity! Social media integrated <span class="text-info">[In Progress]</span></small></h3>
+<ul class="posts">
+	{% for post in site.tags.pickl %}
+	<li>
+		<span class="meta">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+	</li>
+	{% endfor %}
+</ul>
+</div>
+
+<div class="project-entry">
+<h3>DropPhone: <small>an Android Phone utility that screams when your phone is dropped. <span class="text-info">[Finished]</span></small></h3>
+<p>Written at MHacks, this project has two main parts. There is an actual Andriod
+	app as well as a website that displays where the app has been activated in real time.
+	Take a look at where we dropped our phones (hint: Ann Arbor and Atlanta) at
+	<a href="http://alternativeheroes.github.io/dropped-site/">alternativeheroes.github.io/dropped-site</a>.
+	I did the front end for the website and it runs entirely on Firebase, jQuery and Leaflet.
+	The source code for
+	<a href="https://github.com/AlternativeHeroes/dropped-app">both</a>
+	<a href="https://github.com/AlternativeHeroes/dropped-site">parts</a>
+	can be found on Github.</p>
+</div>
+
+<div class="project-entry">
 <h3>BeagleCar: <small>a BeagleBone Black powered autonomous RC car. <span class="text-info">[In Limbo]</span></small></h3>
 <ul class="posts">
 	{% for post in site.categories.beaglecar %}
@@ -15,3 +51,4 @@ title: "My Projects"
 	</li>
 	{% endfor %}
 </ul>
+</div>
