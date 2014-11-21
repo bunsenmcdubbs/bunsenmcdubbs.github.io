@@ -1,3 +1,11 @@
+/*body {
+	background: url(http://photos-d.ak.instagram.com/hphotos-ak-xpa1/10808990_1502928523289643_815335201_n.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}*/
+
 /* Customize container - narrower */
 @media (min-width: 768px) {
 	.container {
@@ -62,7 +70,7 @@ article > p:first-child {
 		font-size: 16px;
 		line-height: 1.55em;
 	}
-	
+
 	article > p:first-child {
 		font-size: 21px;
 	}
