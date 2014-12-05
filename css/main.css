@@ -1,21 +1,17 @@
-/*body {
-	background: url(http://photos-d.ak.instagram.com/hphotos-ak-xpa1/10808990_1502928523289643_815335201_n.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}*/
-
-/* Customize container - narrower */
-@media (min-width: 768px) {
-	.container {
-		max-width: 730px;
-	}
+.big {
+	display: block;
+	font-family: "League Gothic", "Futura", "Helvetica Neue", Arial;
 }
 
-/* Custom Jumbotron */
-.jumbotron {
-	text-align: center;
+.img-circle {
+	border-radius: 50%;
+}
+
+/* Customize container - narrower */
+@media (min-width: 500px) {
+	.container {
+		max-width: 500px;
+	}
 }
 
 .jumbotron h1, nav {
