@@ -9,21 +9,60 @@ title: BunsenMcDubbs
     <span class="big">Hi! My name is</span>
     <span class="big">Andrew Dai.</span>
   </div>
-  <div id="mid" class="row">
-    <div class="col-md-4">
-
+  <hr>
+  <div id="mid" class="pure-g">
+    <div class="pure-u-1-2 pure-u-sm-1-4">
+      <div class="icon-container">
+        <i class="fa fa-code fa-fw"></i>
+      </div>
+      <!-- <span class="big">Blog</span> -->
     </div>
-    <div class="col-md-4">
-
+    <div class="pure-u-1-2 pure-u-sm-1-4">
+      <div class="icon-container">
+        <i class="fa fa-camera fa-fw"></i>
+      </div>
+      <!-- <span class="big">Photos</span> -->
     </div>
-    <div class="col-md-4">
-
+    <div class="pure-u-1-2 pure-u-sm-1-4">
+      <div class="icon-container">
+        <i class="fa fa-pencil-square-o fa-fw"></i>
+      </div>
+      <!-- <span class="big">Code</span> -->
+    </div>
+    <div class="pure-u-1-2 pure-u-sm-1-4">
+      <div class="icon-container">
+        <i class="fa fa-info-circle fa-fw"></i>
+      </div>
+      <!-- <span class="big">Code</span> -->
     </div>
   </div>
+  <!-- <div id="mid">
+    <span class="big">Photography</span>
+    <span class="big">Code</span>
+    <span class="big">Writing</span>
+  </div> -->
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="/js/jquery.slabtext.min.js"></script>
+<!-- Using font loader https://github.com/smnh/FontLoader -->
+<script src="/js/jquery.FontLoader.js"></script>
 <script>
-  $(".big").slabText();
+  var fontLoader = new FontLoader(["League Gothic"], {
+    "fontsLoaded": function(error) {
+        if (error !== null) {
+          // Reached the timeout but not all fonts were loaded
+          console.log(error.message);
+          console.log(error.notLoadedFontFamilies);
+        } else {
+          // All fonts were loaded
+          console.log("all fonts were loaded");
+        }
+      },
+      "fontLoaded": function(fontFamily) {
+        console.log(fontFamily);
+        $(".big").slabText();
+      }
+    }, 3000);
+    fontLoader.loadFonts();
+  // $('#mid').hide();
 </script>

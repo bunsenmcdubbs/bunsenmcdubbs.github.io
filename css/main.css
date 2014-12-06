@@ -1,28 +1,52 @@
+@font-face {
+	font-family: "League Gothic";
+	src: url('/fonts/leaguegothic/leaguegothic-regular-webfont.woff') format('woff'),
+		url('/fonts/leaguegothic/leaguegothic-regular-webfont.ttf')  format('truetype'),
+		url('/fonts/leaguegothic/leaguegothic-regular-webfont.svg#leaguegothic') format('svg');
+}
+
 .big {
 	display: block;
 	font-family: "League Gothic", "Futura", "Helvetica Neue", Arial;
+	color: #444;
 }
 
 .img-circle {
 	border-radius: 50%;
 }
 
+#mid .icon-container {
+	display: block;
+	margin: .2em auto;
+	color: #444;
+	width: 180px;
+	height: 140px;
+	font-size: 140px;
+}
+
 /* Customize container - narrower */
-@media (min-width: 500px) {
+@media screen and (min-width: 35.5em) {
 	.container {
-		max-width: 500px;
+		max-width: 35.5em;
+	}
+
+	#mid .icon-container {
+		width: 129px;
+		height: 100px;
+		font-size: 100px;
 	}
 }
 
-.jumbotron h1, nav {
-	font-family: "Roboto Slab", Futura, "Helvetica Neue", Helvetica, Arial;
-}
+/* Customize container - narrower */
+/*@media (min-width: 750px) {
+	.container {
+		max-width: 750px;
+	}
+}*/
 
-.jumbotron,
-header,
-footer,
-h1, h2, h3{
-	font-family: Futura, "Roboto Slab", "Helvetica Neue", Helvetica, Arial;
+.container {
+	margin: 0 auto;
+	width: 100%;
 }
 
 /* Custom header */
