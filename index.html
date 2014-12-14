@@ -41,27 +41,3 @@ title: BunsenMcDubbs
     </div>
   </div>
 </div>
-
-<script src="/js/jquery.slabtext.min.js"></script>
-<!-- Using font loader https://github.com/smnh/FontLoader -->
-<script src="/js/jquery.FontLoader.js"></script>
-<script>
-  var fontLoader = new FontLoader(["League Gothic"], {
-    "fontsLoaded": function(error) {
-        if (error !== null) {
-          // Reached the timeout but not all fonts were loaded
-          console.log(error.message);
-          console.log(error.notLoadedFontFamilies);
-        } else {
-          // All fonts were loaded
-          console.log("all fonts were loaded");
-        }
-      },
-      "fontLoaded": function(fontFamily) {
-        console.log(fontFamily);
-        $(".big").slabText();
-      }
-    }, 3000);
-    fontLoader.loadFonts();
-  // $('#mid').hide();
-</script>
