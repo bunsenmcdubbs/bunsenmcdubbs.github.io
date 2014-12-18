@@ -1,7 +1,5 @@
 # This is my website
 
-I use Jekyll and Bootstrap
+I use Jekyll, PureCSS, jQuery and slabtext jQuery plugin.
 
 master branch is the "production" branch with live code
-
-new_styling is the frontend experimental sandbox
