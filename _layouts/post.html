@@ -2,8 +2,9 @@
 layout: default
 ---
 <div class="articleInfo">
-<span class="big">{{ page.title }}</span><h3>{{ page.subtitle }}</h3>
-<span class="meta">written on {{ page.date | date_to_string }} by {{ site.author }}</span>
+<div><span class="big">{{ page.title }}</span></div>
+{% if page.subtitle %}<h3>{{ page.subtitle }}</h3>{% endif %}
+<div class="meta">written on {{ page.date | date_to_string }} by {{ site.author }}</div>
 </div>
 
 <div class="post">

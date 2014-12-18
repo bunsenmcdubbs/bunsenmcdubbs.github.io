@@ -5,12 +5,6 @@
 		url('/fonts/leaguegothic/leaguegothic-regular-webfont.svg#leaguegothic') format('svg');
 }
 
-.big {
-	display: block;
-	font-family: "League Gothic", Arial;
-	font-size: 1.75em;
-}
-
 h1, h2, h3 {
 	font-family: "Open Sans","Futura", "Helvetica Neue", sans-serif;
 	font-weight: 700;
@@ -21,10 +15,13 @@ h1, h2, h3 {
 }
 
 body {
-	font-family: Merriweather, Times, serif;
-	font-size: 14px;
 	margin: 0;
 	padding: 0;
+}
+
+body, .pure-g [class *="pure-u"] {
+	font-family: Merriweather, Times, serif;
+	font-size: 14px;
 }
 
 p {
@@ -67,11 +64,12 @@ p {
 }
 
 /* Custom header */
-header h3, .articleInfo {
-	padding-bottom: 20px;
-	margin-bottom: 20px;
+.articleInfo {
+	padding: .7em 0;
+	margin: .7em 0;
 	border-bottom: 1px solid #e5e5e5;
-	line-height: 40px;
+	/* TODO: change this - refactor */
+	font-size: 20px;
 }
 
 /* Custom footer */
@@ -86,12 +84,6 @@ footer {
 .listing {
 	font-size: 20px;
 	/*font-weight: 200;*/
-}
-
-/* Article info on post page*/
-.articleInfo {
-	margin-bottom: 1em;
-	font-size: 20px;
 }
 
 /* custom lede paragraphs (copying bootstrap lede style)*/
@@ -110,8 +102,24 @@ a:hover {
 	font-weight: bold;
 }
 
-nav a:hover {
-	font-weight: inherit;
+nav {
+	margin-top: .5em;
+}
+
+nav .nav-item {
+	z-index: 2;
+	text-align: center;
+	height: 2em;
+	line-height: 2em;
+}
+
+nav .nav-item:hover {
+	background-color: #ddd;
+}
+
+nav .nav-item a {
+	display: block;
+	text-decoration: none;
 }
 
 .posts {
@@ -134,6 +142,7 @@ nav a:hover {
 .meta {
 	font-family: Courier, monospace;
 	font-size: 90%;
+	margin-top: 1.5em;
 }
 
 .excerpt {
@@ -156,6 +165,19 @@ nav a:hover {
 	font-size: 20px;
 }
 
+.pagination a {
+	text-decoration: none;
+}
+
+.pagination a:hover {
+	font-weight: inherit;
+	text-decoration: underline;
+}
+
+.pagination .curr-page {
+	text-decoration: underline;
+}
+
 /* Code snippets */
 pre {
 	max-height: 45em;
@@ -166,4 +188,12 @@ pre {
 img {
 	display: block;
 	margin: 1.5em auto;
+}
+
+.text-muted {
+	color: gray;
+}
+
+.centered {
+	margin: 0 auto;
 }
