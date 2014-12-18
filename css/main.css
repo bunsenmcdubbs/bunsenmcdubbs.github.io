@@ -7,8 +7,20 @@
 
 .big {
 	display: block;
-	font-family: "League Gothic", "Futura", "Helvetica Neue", Arial;
+	font-family: "League Gothic", Arial;
+}
+
+h1, h2, h3 {
+	font-family: "Open Sans","Futura", "Helvetica Neue", sans-serif;
+	font-weight: 700;
+}
+
+.big, h1, h2, h3 {
 	color: #232323;
+}
+
+body {
+	font-family: Merriweather, Times, serif;
 }
 
 .img-circle {
@@ -46,13 +58,6 @@
 	}
 }
 
-/* Customize container - narrower */
-/*@media (min-width: 750px) {
-	.container {
-		max-width: 750px;
-	}
-}*/
-
 /* Custom header */
 header h3, .articleInfo {
 	padding-bottom: 20px;
@@ -86,25 +91,39 @@ article > p:first-child {
 	font-size: 16px;
 	margin-bottom: 20px;
 	font-weight: 200;
-	line-height: 1.4;
+	line-height: 1.7;
 }
 
 @media (min-width: 768px){
-	body {
-		font-size: 16px;
-		line-height: 1.55em;
-	}
 
 	article > p:first-child {
 		font-size: 21px;
 	}
 }
 
+a {
+	color: inherit;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+.posts {
+	padding: 0;
+	margin-top: 2em;
+}
+
+.posts .listing a {
+	font-family: "Open Sans", sans-serif;
+	text-decoration: none;
+}
+
 /* Custom post listings */
 .posts li {
 	display: block;
-	margin: .75em 0;
-	padding-top: 0.5em;
+	margin: 0;
+	padding: 1em;
 }
 
 .meta {
@@ -114,16 +133,13 @@ article > p:first-child {
 
 .excerpt {
 	display: block;
-	margin-top: 0.7em;
-	padding: .75em .5em .5em 1.5em;
+	margin: .75em 0 .25em 0;
 }
 
 .excerpt p {
 	font-style: normal;
 	font-size: 100%;
-	margin-bottom: 0;
-	border-left: 11px solid #ddd;
-	padding-left: 1.2em;
+	margin: 0;
 }
 
 /* paginator links */

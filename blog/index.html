@@ -4,13 +4,14 @@ title: BunsenMcDubbs
 ---
 
 <div id="home">
-	<div class=""><span class="big">Adventures</span></div>
+	<div><span class="big">Blog</span></div>
 		<!-- <h2>one bit at a time into the future</h2></div> -->
 	<ul class="posts list-unstyled">
 		{% for post in paginator.posts %}
 		<li>
-			<span class="listing"><span class="meta">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></span>
+			<span class="listing"><a href="{{ post.url }}">{{ post.title }}</a></span>
 			<div class="excerpt">{{ post.excerpt }}</div>
+			<span class="meta">{{ post.date | date_to_string }}</span>
 		</li>
 		{% endfor %}
 	</ul>
