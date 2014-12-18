@@ -1,40 +1,75 @@
-/*body {
-	background: url(http://photos-d.ak.instagram.com/hphotos-ak-xpa1/10808990_1502928523289643_815335201_n.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}*/
+@font-face {
+	font-family: "League Gothic";
+	src: url('/fonts/leaguegothic/leaguegothic-regular-webfont.woff') format('woff'),
+		url('/fonts/leaguegothic/leaguegothic-regular-webfont.ttf')  format('truetype'),
+		url('/fonts/leaguegothic/leaguegothic-regular-webfont.svg#leaguegothic') format('svg');
+}
+
+h1, h2, h3 {
+	font-family: "Open Sans","Futura", "Helvetica Neue", sans-serif;
+	font-weight: 700;
+}
+
+.big, h1, h2, h3 {
+	color: #232323;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body, .pure-g [class *="pure-u"] {
+	font-family: Merriweather, Georgia, Times, serif;
+	font-size: 14px;
+}
+
+p {
+	line-height: 1.7em;
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+#bottom .icon-container {
+	display: block;
+	margin: .2em auto;
+	color: #232323;
+	width: 180px;
+	height: 140px;
+	font-size: 140px;
+}
+
+#bottom a {
+	color: #232323;
+}
+
+.container {
+	margin: 0 .75em 0 .75em;
+}
 
 /* Customize container - narrower */
-@media (min-width: 768px) {
+@media screen and (min-width: 35.5em) {
 	.container {
-		max-width: 730px;
+		max-width: 35.5em;
+		margin: 0 auto;
+	}
+
+	#bottom .icon-container {
+		width: 129px;
+		height: 100px;
+		font-size: 100px;
 	}
 }
 
-/* Custom Jumbotron */
-.jumbotron {
-	text-align: center;
-}
-
-.jumbotron h1, nav {
-	font-family: "Roboto Slab", Futura, "Helvetica Neue", Helvetica, Arial;
-}
-
-.jumbotron,
-header,
-footer,
-h1, h2, h3{
-	font-family: Futura, "Roboto Slab", "Helvetica Neue", Helvetica, Arial;
-}
-
 /* Custom header */
-header h3, .articleInfo {
-	padding-bottom: 20px;
-	margin-bottom: 20px;
+.articleInfo {
+	padding: .7em 0;
+	margin: .7em 0;
 	border-bottom: 1px solid #e5e5e5;
-	line-height: 40px;
+	/* TODO: change this - refactor */
+	font-size: 20px;
 }
 
 /* Custom footer */
@@ -51,55 +86,74 @@ footer {
 	/*font-weight: 200;*/
 }
 
-/* Article info on post page*/
-.articleInfo {
-	margin-bottom: 1em;
-	font-size: 20px;
-}
-
 /* custom lede paragraphs (copying bootstrap lede style)*/
 article > p:first-child {
-	font-size: 16px;
+	font-size: 1.25em;
 	margin-bottom: 20px;
 	font-weight: 200;
-	line-height: 1.4;
+	line-height: 1.7;
 }
 
-@media (min-width: 768px){
-	body {
-		font-size: 16px;
-		line-height: 1.55em;
-	}
+a {
+	color: inherit;
+}
 
-	article > p:first-child {
-		font-size: 21px;
-	}
+a:hover {
+	font-weight: bold;
+}
+
+nav {
+	margin-top: .5em;
+}
+
+nav .nav-item {
+	z-index: 2;
+	text-align: center;
+	height: 2em;
+	line-height: 2em;
+}
+
+nav .nav-item:hover {
+	background-color: #ddd;
+}
+
+nav .nav-item a {
+	display: block;
+	text-decoration: none;
+}
+
+.posts {
+	padding: 0;
+	margin-top: 2em;
+}
+
+.posts .listing a {
+	font-family: "Open Sans", sans-serif;
+	text-decoration: none;
 }
 
 /* Custom post listings */
 .posts li {
 	display: block;
-	margin: .75em 0;
-	padding-top: 0.5em;
+	margin: 0;
+	padding: 1em;
 }
 
 .meta {
-	font-family: Courier;
+	font-family: Courier, monospace;
 	font-size: 90%;
+	margin-top: 1.5em;
 }
 
 .excerpt {
 	display: block;
-	margin-top: 0.7em;
-	padding: .75em .5em .5em 1.5em;
+	margin: .75em 0 .25em 0;
 }
 
 .excerpt p {
 	font-style: normal;
 	font-size: 100%;
-	margin-bottom: 0;
-	border-left: 11px solid #ddd;
-	padding-left: 1.2em;
+	margin: 0;
 }
 
 /* paginator links */
@@ -109,6 +163,19 @@ article > p:first-child {
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 20px;
+}
+
+.pagination a {
+	text-decoration: none;
+}
+
+.pagination a:hover {
+	font-weight: inherit;
+	text-decoration: underline;
+}
+
+.pagination .curr-page {
+	text-decoration: underline;
 }
 
 /* Code snippets */
@@ -121,4 +188,12 @@ pre {
 img {
 	display: block;
 	margin: 1.5em auto;
+}
+
+.text-muted {
+	color: gray;
+}
+
+.centered {
+	margin: 0 auto;
 }
