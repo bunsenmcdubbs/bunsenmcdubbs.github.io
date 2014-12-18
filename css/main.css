@@ -82,8 +82,11 @@ footer {
 
 /* listing info */
 .listing {
-	font-size: 20px;
-	/*font-weight: 200;*/
+	font-size: 1.2em;
+}
+
+.listing:hover {
+	text-decoration: underline;
 }
 
 /* custom lede paragraphs (copying bootstrap lede style)*/
@@ -137,6 +140,10 @@ nav .nav-item a {
 	display: block;
 	margin: 0;
 	padding: 1em;
+}
+
+.posts-entry:hover {
+	background-color: #ededed;
 }
 
 .meta {
