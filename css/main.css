@@ -8,6 +8,7 @@
 .big {
 	display: block;
 	font-family: "League Gothic", Arial;
+	font-size: 1.75em;
 }
 
 h1, h2, h3 {
@@ -21,6 +22,13 @@ h1, h2, h3 {
 
 body {
 	font-family: Merriweather, Times, serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	line-height: 1.7em;
 }
 
 .img-circle {
@@ -88,17 +96,10 @@ footer {
 
 /* custom lede paragraphs (copying bootstrap lede style)*/
 article > p:first-child {
-	font-size: 16px;
+	font-size: 1.25em;
 	margin-bottom: 20px;
 	font-weight: 200;
 	line-height: 1.7;
-}
-
-@media (min-width: 768px){
-
-	article > p:first-child {
-		font-size: 21px;
-	}
 }
 
 a {
@@ -107,6 +108,10 @@ a {
 
 a:hover {
 	font-weight: bold;
+}
+
+nav a:hover {
+	font-weight: inherit;
 }
 
 .posts {
@@ -127,7 +132,7 @@ a:hover {
 }
 
 .meta {
-	font-family: Courier;
+	font-family: Courier, monospace;
 	font-size: 90%;
 }
 

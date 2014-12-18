@@ -5,10 +5,13 @@ layout: bare
 
 <div class="container">
 	<header>
-		<nav>
-			<ul class="nav nav-pills navbar-right">
+		<nav class="pure-menu pure-menu-open pure-menu-horizontal">
+			<ul>
 				<li>
-					<a href="/">home</a>
+					<a href="/">{{ site.name }}</a>
+				</li>
+				<li>
+					<a href="/blog/">blog</a>
 				</li>
 				<li>
 					<a href="/about/">about</a>
@@ -20,7 +23,6 @@ layout: bare
 					<a href="/archive/">archive</a>
 				</li>
 			</ul>
-			<h3 class="text-muted">{{ site.name }}</h3>
 		</nav>
 	</header>
 
