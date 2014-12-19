@@ -24,6 +24,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/slabtext.css">
+  {% if page.customCSS %}
+  <link rel="stylesheet" href="{{ page.customCSS }}">
+  {% endif %}
 
   <!-- Fonts: Open Sans and Merriweather -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700|Merriweather:400,700' rel='stylesheet' type='text/css'>

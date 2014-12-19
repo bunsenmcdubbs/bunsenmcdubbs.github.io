@@ -1,0 +1,53 @@
+.excerpt {
+    display: block;
+    margin: .75em 0 .25em 0;
+}
+
+.excerpt p {
+    font-style: normal;
+    font-size: 100%;
+    margin: 0;
+}
+
+/* paginator links */
+.pagination {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    font-weight: inherit;
+    text-decoration: underline;
+}
+
+.pagination .curr-page {
+    text-decoration: underline;
+}
+
+.posts {
+    padding: 0;
+    margin-top: 2em;
+}
+
+.posts .listing a {
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+}
+
+/* Custom post listings */
+.posts li {
+    display: block;
+    margin: 0;
+    padding: 1em;
+}
+
+.posts-entry:hover {
+    background-color: #ededed;
+}
