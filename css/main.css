@@ -43,10 +43,18 @@ p {
 	}
 }
 
+header {
+	border-bottom: 1px solid #e5e5e5;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
 /* Custom footer */
 footer {
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 10px;
+	margin-top: 15px;
 	border-top: 1px solid #e5e5e5;
 	padding-bottom: 20px;
 }
@@ -81,14 +89,13 @@ nav {
 }
 
 nav .nav-item {
-	z-index: 2;
 	text-align: center;
 	height: 2em;
 	line-height: 2em;
 }
 
 nav .nav-item:hover {
-	background-color: #ddd;
+	background-color: #eee;
 }
 
 nav .nav-item a {
