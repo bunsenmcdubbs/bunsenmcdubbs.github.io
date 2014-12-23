@@ -16,6 +16,35 @@
     }
 }
 
+@media screen and (min-width: 67em)	{
+
+    .container {
+        max-width: 65em;
+    }
+
+    .articleInfo, .post {
+        box-sizing: border-box;
+    }
+
+    .content:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .articleInfo {
+        width: 33.333%;
+        float: left;
+        /*position: fixed;*/
+    }
+
+    .post {
+        padding-left: 40px;
+        width: 66.666%;
+        float: left;
+    }
+}
+
 /* need to make this a thing */
 .caption {
 
