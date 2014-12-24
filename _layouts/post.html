@@ -6,6 +6,9 @@ customCSS: "/css/post.css"
 <div><span class="big">{{ page.title }}</span></div>
 {% if page.subtitle %}<h3>{{ page.subtitle }}</h3>{% endif %}
 <div class="meta">written on {{ page.date | date_to_string }} by {{ site.author }}</div>
+{% if page.thumb %}
+<img class="thumb img-circle" src="{{ page.thumb }}">
+{% endif %}
 </div>
 
 <div class="post">

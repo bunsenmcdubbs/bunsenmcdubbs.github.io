@@ -3,6 +3,7 @@ layout: post
 title:  "Pickl at HackNashville6"
 date: 2014-11-20
 tags: [hackathon, hacknashville, pickl, node]
+thumb: "http://photos-d.ak.instagram.com/hphotos-ak-xpa1/t51.2885-15/10808990_1502928523289643_815335201_n.jpg"
 ---
 
 In late October we (Michael, Nick and I) saw a post on the GTHackers group on
