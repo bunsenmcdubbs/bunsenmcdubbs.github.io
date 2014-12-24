@@ -1,45 +1,54 @@
 ---
 layout: default
-title: BunsenMcDubbs
+title: "Blog"
 customCSS: "/css/blog.css"
 ---
 
-<div id="home">
-	<div class="jumbotron"><span class="big">Blog</span></div>
-		<!-- <h2>one bit at a time into the future</h2></div> -->
-	<ul class="posts list-unstyled">
-		{% for post in paginator.posts %}
-		<li class="posts-entry">
-			<span class="listing"><a href="{{ post.url }}">{{ post.title }}</a></span>
-			<div class="excerpt">{{ post.excerpt }}</div>
-			<span class="meta">{{ post.date | date_to_string }}</span>
-		</li>
-		{% endfor %}
-	</ul>
-
-	{% if paginator.total_pages > 1 %}
-	<div class="pagination">
-		{% if paginator.previous_page %}
-		<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-		{% else %}
- 		<span class="text-muted">&laquo; Prev</span>
-		{% endif %}
-
-		{% for page in (1..paginator.total_pages) %}
-		{% if page == paginator.page %}
-		<em class="curr-page">{{ page }}</em>
-		{% elsif page == 1 %}
-		<a href="{{ '/blog/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-		{% else %}
-		<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-		{% endif %}
-		{% endfor %}
-
-		{% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-		{% else %}
-		<span class="text-muted">Next &raquo;</span>
-		{% endif %}
+<div class="posts posts-{{ paginator.page }} pure-g">
+	{% if paginator.page == 1 %}
+	<div class="jumbotron pure-u-lg-1-2 pure-u-1">
+		<span class="big">Blog</span>
 	</div>
 	{% endif %}
+
+	{% for post in paginator.posts %}
+	<div class="pure-u-lg-1-2 pure-u-1 posts-entry">
+		<div>
+			<a href="{{ post.url }}" class="listing">{{ post.title }}</a>
+			<div class="excerpt">{{ post.excerpt }}</div>
+			<span class="meta">{{ post.date | date_to_string }}</span>
+		</div>
+		<!-- {% if post.thumb %}
+		<img class="thumb img-circle" src="{{ post.thumb }}">
+		{% endif %} -->
+	</div>
+	{% endfor %}
 </div>
+
+<!-- Previous/Next Page -->
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+	{% if paginator.previous_page %}
+	<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+	{% else %}
+		<span class="text-muted">&laquo; Prev</span>
+	{% endif %}
+
+	{% for page in (1..paginator.total_pages) %}
+	{% if page == paginator.page %}
+	<em class="curr-page">{{ page }}</em>
+	{% elsif page == 1 %}
+	<a href="{{ '/blog/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+	{% else %}
+	<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+	{% endif %}
+	{% endfor %}
+
+	{% if paginator.next_page %}
+	<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+	{% else %}
+	<span class="text-muted">Next &raquo;</span>
+	{% endif %}
+</div>
+{% endif %}

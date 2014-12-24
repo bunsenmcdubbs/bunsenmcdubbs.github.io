@@ -5,6 +5,17 @@
 		url('/fonts/leaguegothic/leaguegothic-regular-webfont.svg#leaguegothic') format('svg');
 }
 
+body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+html, button, input, select, textarea, body, .pure-g [class *="pure-u"] {
+	font-family: Merriweather, Georgia, Times, serif;
+	font-size: 14px;
+}
+
 h1, h2, h3 {
 	font-family: "Open Sans","Futura", "Helvetica Neue", sans-serif;
 	font-weight: 700;
@@ -14,18 +25,14 @@ h1, h2, h3 {
 	color: #232323;
 }
 
-body {
-	margin: 0;
-	padding: 0;
-}
-
-body, .pure-g [class *="pure-u"] {
-	font-family: Merriweather, Georgia, Times, serif;
-	font-size: 14px;
-}
-
 p {
 	line-height: 1.7em;
+}
+
+/* fixing up images */
+img {
+	display: block;
+	margin: 1.5em auto;
 }
 
 .img-circle {
@@ -48,6 +55,7 @@ header {
 	position: relative;
 	left: 0;
 	top: 0;
+	z-index: 20;
 }
 
 /* Custom footer */
@@ -57,23 +65,6 @@ footer {
 	margin-top: 15px;
 	border-top: 1px solid #e5e5e5;
 	padding-bottom: 20px;
-}
-
-/* listing info */
-.listing {
-	font-size: 1.2em;
-}
-
-.listing:hover {
-	text-decoration: underline;
-}
-
-/* custom lede paragraphs (copying bootstrap lede style)*/
-article > p:first-child {
-	font-size: 1.25em;
-	margin-bottom: 20px;
-	font-weight: 200;
-	line-height: 1.7;
 }
 
 a {
@@ -115,10 +106,9 @@ pre {
 	overflow: scroll;
 }
 
-/* fixing up images */
-img {
-	display: block;
-	margin: 1.5em auto;
+.list-unstyled {
+    list-style-type: none;
+	
 }
 
 .text-muted {

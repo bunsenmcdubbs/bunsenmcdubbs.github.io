@@ -1,52 +1,111 @@
+
+@media screen and (min-width: 64em)	{
+  .container {
+    max-width: 63em;
+  }
+}
+
+.jumbotron {
+  /*z-index: 10;*/
+}
+
+.posts {
+  padding: 0;
+}
+
+.posts-1 > div:nth-of-type(2) {
+  display: inline-flex;
+}
+
+.posts-1 > div:nth-of-type(2) > :first-child:before {
+  content: '[Latest Post]';
+  display: block;
+  font-family: Courier, monospace;
+  margin-bottom: .4em;
+}
+
+.posts-1 > div:nth-of-type(2) > :first-child {
+  margin: auto 0;
+}
+
+/*.posts-1 > div:nth-of-type(2) > .thumb {
+  display: none;
+}
+
+@media screen and (min-width: 64em) {
+  .posts-1 > div:nth-of-type(2) > :first-child {
+    max-width: calc(100% - 128px);
+  }
+
+  .posts-1 > div:nth-of-type(2) > .thumb {
+    display: inline-block;
+    max-width: 128px;
+    max-height: 128px;
+    margin: auto 0;
+  }
+}*/
+
+.posts-1 > div:nth-of-type(2) .excerpt {
+  max-height: 100%;
+}
+
+.listing {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+
+/* listing info */
+.listing {
+  font-size: 1.2em;
+}
+
+.listing:hover{
+  text-decoration: underline;
+}
+
+/* Custom post listings */
+.posts-entry {
+  box-sizing: border-box;
+  display: inline-flex;
+  padding: 1em;
+  float: left;
+}
+
+.posts-entry:hover {
+  background-color: #ededed;
+}
+
 .excerpt {
-    display: block;
-    margin: .75em 0 .25em 0;
+  display: block;
+  margin: .75em 0 .3em 0;
+  max-height: 6.5em;
+  overflow: hidden;
 }
 
 .excerpt p {
-    font-style: normal;
-    font-size: 100%;
-    margin: 0;
+  font-style: normal;
+  font-size: 100%;
+  margin: 0;
 }
 
 /* paginator links */
 .pagination {
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 20px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
 }
 
 .pagination a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .pagination a:hover {
-    font-weight: inherit;
-    text-decoration: underline;
+  font-weight: inherit;
+  text-decoration: underline;
 }
 
 .pagination .curr-page {
-    text-decoration: underline;
-}
-
-.posts {
-    padding: 0;
-}
-
-.posts .listing a {
-    font-family: "Open Sans", sans-serif;
-    text-decoration: none;
-}
-
-/* Custom post listings */
-.posts li {
-    display: block;
-    margin: 0;
-    padding: 1em;
-}
-
-.posts-entry:hover {
-    background-color: #ededed;
+  text-decoration: underline;
 }
