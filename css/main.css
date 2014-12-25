@@ -33,6 +33,7 @@ p {
 img {
 	display: block;
 	margin: 1.5em auto;
+	max-width: 100%;
 }
 
 .img-circle {
