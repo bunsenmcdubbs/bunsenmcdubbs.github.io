@@ -1,10 +1,14 @@
 /* Custom header */
-.articleInfo {
-    padding: .7em 0;
-    margin: .7em 0;
-    border-bottom: 1px solid #e5e5e5;
-    /* TODO: change this - refactor */
-    font-size: 20px;
+.articleInfo-top {
+  padding: .7em 0;
+  margin: .7em 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+#toc-sticky-wrapper {
+  display: none;
+  height: 0;
+  width: 0;
 }
 
 .thumb {
@@ -21,40 +25,54 @@ article > p:first-child {
 
 /* When on small screens - shrink images to size */
 @media screen and (max-width: 35.5em) {
-    img {
-        max-height: 300px;
-        max-width: 100%;
-        height: auto;
-    }
+  img {
+    max-height: 300px;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media screen and (min-width: 64em)	{
 
-    .container {
-        max-width: 63em;
-    }
+  .container {
+    max-width: 63em;
+  }
 
-    .articleInfo, .post {
-        box-sizing: border-box;
-    }
+  .articleInfo, .post {
+    box-sizing: border-box;
+  }
 
-    .content:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  .content:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
-    .articleInfo {
-        width: 33.333%;
-        float: left;
-        /*position: fixed;*/
-    }
+  .articleInfo {
+    width: 33.333%;
+    float: left;
+  }
 
-    .post {
-        padding-left: 40px;
-        width: 66.666%;
-        float: left;
-    }
+  .post {
+    padding-left: 40px;
+    width: 66.666%;
+    float: left;
+  }
+
+  .articleInfo-top {
+    border: 0;
+  }
+
+  #toc-sticky-wrapper {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  #toc {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
 }
 
 /* need to make this a thing */
