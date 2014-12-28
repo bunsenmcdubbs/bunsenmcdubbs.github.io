@@ -20,16 +20,51 @@ customCSS: "/css/post.css"
 
 <main><article class="post">{{ content }}</article></main>
 
-<script src="/js/jquery.toc.min.js"></script>
-<script src="/js/jquery.sticky.js"></script>
 <script>
-  $('#toc').toc({
-    'container': '.post',
-    'anchorName': function(i, heading, prefix) {
-      return $(heading).text().replace(/[^a-z0-9]/ig, ' ').replace(/\s+/g, '-').toLowerCase();
+// loadScript function was modified from SitePoint
+// http://www.sitepoint.com/dynamically-load-jquery-library-javascript/
+  function loadScript(url, callback) {
+
+    var script = document.createElement("script")
+    script.type = "text/javascript";
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function () {
+        if (script.readyState == "loaded" || script.readyState == "complete") {
+          script.onreadystatechange = null;
+          if (callback) { callback(); }
+        }
+      };
+    } else { //Others
+      script.onload = function () {
+        if (callback) { callback(); }
+      };
     }
-  });
-  $(document).ready(function(){
-    $("#toc").sticky({topSpacing:10, getWidthFrom: ".articleInfo"});
-  });
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  var selectors = 'h2, h3';
+
+  if ($('.post').find(selectors).length != 0) {
+    loadScript("/js/jquery.toc.min.js", function() {
+      loadScript("/js/jquery.sticky.js", function() {
+        $('#toc').toc({
+          'selectors': selectors,
+          'container': '.post',
+          'anchorName': function(i, heading, prefix) {
+            return $(heading).text().replace(/[^a-z0-9]/ig, ' ').replace(/\s+/g, '-').toLowerCase();
+          }
+        });
+        $(document).ready(function(){
+          $("#toc").sticky({topSpacing:10, getWidthFrom: ".articleInfo"});
+        });
+      });
+    });
+  } else {
+    $('#toc').remove();
+  }
+
+
 </script>
