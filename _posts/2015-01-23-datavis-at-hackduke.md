@@ -2,6 +2,9 @@
 layout: post
 title: "Data Visualization at HackDuke"
 tags: [datavis, hackduke, nceduviz]
+thumb: "http://i.imgur.com/DWLwnMv.png?1"
+thumb-circle: "false"
+date: 2015-01-23
 ---
 
 We gathered outside at some ungodly hour of the morning, shivering and weighed
@@ -47,7 +50,59 @@ changing year to year, and made Michael&rsquo;s life a nightmare.
 ## &ldquo;Using&rdquo; d3.js
 
 Having no actual experience with d3.js, we just tried to find and modify
-existing d3 code to fit our purposes.
+existing d3 code to fit our purposes. It was not easy and our final
+implementation was a thoroughly hacked together hackathon project. Magic numbers
+were everywhere and guess and check became the development process of choice.
+Surprisingly, we finished in time with a working prototype.
+
+## Flaws and Improvements
+
+Technical issues aside, I have doubts about the statistical validity of our
+data visualization. We set out to measure the &ldquo;performance&rdquo; of
+different school districts in North Carolina. To do this we chose
+&ldquo;cost-effectiveness&rdquo; to quantify and that in and of itself can be
+viewed as a controversial choice.
+
+Cost-effectiveness boiled down to average SAT score divided by per-pupil
+expenditure. This ignores year-over-year improvement and also puts far too much
+emphasis on a single standardized test, implying that the &ldquo;success&rdquo;
+of a school district depended on their students&rsquo; performance on the SAT
+test.
+
+We wanted to try to show the change in performance but due to time restraints
+and a lack of expertise in the topic we couldn&rsquo;t do that effectively.
+Instead we generated the same map for different years and let the viewer
+switch between them to see the change from map to map.
+
+Knowing that socio-economic status plays an enormous factor in academic 
+performance (especially in standardized testing), we tried to control for it
+by making two categories &ldquo;wealthy&rdquo; and &ldquo;not-wealthy&rdquo;
+demarkated by the federal Title 1 designation. Although this seemed reasonable
+at first, it also ended up being a major confounding factor. 
+
+The crux of the ineffectiveness comes from the individual year maps.
+Because we never accounted for year-over-year changes, changes in Title 1 
+designation could drastically change the indicated success of a district.
+
+As the economy plummeted in the late 2000&rsquo;s many districts gained the
+Title 1 designation. When this happened, many districts previously judged as
+under-performing low-end wealthy schools became high-performing high-end
+not-wealthy schools and heavily skewed both their own perceived standing and 
+that of the entire data set.
+
+I seriously doubt the validity of our choice in metrics because in the end, our main data point boils down to SAT point per dollar spent. It ignores many
+confounding factors and making broad assumptions and assertions on the goal of
+education.
+
+That being said, I still think the concept itself is valid. Had we crafted
+a metric to properly associate dollars spent and increase in performance then
+the visualization itself could be immensely useful. But since that was not the
+case then our one-off hackathon project is more of a technical demo than
+useful tool.
+
+The code (as usual) is on [Github](https://github.com/alternativeheroes/nceduviz) and so is the [live demo](https://alternativeheroes.github.io/nceduviz).
+
+<!--
 
 # Outline
 
@@ -70,3 +125,5 @@ for america - durham mentors)
  8. ways to improve
    - fix above flaws
    - more in depth data about each district (labeling)
+
+-->
