@@ -9,6 +9,12 @@ customCSS: "/css/projects.css"
 </div>
 
 <div class="project-entry">
+<h3>Dust and Magnet</h3>
+<p>Made at MHacksV with Koushik Krishnan. <a href="https://github.com/AlternativeHeroes/dust-and-magnet">Source</a></p>
+<p>More info coming soon! 1/23/2015</p>
+</div>
+
+<div class="project-entry">
 <h3>NCEduVis: <small>North Carolina Education Visualization <span class="text-info">[In Limbo]</span></small></h3>
 <p>Despite the clunky name we tried to make an attractive data visualization to analyse the
 	relative cost effectiveness of various school districts. Churned out at HackDuke, this
@@ -18,10 +24,17 @@ customCSS: "/css/projects.css"
 	more rigorous methodology for our metrics. Critique the hacked-together source on
 	<a href="http://github.com/AlternativeHeroes/nceduviz">Github</a>.</p>
 <p><a href="http://alternativeheroes.github.io/nceduviz">View the live demo.</a></p>
+<ul class="posts">
+	{% for post in site.tags.hackduke %}
+	<li>
+		<span class="meta">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+	</li>
+	{% endfor %}
+</ul>
 </div>
 
 <div class="project-entry">
-<h3>Pickl: <small>instead of money, bet away your dignity! Social media integrated <span class="text-info">[In Progress]</span></small></h3>
+<h3>Pickl: <small>instead of money, bet away your dignity! Social media integrated <span class="text-info">[In Limbo]</span></small></h3>
 <ul class="posts">
 	{% for post in site.tags.pickl %}
 	<li>
