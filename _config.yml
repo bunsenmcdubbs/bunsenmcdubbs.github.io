@@ -3,5 +3,5 @@ author: Andrew Dai
 markdown: redcarpet
 pygments: true
 permalink: none
-paginate: 11
+paginate: 12
 paginate_path: "blog/page:num/"

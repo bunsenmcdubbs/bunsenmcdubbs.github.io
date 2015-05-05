@@ -26,8 +26,8 @@
   {% endif %}
 
   <!-- Fonts: Open Sans and Merriweather -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:700|Merriweather:400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans|Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="http://en.gravatar.com/userimage/43242946/99ef6a0172bffefbe4c08416d432eef0.png?size=64">
 
@@ -36,7 +36,63 @@
 </head>
 <body>
 
+  <header>
+  	<nav class="pure-g container">
+  		<div class="pure-u-1-4 nav-item"><a href="/">about</a></div>
+  		<div class="pure-u-1-4 nav-item"><a href="/blog/">blog</a></div>
+  		<div class="pure-u-1-4 nav-item"><a href="/projects/">projects</a></div>
+  		<div class="pure-u-1-4 nav-item"><a href="/archive/">archive</a></div>
+  	</nav>
+  	<div id="main-title" class="container vert-center">
+  		{% if page.customTitle %}
+  		{{ page.customTitle }}
+  		{% else %}
+  		<span class="big">{{ page.title }}</span>
+  		{% endif %}
+  	</div>
+  </header>
+
   {{ content }}
+
+  <footer>
+    <div class="container pure-g">
+      <div class="pure-u-sm-1-2 pure-u-1">
+        <ul>
+          <li><a href="https://github.com/bunsenmcdubbs" class="no-style">
+            <i class="fa fa-github fa-2x fa-fw" id="github"></i>/bunsenmcdubbs</a></li>
+          <li><a href="https://linkedin.com/in/daiandrew" class="no-style">
+            <i class="fa fa-linkedin-square fa-2x fa-fw" id="linkedin"></i>/daiandrew</a></li>
+          <li><a href="https://instagram.com/bunsenmcdubbs/" class="no-style">
+            <i class="fa fa-instagram fa-2x fa-fw" id="instagram"></i>/bunsenmcdubbs</a></li>
+        </ul>
+      </div>
+      <div class="pure-u-sm-1-2 pure-u-1">
+        <ul>
+          <li><a href="https://www.flickr.com/photos/andyswim96/" class="no-style">
+            <i class="fa fa-flickr fa-2x fa-fw" id="flickr"></i>/bunsenmcdubbs</a></li>
+          <li><a href="/blog" class="no-style">
+            <i class="fa fa-pencil-square fa-2x fa-fw" id="blog"></i>/blog</a></li>
+          <li>
+            <i class="fa fa-envelope fa-2x fa-fw" id="email"></i>/contact@andrewdai.co</li>
+        </ul>
+      </div>
+      <section id="meta" class="pure-u-1">
+        <hr>
+        <h3>Meta: <small>about this site</small></h3>
+        <p>This site is hosted on <a
+          href="http://pages.github.com">Github Pages</a> and uses <a
+          href="http://jekyllrb.com">Jekyll</a>.
+          <br />The source can be found on my <a
+          href="http://github.com/bunsenmcdubbs/bunsenmcdubbs.github.io/">Github</a>.
+        </p>
+        <hr>
+      </section>
+      <div class="pure-u-1" id="last">
+  			<small>Andrew Dai: Coder, Maker, and Photographer. Also known as BunsenMcDubbs. 2015.</small>
+  		</div>
+    </div>
+  </footer>
+
 
   <script src="/js/jquery.slabtext.min.js"></script>
   <!-- Using font loader https://github.com/smnh/FontLoader -->

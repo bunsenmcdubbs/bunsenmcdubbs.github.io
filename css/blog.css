@@ -5,26 +5,32 @@
   }
 }
 
-.jumbotron {
-  /*z-index: 10;*/
+@media screen and (min-width: 35.5em) {
+  #main-title {
+    max-width: 50%;
+  }
+}
+
+#main-title {
+  max-width: 50%;
 }
 
 .posts {
   padding: 0;
 }
 
-.posts-1 > div:nth-of-type(2) {
+.posts-1 > div:nth-of-type(1) {
   display: inline-flex;
 }
 
-.posts-1 > div:nth-of-type(2) > :first-child:before {
+.posts-1 > div:nth-of-type(1) > :first-child:before {
   content: '[Latest Post]';
   display: block;
   font-family: Courier, monospace;
   margin-bottom: .4em;
 }
 
-.posts-1 > div:nth-of-type(2) > :first-child {
+.posts-1 > div:nth-of-type(1) > :first-child {
   margin: auto 0;
 }
 

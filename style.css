@@ -1,50 +1,6 @@
-body, .pure-g [class *="pure-u"]{
-  /* font-family: Open Sans; */
-}
-
-header {
-  background-image: url("https://distilleryimage5-a.akamaihd.net/364c08d2fbdb11e286c222000a1fbc86_7.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  height: 60vmin;
-
-  box-shadow: 0 0 20px #aaa;
-}
-
 #mid {
   padding-top: 1.5em;
   /*box-shadow: 0 0 20px #aaa;*/
-}
-
-#mid ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#mid li {
-  text-align: center;
-  margin-bottom: .75em;
-  padding-top: .25em;
-  padding-bottom: .25em;
-}
-
-#mid li:hover {
-  background-color: #ddd;
-}
-
-#mid li a {
-  display: block;
-}
-
-a.no-style {
-  text-decoration: none;
-}
-
-a.no-style:hover {
-  font-weight: normal;
 }
 
 #boston, #atlanta {
@@ -55,27 +11,11 @@ a.no-style:hover {
 
 #boston {
   background-image: url("https://distilleryimage11-a.akamaihd.net/19af293cfacb11e1840e123138141d93_7.jpg");
-
 }
 
 #atlanta {
   background-image: url("https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xpt1/t51.2885-15/925970_1498854333737674_178616849_n.jpg");
   background-position: center top;
-}
-
-.vert-center {
-  /*
-   * vertically centering text with code from
-   * http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
-   */
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.container {
-  width: 90%;
-  margin: 0 5%;
 }
 
 .icon {
@@ -99,40 +39,33 @@ a.no-style:hover {
 }
 
 #boston p {
-  background-color: hsla(0, 0%, 93%, .75);
+  background-color: hsla(45, 29.8%, 90%, .75);
 }
 
 #atlanta p {
-  background-color: hsla(0, 0%, 7%, .75);
+  background-color: hsla(200, 31.2%, 15%, .75);
 }
 
-#atlanta, #atlanta .airport-code > h3 {
-  color: #eee;
+#atlanta {
+  color: hsl(45, 29.8%, 90%);
+}
+#atlanta .airport-code > h3 {
+  color: hsla(45, 29.8%, 90%, .7);
 }
 
-footer {
-  background-color: #ccc;
-  padding-top: 2em;
-  padding-bottom: 5em;
+#boston {
+  color: hsl(200, 31.2%, 15%);
+}
+#boston .airport-code > h3 {
+  color: hsla(200, 31.2%, 15%, .9);
 }
 
-@media screen {
-  @media (min-aspect-ratio: 1/1) {
-    #top {
-      height: 100vh;
-    }
-
-    body {
-      min-height: 197vh;
-    }
-  }
+#hire-me {
+  background-color: #E1BEE7;
+  background-clip: border-box;
 }
 
 @media screen and (min-width: 35.5em) {
-  .container {
-    width: 35.5em;
-    margin: 0 auto;
-  }
 
   #intro p {
     padding: 0;
@@ -143,24 +76,8 @@ footer {
     font-size: 1.2em;
   }
 
-  #mid li {
-    text-align: left;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
   p.text-pad-left {
     box-sizing: border-box;
     margin-left: 1em;
-  }
-
-  @media (min-height: 35.5em){
-    #top {
-      height: 50vmin;
-    }
-
-    body {
-      min-height: 100vh;
-    }
   }
 }
