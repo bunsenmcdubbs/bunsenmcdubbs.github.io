@@ -23,8 +23,18 @@
   max-height: 128px;
 }
 
-#personal-places section {
+#personal {
+  background-color: #F0F4C3;
+  padding: 5em 0;
+}
+
+#personal section {
   min-height: 15em;
+}
+
+#personal p {
+  margin: 0;
+  padding-bottom: 1em;
 }
 
 .airport-code {
@@ -40,29 +50,58 @@
 
 #boston p {
   background-color: hsla(45, 29.8%, 90%, .75);
+  color: hsl(200, 31.2%, 15%);
 }
 
 #atlanta p {
   background-color: hsla(200, 31.2%, 15%, .75);
+  color: hsl(45, 29.8%, 100%);
 }
 
-#atlanta {
-  color: hsl(45, 29.8%, 90%);
-}
 #atlanta .airport-code > h3 {
   color: hsla(45, 29.8%, 90%, .7);
 }
 
-#boston {
-  color: hsl(200, 31.2%, 15%);
-}
 #boston .airport-code > h3 {
   color: hsla(200, 31.2%, 15%, .9);
 }
 
+#more-info {
+  padding: 2.5em 0;
+}
+
 #hire-me {
-  background-color: #E1BEE7;
-  background-clip: border-box;
+  background-color: #E1F5FE;
+}
+
+#hire-me .banner {
+  padding-top: 3em;
+  padding-bottom: 2em;
+  background-color: #01579B;
+  box-shadow: 0 -2px 30px #888888;
+}
+
+#hire-me .big {
+  margin: 0;
+  color: #E1F5FE;
+}
+
+#resume {
+  display: block;
+  background-color: #0288D1;
+  padding: 1.25em 1.5em;
+  text-align: center;
+  color: #E1F5FE;
+  box-shadow: 0 -2px 20px #888;
+}
+
+#resume > a.big {
+  width: 8em;
+  margin: 0 auto;
+}
+
+#resume > a.big:hover {
+  color: #80D8FF;
 }
 
 @media screen and (min-width: 35.5em) {

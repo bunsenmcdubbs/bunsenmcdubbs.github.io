@@ -13,6 +13,7 @@ body {
 
 html, button, input, select, textarea, body, .pure-g [class *="pure-u"] {
 	font-family: Merriweather, Georgia, Times, serif;
+	color: hsla(0, 0%, 0%, .87);
 	font-size: 14px;
 }
 
@@ -77,12 +78,13 @@ header > #main-title > span.big {
 /* Custom footer */
 footer {
 	text-align: center;
-	margin-top: 15px;
-	/*border-top: 1px solid #e5e5e5;*/
+	/*border-top: 1px solid #666;*/
+
+	box-shadow: 0 -2px 40px #999;
 
 	background-color: #90A4AE;
 	padding-top: 2em;
-	padding-bottom: 5em;
+	padding-bottom: 3em;
 }
 
 footer ul {
@@ -165,12 +167,12 @@ nav .nav-item {
 nav .nav-item:hover {
 	/*background-color: #eee;*/
 	background-color: hsla(0, 0%, 93%, .75);
-
 }
 
 nav .nav-item a {
 	display: block;
 	text-decoration: none;
+	color: #ffffff;
 }
 
 .meta {
