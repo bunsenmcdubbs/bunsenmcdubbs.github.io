@@ -21,14 +21,14 @@ body, .pure-g [class *="pure-u"]{
   background-image: url("https://distilleryimage11-a.akamaihd.net/19af293cfacb11e1840e123138141d93_7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
 }
 
 #atlanta {
   background-image: url("https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xpt1/t51.2885-15/925970_1498854333737674_178616849_n.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
 }
 
 .container {
@@ -55,6 +55,10 @@ body, .pure-g [class *="pure-u"]{
   max-height: 128px;
 }
 
+#personal-places section {
+  min-height: 20em;
+}
+
 .airport-code {
   width: 85%;
   margin: 0 auto;
@@ -64,7 +68,7 @@ body, .pure-g [class *="pure-u"]{
   font-family: Open Sans;
 }
 
-#atlanta .airport-code > h3, #atlanta {
+#atlanta, #atlanta .airport-code > h3 {
   color: #eee;
 }
 
@@ -72,6 +76,10 @@ body, .pure-g [class *="pure-u"]{
   @media (min-aspect-ratio: 1/1) {
     #top {
       height: 100vh;
+    }
+
+    body {
+      min-height: 197vh;
     }
   }
 }
@@ -95,6 +103,10 @@ body, .pure-g [class *="pure-u"]{
   @media (min-height: 35.5em){
     #top {
       height: 50vmin;
+    }
+
+    body {
+      min-height: 100vh;
     }
   }
 }
