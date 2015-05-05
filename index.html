@@ -3,14 +3,18 @@ layout: bare
 title: BunsenMcDubbs
 customCSS: "/style.css"
 ---
-
-<div id="top" class="chunk">
-  <!-- <img src="https://avatars2.githubusercontent.com/u/699273?v=3&s=200" class="img-circle" width="200" height="200"> -->
+<header id="top" class="chunk">
+  <nav class="pure-g container">
+    <div class="pure-u-1-4 nav-item"><a href="/">about</a></div>
+    <div class="pure-u-1-4 nav-item"><a href="/blog/">blog</a></div>
+    <div class="pure-u-1-4 nav-item"><a href="/projects/">projects</a></div>
+    <div class="pure-u-1-4 nav-item"><a href="/archive/">archive</a></div>
+  </nav>
   <div id="main-title" class="container vert-center">
     <span class="big">Hi! My name is</span>
     <span class="big">Andrew Dai.</span>
   </div>
-</div>
+</header>
 
 <div id="mid" class="chunk">
   <div class="container">
@@ -18,44 +22,115 @@ customCSS: "/style.css"
       <div class="pure-u-sm-1-4 pure-u-1">
         <img class="img-circle icon" src="http://en.gravatar.com/userimage/43242946/99ef6a0172bffefbe4c08416d432eef0.png?size=128" />
       </div>
-      <p class="pure-u-sm-3-4 pure-u-1 text-pad-left">
-        I am a student, curious tinkerer, hackathon hacker, and
-        avid photographer. A true nerd at heart, I am now studying
-        computer science at the Georgia Institute of Technology.
-      </p>
+      <div class="pure-u-sm-3-4 pure-u-1">
+        <p class="text-pad-left">
+          I am a student, curious tinkerer, hackathon hacker, and
+          avid photographer. A true nerd at heart, I am now studying
+          computer science at the
+          <a href="https://gatech.edu">Georgia Institute of Technology</a>.
+        </p>
+      </div>
+      <div class="pure-u-1">
+        <section id="work">
+          <p>This summer I&rsquo;m interning at Intersystems in Cambridge.
+            In the past, I&rsquo;ve also interned at the Concord Consortium
+            and the Martinos Center for Biomedical Imaging at Massachusetts
+            General Hospital.</p>
+        </section>
+        <section id="gatech">
+          <p> At Georgia Tech, under the direction of Dr. John Stasko and in
+            collaboration with PhD students Chad Stopler and Ramik Sadana, I
+            developed a multitouch version of the Dust and Magnet data
+            visualization. It is built with Processing and Java and heavily
+            utilizes the Simple Multitouch Library.</p>
+        </section>
+      </div>
+      <div class="pure-u-sm-1-2 pure-u-1">
+        <ul>
+          <li><a href="https://github.com/bunsenmcdubbs" class="no-style">
+            <i class="fa fa-github fa-2x fa-fw" id="github"></i>/bunsenmcdubbs</a></li>
+          <li><a href="https://linkedin.com/in/daiandrew" class="no-style">
+            <i class="fa fa-linkedin-square fa-2x fa-fw" id="linkedin"></i>/daiandrew</a></li>
+          <li><a href="https://instagram.com/bunsenmcdubbs/" class="no-style">
+            <i class="fa fa-instagram fa-2x fa-fw" id="instagram"></i>/bunsenmcdubbs</a></li>
+        </ul>
+      </div>
+      <div class="pure-u-sm-1-2 pure-u-1">
+        <ul>
+          <li><a href="https://www.flickr.com/photos/andyswim96/" class="no-style">
+            <i class="fa fa-flickr fa-2x fa-fw" id="flickr"></i>/bunsenmcdubbs</a></li>
+          <li><a href="/blog" class="no-style">
+            <i class="fa fa-pencil-square fa-2x fa-fw" id="blog"></i>/blog</a></li>
+          <li>
+            <i class="fa fa-envelope fa-2x fa-fw" id="email"></i>/contact@andrewdai.co</li>
+        </ul>
+      </div>
     </section>
   </div>
 </div>
+
+<!-- <div id="hire-me" class="chunk">
+  <div class="container">
+    <section id="gatech">
+      <p> At Georgia Tech, under the direction of Dr. John Stasko and in
+        collaboration with PhD students Chad Stopler and Ramik Sadana, I
+        developed a multitouch version of the Dust and Magnet data
+        visualization. It is built with Processing and Java and heavily
+        utilizes the Simple Multitouch Library.</p>
+    </section>
+    <section id="intersystems">
+      <p>This summer I&rsquo;m interning at Intersystems in Cambridge.</p>
+    </section>
+  </div>
+</div> -->
 
 <div id="personal-places" class="chunk">
   <div class="container">
-    <section class="pure-g" id="boston">
-      <div class="pure-u-sm-1-4 pure-u-1">
-        <!-- <img class="img-circle icon" src="https://distilleryimage11-a.akamaihd.net/19af293cfacb11e1840e123138141d93_7.jpg" /> -->
-        <div class="airport-code icon"><h3 class="big">BOS</h3></div>
-      </div>
-      <p class="pure-u-sm-3-4 pure-u-1 text-pad-left">
-        Although born farther north and closet Canadian, I
-        grew up in the quiet suburbs of Boston. This is where I formed my
-        love of both photography and computer science as well as solidifed
-        my immunity to cold weather.
-      </p>
-    </section>
-    <section class="pure-g" id="atlanta">
-      <div class="pure-u-sm-1-4 pure-u-1">
-        <div class="airport-code icon"><h3 class="big">ATL</h3></div>
-        <!-- <img class="img-circle icon" src="https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xpt1/t51.2885-15/925970_1498854333737674_178616849_n.jpg" /> -->
-      </div>
-      <p class="pure-u-sm-3-4 pure-u-1 text-pad-left">
-        After living for so long in Massachusetts and getting closely
-        aquainted with that famous New England charm, I decided to experience my
-        share of Southern Hospitality. I moved down South to attend school
-        and live out my dream of becoming a carpetbagger.
-      </p>
-    </section>
+    <a href="https://instagram.com/p/PXu3o1s0y7/" class="no-style">
+      <section class="pure-g" id="boston">
+        <div class="pure-u-sm-1-4 pure-u-1">
+          <div class="airport-code icon"><h3 class="big">BOS</h3></div>
+        </div>
+        <div class="pure-u-sm-3-4 pure-u-1">
+          <p class="text-pad-left">
+            Although born farther north and closet Canadian, I
+            grew up in the quiet suburbs of Boston. This is where I formed my
+            love of both photography and computer science as well as solidifed
+            my immunity to cold weather.
+          </p>
+        </div>
+      </section>
+    </a>
+    <a href="https://instagram.com/p/wSJ1Dns09D/" class="no-style">
+      <section class="pure-g" id="atlanta">
+        <div class="pure-u-sm-1-4 pure-u-1">
+          <div class="airport-code icon"><h3 class="big">ATL</h3></div>
+        </div>
+        <div class="pure-u-sm-3-4 pure-u-1">
+          <p class="text-pad-left">
+            After living in Massachusetts and getting closely
+            aquainted with that famous New England charm, I decided to experience
+            my share of Southern Hospitality. I moved down South to attend school
+            and live out my dream of becoming a carpetbagger.
+          </p>
+        </div>
+      </section>
+    </a>
   </div>
 </div>
 <!-- <hr> -->
-<!-- <div id="bottom" class="pure-g">
-
-</div> -->
+<footer>
+  <div class="container">
+    <section id="meta">
+      <h3>Meta: <small>about this site</small></h3>
+      <p>This site is hosted on <a
+        href="http://pages.github.com">Github Pages</a> and uses <a
+        href="http://jekyllrb.com">Jekyll</a>. The source can be found on my <a
+        href="http://github.com/bunsenmcdubbs/bunsenmcdubbs.github.io/">Github</a>.
+      </p>
+    </section>
+    <small>
+			Andrew Dai: Coder, Maker, and Photographer. Also known as BunsenMcDubbs. 2015.
+		</small>
+  </div>
+</footer>

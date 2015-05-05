@@ -60,6 +60,12 @@ header {
 	left: 0;
 	top: 0;
 	z-index: 20;
+	background-image: url("https://distilleryimage5-a.akamaihd.net/364c08d2fbdb11e286c222000a1fbc86_7.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	box-shadow: 0 0 20px #aaa;
 }
 
 /* Custom footer */
@@ -90,7 +96,9 @@ nav .nav-item {
 }
 
 nav .nav-item:hover {
-	background-color: #eee;
+	/*background-color: #eee;*/
+	background-color: hsla(0, 0%, 93%, .75);
+
 }
 
 nav .nav-item a {

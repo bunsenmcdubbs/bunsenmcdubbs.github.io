@@ -1,12 +1,8 @@
 body, .pure-g [class *="pure-u"]{
-  /*font-family: Open Sans;*/
+  /* font-family: Open Sans; */
 }
 
-.chunk {
-  margin-bottom: 1.5em;
-}
-
-#top {
+header {
   background-image: url("https://distilleryimage5-a.akamaihd.net/364c08d2fbdb11e286c222000a1fbc86_7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,25 +10,57 @@ body, .pure-g [class *="pure-u"]{
 
   height: 60vmin;
 
-  box-shadow: 0 2px 40px #aaa;
+  box-shadow: 0 0 20px #aaa;
+}
+
+#mid {
+  padding-top: 1.5em;
+  /*box-shadow: 0 0 20px #aaa;*/
+}
+
+#mid ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#mid li {
+  text-align: center;
+  margin-bottom: .75em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+}
+
+#mid li:hover {
+  background-color: #ddd;
+}
+
+#mid li a {
+  display: block;
+}
+
+a.no-style {
+  text-decoration: none;
+}
+
+a.no-style:hover {
+  font-weight: normal;
+}
+
+#boston, #atlanta {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #boston {
   background-image: url("https://distilleryimage11-a.akamaihd.net/19af293cfacb11e1840e123138141d93_7.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
+
 }
 
 #atlanta {
   background-image: url("https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xpt1/t51.2885-15/925970_1498854333737674_178616849_n.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: center top;
-}
-
-.container {
-  width: 100%;
 }
 
 .vert-center {
@@ -56,7 +84,7 @@ body, .pure-g [class *="pure-u"]{
 }
 
 #personal-places section {
-  min-height: 20em;
+  min-height: 15em;
 }
 
 .airport-code {
@@ -66,10 +94,26 @@ body, .pure-g [class *="pure-u"]{
 
 #boston p, #atlanta p {
   font-family: Open Sans;
+  background-clip: padding-box;
+  padding: 3% 5%;
+}
+
+#boston p {
+  background-color: hsla(0, 0%, 93%, .75);
+}
+
+#atlanta p {
+  background-color: hsla(0, 0%, 7%, .75);
 }
 
 #atlanta, #atlanta .airport-code > h3 {
   color: #eee;
+}
+
+footer {
+  background-color: #ccc;
+  padding-top: 2em;
+  padding-bottom: 5em;
 }
 
 @media screen {
@@ -90,14 +134,24 @@ body, .pure-g [class *="pure-u"]{
     margin: 0 auto;
   }
 
-  #intro > p {
+  #intro p {
+    padding: 0;
+  }
+
+  #intro p.text-pad-left {
+    margin-left: 10%;
     font-size: 1.2em;
-    padding-left: 10%;
+  }
+
+  #mid li {
+    text-align: left;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   p.text-pad-left {
     box-sizing: border-box;
-    padding-left: 5%;
+    margin-left: 1em;
   }
 
   @media (min-height: 35.5em){
