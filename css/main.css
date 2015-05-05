@@ -117,7 +117,7 @@ footer #last {
 }
 
 @media screen and (min-width: 35.5em) {
-	.container, nav.container {
+	.container, nav.container, footer .container {
 		max-width: 35.5em;
 		margin: 0 auto;
 	}
