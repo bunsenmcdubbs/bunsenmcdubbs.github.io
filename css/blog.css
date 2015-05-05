@@ -5,14 +5,8 @@
   }
 }
 
-@media screen and (min-width: 35.5em) {
-  #main-title {
-    max-width: 50%;
-  }
-}
-
 #main-title {
-  max-width: 50%;
+  width: 60vmin;
 }
 
 .posts {
