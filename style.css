@@ -10,11 +10,11 @@
 }
 
 #boston {
-  background-image: url("https://distilleryimage11-a.akamaihd.net/19af293cfacb11e1840e123138141d93_7.jpg");
+  background-image: url("/images/home.jpg");
 }
 
 #atlanta {
-  background-image: url("https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xpt1/t51.2885-15/925970_1498854333737674_178616849_n.jpg");
+  background-image: url("/images/atl.jpg");
   background-position: center top;
 }
 
