@@ -109,6 +109,15 @@ h3 {
   font-style: italic;
 }
 
+.resume-objective {
+  padding-top: 1.3em;
+  border-top: 1px solid grey;
+  font-style: italic;
+  text-align: center;
+  /*font-size: 1.15em;*/
+  line-height: 90%;
+}
+
 .resume-project .project-name {
   /*text-decoration: underline;*/
   /*border-bottom: 1px solid;*/
