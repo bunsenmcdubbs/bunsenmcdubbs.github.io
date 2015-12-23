@@ -1,221 +1,249 @@
 <html>
 <head>
   <title>Andrew Dai Resume</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="print.css" media="print">
 </head>
 
 <body>
 
-  <header>
+<header>
 
+  <div>
     <h1 id="name">Andrew Dai</h1>
 
     <ul id="contact">
-      <li><span class='label'>cell</span>(978) 201-0796</li>
-      <li><span class='label'>email</span>adai@gatech.edu</li>
-      <li><span class='label'>website</span>
-        <a href="http://andrewdai.co">andrewdai.co</a></li>
-      <li><span class='label'>github</span>
-        <a href="https://github.com/bunsenmcdubbs">bunsenmcdubbs</a></li>
+      <li>(978) 201-0796</li>
+      <li>adai@gatech.edu</li>
+      <li><a href="http://andrewdai.co">andrewdai.co</a></li>
+      <li><a href="https://github.com/bunsenmcdubbs"><span class='label'>github/</span>bunsenmcdubbs</a></li>
+    </ul>
+  </div>
+
+  <p id="objective">Full stack developer with a passion for solving
+    challenging problems. Seeking a software engineering internship.</p>
+
+</header>
+
+<div class="container">
+
+<!--
+8888888888     888                            888    d8b
+888            888                            888
+8888888    .d88888 888  888  .d8888b  8888b.  888888 888  .d88b.  88888b.
+888       888  888 888  888 888      .d888888 888    888 888  888 888  888
+888       Y88b 888 Y88b 888 Y88b.    888  888 Y88b.  888 Y88..88P 888  888
+8888888888 "Y88888  "Y88888  "Y8888P "Y888888  "Y888 888  "Y88P"  888  888
+-->
+
+  <section class="resume-edu">
+    <h2>Education</h2>
+    <div class="entry">
+      <h3>Georgia Institute of Technology</h3>
+      <span class='loc'>Atlanta, Georgia</span>
+      <span class='date'>Graduation: 2017</span>
+      <p class="des">Pursuing a Bachelors of Science in Computer Science</p>
+      <ul>
+        <li><p><span class="label">Research:</span>
+          Information Interfaces Lab at the GVU Center with PI Dr. John Stasko</p></li>
+        <li><p><span class="label">GPA:</span> 3.89 (overall), 4.00 (major)</p></li>
+      </ul>
+    </div>
+  </section>
+
+<!--
+888       888                  888
+888   o   888                  888
+888 d888b 888  .d88b.  888d888 888  888
+888d88888b888 d88''88b 888P"   888 .8P
+8888P   Y8888 Y88..88P 888     888 "88b
+888P     Y888  "Y88P"  888     888  888
+ -->
+
+  <section class="resume-work">
+    <h2>Work Experience</h2>
+
+    <div class="entry">
+      <h3><a href="http://www.intersystems.com">InterSystems Corporation</a></h3>
+      <span class="role">Intern</span>
+      <span class='loc'>Cambridge, Massachusetts</span>
+      <span class='date'>May 2015 - present</span>
+      <p class="des">Large, multinational corporation developing
+         advanced data management, connectivity, and analytics technologies</p>
+      <ul>
+        <li><p>Designed and developed a fully featured modern replacement for
+          an aging internal bug and feature tracking system</p></li>
+        <li><p>Wrote a single
+          page application and RESTful API using Angular.js and Cach&eacute;
+          ObjectScript</p></li>
+        <li><p>Shipped a fully featured product
+          to hundreds of employees in an aggressive 8 week timeline</p></li>
+        <li><p>Built a fast site
+          that allows the user to browse hundreds of thousands of bug
+          reports</p></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3>
+        <a href="http://www.cc.gatech.edu/gvu/ii/index.html">Information Interfaces Lab</a>,
+        <a href="http://gvu.gatech.edu">Georgia Tech&rsquo;s GVU Center</a>
+      </h3>
+      <span class="role">Research Assistant</span>
+      <span class='loc'>Atlanta, Georgia</span>
+      <span class='date'>August 2014 - present</span>
+      <p class="des">HCI research group developing computing techniques that
+        help people use information to enrich their lives</p>
+      <ul>
+        <li><p>Exploring multi-user, multi-device data
+          visualization techniques with web technologies (WebSockets, d3.js)
+          and mobile devices</p></li>
+        <li><p>Using MySQL and Elasticsearch to store and process large sets of
+          documents for analysis and visualization with d3.js</p></li>
+        <li><p>Wrote a multitouch Dust and Magnet simulation with Java/Processing
+          for a Microsoft PixelSense 55&rdquo; touchscreen</p></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3><a href="http://concord.org">Concord Consortium</a></h3>
+      <span class="role">Intern</span>
+      <span class='loc'>Concord, Massachusetts</span>
+      <span class='date'>June 2014 - August 2014</span>
+      <p class="des">Non-profit educational research and development
+        organization focused on bringing technology into classrooms</p>
+      <ul>
+        <li><p>Led the initial development of a web-based drawing tool now
+          used by thousands of teachers across hundreds of schools in the
+          US</p></li>
+        <li><p>Tested and described issues in web, iOS and Android versions of
+          SmartGraphs (interactive math/graphing activity)</p></li>
+        <!-- <li><p>Used JavaScript (jQuery, Node.js), Git/Github, and issue tracking
+          (Pivotal Tracker)</p></li> -->
+      </ul>
+    </div>
+  </section>
+
+<!--
+8888888b.                   d8b                   888
+888    888                                        888
+888   d88P 888d888 .d88b.  8888  .d88b.   .d8888b 888888 .d8888b
+8888888P"  888P"  d88""88b "888 d8P  Y8b d88P"    888    88K
+888        888    888  888  888 88888888 888      888    "Y8888b.
+888        888    Y88..88P  888 Y8b.     Y88b.    Y88b.       X88
+888        888     "Y88P"   888  "Y8888   "Y8888P  "Y888  88888P'
+                            888
+                          88P"
+ -->
+
+  <section class="resume-project">
+    <h2>Projects and Publications</h2>
+
+    <div class="entry">
+      <h3><a href="https://github.com/BunsenMcDubbs/congressvis">CongressVis</a></h3>
+      (In Progress)
+      <span class='date'>September 2015 - present</span>
+      <ul>
+        <li><p>Implementing a full stack web application for data visualization
+          and analytics of US Congress data</p></li>
+        <li><p>Investigating multi-device and multi-user collaboration in a
+          browsing/discovery context for large, rich datasets</p></li>
+        <li><p>Node.js with Express.js framework backed by MySQL and Elasticsearch with
+          a Backbone.js single page application and d3.js</p></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3><a href="http://andrewdai.co/dustandmagnet-presentation/#/">
+          Hands-On, Large Display Visual Data Exploration</a></h3>
+      <span class="role">Poster at IEEE Vis2015</span>
+      <span class='date'>October 2015</span>
+      <ul>
+        <li><p>Adapted the Dust and Magnet technique to a large multitouch
+          screen (from work at the Information Interfaces Lab)</p></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3><a href="http://andrewdai.co/projects/">Autonomous, GPS Guided Toy Car</a></h3>
+      <span class='date'>October 2013 - June 2014</span>
+      <ul>
+        <li><p>Modified a toy remote control car to autonomously drive between
+          GPS waypoints</p></li>
+        <li><p>Developed for embedded Linux on a BeagleBone Black microcomputer
+          and Robot Operating System (ROS) with Python</p></li>
+      </ul>
+    </div>
+
+  </section>
+
+<!--
+.d8888b.   888          888 888
+d88P  Y88b 888      Y8P 888 888
+"Y888b.    888  888     888 888 .d8888b
+   "Y88b.  888 .88P 888 888 888 88K
+     "888  888888K  888 888 888 "Y8888b.
+Y88b  d88P 888 "88b 888 888 888      X88
+"Y8888P"   888  888 888 888 888  88888P'
+ -->
+
+  <section class="resume-skills">
+    <h2>Skills</h2>
+
+    <ul>
+      <li><p><span class="label">Languages:</span> Java (4 years),
+        JavaScript (2 years), Python (2 years), Cach&eacute; ObjectScript,
+        HTML/CSS, and SQL</p></li>
+      <li><p><span class="label">Tools/Platforms/Databases:</span>
+        Angular.js, Backbone.js, Elasticsearch, Express.js, Git, MySQL,
+        Node.js, REST API&rsquo;s, *nix proficiency</p></li>
+      <!-- <li><p><span class="label">Making things:</span> electronics prototyping
+        (soldering, basic circuitry), embedded Linux, microcomputers and
+        controllers</p></li> -->
     </ul>
 
-  </header>
+  </section>
 
-  <div class="container">
+<!--
+      d88888          888    Y8P          Y8P 888    Y8P
+     d88P888          888                     888
+    d88P 888  .d8888b 888888 888 888  888 888 888888 888  .d88b.  .d8888b
+   d88P  888 d88P"    888    888 888  888 888 888    888 d8P  Y8b 88K
+  d88P   888 888      888    888 Y88  88P 888 888    888 88888888 "Y8888b.
+ d8888888888 Y88b.    Y88b.  888  Y8bd8P  888 Y88b.  888 Y8b.          X88
+d88P     888  "Y8888P  "Y888 888   Y88P   888  "Y888 888  "Y8888   88888P'
+ -->
+  <section class="resume-activities">
+    <h2>Activities and Involvement</h2>
 
-    <!-- <section class="resume-objective">
-      <p>I am a student and  full stack developer looking for a software
-        engineering internship for Summer 2016.</p>
-      <p>I strive to ship solid, well-engineered code
-        everyday.</p>
-    </section> -->
+    <ul>
+      <li><p><span class="label">Clubs and Interests:</span> HackGT Tech Team,
+        Linux Users Group &commat; GT, GT WebDev,
+        Photography ([Land|City]scape, Portrait, Sport)</p></li>
+      <li><p><span class="label">Other/Fun Facts:</span>
+        Teacher's Assistant for AP CS class in high school,
+        High School Varsity Swim Team Captain</p></li>
+    </ul>
+  </section>
+</div>
 
-    <section class="resume-edu">
-      <h2>Education</h2>
-      <div class="entry">
-        <h3>Georgia Institute of Technology</h3>
-        <span class='loc'>Atlanta, Georgia</span>
-        <span class='date'>Graduation: 2017</span>
-        <p class="des">Pursuing a Bachelors of Science in Computer Science</p>
-        <ul>
-          <!-- <li><p><span class="label">Teaching:</span>
-            Tutor for Intro CS Courses
-            </p></li> -->
-          <li><p><span class="label">Research:</span>
-            Information Interfaces Lab at the GVU Center with PI Dr. John Stasko</p></li>
-          <li><p><span class="label">GPA:</span> 3.84 (overall), 4.00 (major)</p></li>
-        </ul>
-      </div>
-    </section>
+<footer>
+  <!-- <small>References available upon request</small> -->
+  <p>Thank you and have a great day!</p>
+  <small>v2.2.0-20151222</small>
+</footer>
 
-    <section class="resume-work">
-      <h2>Work Experience</h2>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      <div class="entry">
-        <h3><a href="http://www.intersystems.com">InterSystems Corporation</a></h3>
-        <span class="role">Intern</span>
-        <span class='loc'>Cambridge, Massachusetts</span>
-        <span class='date'>May 2015 - present</span>
-        <p class="des">Large, multinational corporation developing
-           advanced data management, connectivity, and analytics technologies</p>
-        <ul>
-          <li><p>Wrote a single
-            page application and RESTful API for the internal feature and bug
-            tracker using Angular.js and Cach&eacute;
-            ObjectScript</p></li>
-          <li><p>Planned, developed and shipped a fully featured product
-            to hundreds of employees in an aggressive 8 week timeline</p></li>
-          <li><p>Optimized and designed for performance, building a fast site
-            that allows the user to browse hundreds of thousands of bug
-            reports</p></li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <h3><a href="http://www.cc.gatech.edu/gvu/ii/index.html">
-          Information Interfaces Lab at Georgia Tech&rsquo;s GVU Center</a></h3>
-        <span class="role">Research Assistant</span>
-        <span class='loc'>Atlanta, Georgia</span>
-        <span class='date'>August 2014 - present</span>
-        <p class="des">HCI research group developing computing techniques that
-          help people use information to enrich their lives</p>
-        <ul>
-          <li><p>Exploring multi-user, multi-device data
-            visualization techniques with web technologies (WebSockets, d3.js)
-            and mobile devices</p></li>
-          <li><p>Using Apache CouchDB and Solr to store and process large sets of
-            documents for analysis and visualization with d3.js</p></li>
-          <li><p>Wrote a multitouch Dust and Magnet simulation with Java/Processing
-            for a Microsoft PixelSense 55&rdquo; touchscreen</p></li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <h3><a href="http://concord.org">Concord Consortium</a></h3>
-        <span class="role">Intern</span>
-        <span class='loc'>Concord, Massachusetts</span>
-        <span class='date'>June 2014 - August 2014</span>
-        <p class="des">Non-profit educational research and development
-          organization focused on bringing technology into classrooms</p>
-        <ul>
-          <li><p>Led the initial development of a web-based drawing tool now
-            used by thousands of teachers across hundreds of schools in the
-            US</p></li>
-          <li><p>Tested and described issues in web, iOS and Android versions of
-            SmartGraphs (interactive math/graphing activity)</p></li>
-          <li><p>Used JavaScript (jQuery, Node.js), Git/Github, and issue tracking
-            (Pivotal Tracker)</p></li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <h3>Martinos Center for Biomedical Imaging, Massachusetts General Hospital</h3>
-        <span class="role">Intern</span>
-        <span class='loc'>Boston, Massachusetts</span>
-        <span class='date'>June 2013 - August 2013</span>
-        <p class="des">Biomedical Imaging Center focused on both translational
-          research and development of new techniques</p>
-        <ul>
-          <li><p>Worked with graduate students and post-docs to prototype MRI
-              devices</p></li>
-          <li><p>Wrote an extensive how-to and troubleshooting guide
-            for a pick and place machine currently in use</p></li>
-          <li><p>Assembled and helped refine first-of-its-kind affordable
-            tabletop MRI scanners for MIT classrooms</p></li>
-        </ul>
-      </div>
-
-      <!-- <div class="entry">
-        <h3><a href="https://www.facebook.com/2aphoto">A&amp;A Photography</a></h3>
-        <span class="role">Co-founder, Photographer</span>
-        <span class='loc'>Acton, Massachusetts</span>
-        <span class='date'>December 2012 - June 2014</span>
-        <p class="des">Started a small photography business focusing on sports, event
-          and portrait photography</p>
-        <ul>
-          <li><p>Reached out on social media and established a footing in the
-            local community and sold products and services to clients</p></li>
-        </ul>
-      </div> -->
-
-    </section>
-
-    <section class="resume-project">
-      <h2>Projects and Publications</h2>
-
-      <div class="entry">
-        <h3><a href="">Hands-On, Large Display Visual Data Exploration</a></h3>
-        <span class="role">Poster at IEEE Vis2015</span>
-        <span class='date'>October 2015</span>
-        <ul>
-          <li><p>Adapted the Dust and Magnet technique to a large multitouch
-            screen (from work at the Information Interfaces Lab)</p></li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <h3><a href="http://andrewdai.co/projects/">Autonomous, GPS Guided Toy Car</a></h3>
-        <span class='date'>October 2013 - June 2014</span>
-        <ul>
-          <li><p>Modified a toy remote control car to autonomously drive between
-            GPS waypoints</p></li>
-          <li><p>Developed for embedded Linux on a BeagleBone Black microcomputer
-            and Robot Operating System (ROS) with Python</p></li>
-        </ul>
-      </div>
-
-    </section>
-
-    <section class="resume-skills">
-      <h2>Skills</h2>
-
-      <ul>
-        <li><p><span class="label">Languages:</span> Java (4 years),
-          JavaScript (2 years), Python (2 years), Cach&eacute; ObjectScript,
-          HTML/CSS, and SQL</p></li>
-        <li><p><span class="label">Web Development:</span> Angular.js, REST API&rsquo;s,
-          jQuery, Express.js, Node.js</p></li>
-        <!-- <li><p><span class="label">Making things:</span> electronics prototyping
-          (soldering, basic circuitry), embedded Linux, microcomputers and
-          controllers</p></li> -->
-        <li><p><span class="label">Other:</span> Linux/Unix fluency,
-          Git version control, Adobe Photoshop and Illustrator</p></li>
-      </ul>
-
-    </section>
-
-    <section class="resume-activities">
-      <h2>Activities and Involvement</h2>
-
-      <ul>
-        <li><p><span class="label">Clubs:</span> Linux Users Group &commat; GT, GT WebDev</p></li>
-        <li><p><span class="label">Teaching:</span>
-          Teacher's Assistant for AP CS class in high school</p></li>
-
-        <!-- <li><p><span class="label">Teaching:</span> Tutor for Intro CS courses
-          at Georgia Tech and Teacher's Assistant for AP CS class in high school</p></li> -->
-      </ul>
-    </section>
-
-
-    <footer>
-      <!-- <small>References available upon request</small> -->
-      <small>v2.0.5-20151013</small>
-    </footer>
-
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-20508277-4', 'auto');
-    ga('require', 'displayfeatures');
-    ga('send', 'pageview');
-    </script>
-
+ga('create', 'UA-20508277-4', 'auto');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
 
 </body>
 

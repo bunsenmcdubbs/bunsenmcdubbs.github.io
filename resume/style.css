@@ -1,7 +1,7 @@
 body {
   font-family: Georgia;
   font-size: 14px;
-  padding: 0 4em 1.5em 4em;
+  padding: 2em 4em;
 }
 
 a {
@@ -16,17 +16,25 @@ p {
   line-height: 1.6em;
 }
 
-header, footer {
+header {
   text-align: center;
+}
+
+#name {
+  font-size: 2.6em;
+  font-variant: small-caps;
+  padding-bottom: .1em;
 }
 
 header ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 header li {
   display: inline-block;
+  line-height: 1.6em;
 }
 
 header li::after{
@@ -37,12 +45,8 @@ header li:last-child::after {
   content: "";
 }
 
-header .label {
-  font-style: italic;
-}
-
-header .label::after {
-  content: ": ";
+footer {
+  text-align: center;
 }
 
 h1, h2, h3, h4 {
@@ -80,8 +84,6 @@ h2 {
 h3 {
   display: inline-block;
   font-weight: bold;
-  /*text-decoration: underline;*/
-  /*border-bottom: 1px solid;*/
 }
 
 .entry .role {
@@ -104,18 +106,23 @@ h3 {
   float: right;
 }
 
+/* this is a hand-tuned adjustment to vertically align the date*/
+.resume-edu .entry .date, .resume-work .entry .date {
+  line-height: 17px;
+}
+
 .entry .des {
   margin-top: .1em;
   font-style: italic;
 }
 
 .resume-objective {
-  padding-top: 1.3em;
+  /*padding-top: 1.3em;
   border-top: 1px solid grey;
   font-style: italic;
   text-align: center;
-  /*font-size: 1.15em;*/
-  line-height: 90%;
+  font-size: 1.15em;
+  line-height: 90%;*/
 }
 
 .resume-project .project-name {
@@ -126,7 +133,7 @@ h3 {
 }
 
 .resume-project h3 {
-  font-size: 100%;
+  /*font-size: 100%;*/
 }
 
 .meta {
