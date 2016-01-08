@@ -98,30 +98,31 @@
   padding: 1.25em 1.5em;
   text-align: center;
   color: #E1F5FE;
-  box-shadow: 0 -2px 20px #888;
+  /*box-shadow: 0 -2px 20px #888;*/
 }
 
 #resume > a.big {
   width: 8em;
   margin: 0 auto;
-  transition: all .2s;
-  text-shadow: 1px 1px green,
-    2px 2px green,
-    3px 3px green;
+  transition: all .12s ease-out;
+  text-shadow: 1px 1px #01579B,
+    2px 2px #01579B,
+    3px 3px #01579B,
+    4px 4px #01579B;
 }
 
 #resume > a.big:hover {
   /*color: #80D8FF;*/
-  text-shadow: 1px 1px green,
-    2px 2px green,
-    3px 3px green,
-    4px 4px green,
-    5px 5px green,
-    6px 6px green;
+  text-shadow: 1px 1px #01579B,
+    2px 2px #01579B,
+    3px 3px #01579B,
+    4px 4px #01579B,
+    5px 5px #01579B,
+    6px 6px #01579B;
 
   position: relative;
-  top: -3px;
-  left: -3px;
+  top: -4px;
+  left: -4px;
 }
 
 @media screen and (min-width: 35.5em) {
