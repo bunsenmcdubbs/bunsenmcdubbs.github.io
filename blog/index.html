@@ -41,7 +41,7 @@ customCSS: "/css/blog.css"
 	{% elsif page == 1 %}
 	<a href="{{ '/blog/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
 	{% else %}
-	<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+	<a href="{{ site.paginate_path | prepend: '/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
 	{% endif %}
 	{% endfor %}
 
