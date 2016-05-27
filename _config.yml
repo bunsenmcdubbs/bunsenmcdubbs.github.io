@@ -1,7 +1,7 @@
 name: Andrew Dai
 author: Andrew Dai
-markdown: redcarpet
-highlighter: "pygments"
+gems: [jekyll-gist, jekyll-paginate]
+highlighter: "rouge"
 permalink: none
 paginate: 12
 paginate_path: "blog/page:num/"
