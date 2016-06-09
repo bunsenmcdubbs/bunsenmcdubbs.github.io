@@ -4,7 +4,7 @@ body {
   padding: 2em 4em;
 }
 
-.container {
+.container, header, footer {
   max-width: 72em;
   margin: auto;
 }
@@ -109,6 +109,7 @@ h3 {
 
 .entry .date {
   float: right;
+  /*font-style: italic;*/
 }
 
 /* this is a hand-tuned adjustment to vertically align the date*/
@@ -117,8 +118,11 @@ h3 {
 }
 
 .entry .des {
-  margin-top: .1em;
   font-style: italic;
+}
+
+p .entry .des {
+  margin-top: .1em;
 }
 
 .resume-objective {

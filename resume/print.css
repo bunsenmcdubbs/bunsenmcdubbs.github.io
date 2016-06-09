@@ -8,3 +8,7 @@ a {
   text-decoration: none;
   border-bottom: none;
 }
+
+.no-print {
+  display: none;
+}
