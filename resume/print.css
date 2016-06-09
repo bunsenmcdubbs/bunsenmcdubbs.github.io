@@ -12,3 +12,12 @@ a {
 .no-print {
   display: none;
 }
+
+#name {
+  float: left;
+  text-align: left;
+}
+
+#contact, #objective {
+  text-align: right;
+}
