@@ -16,6 +16,7 @@ a {
 #name {
   float: left;
   text-align: left;
+  border-bottom: 5px double darkgrey;
 }
 
 #contact, #objective {
