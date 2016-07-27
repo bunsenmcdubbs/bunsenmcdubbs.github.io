@@ -29,12 +29,20 @@
   background-position: 50% 0%;
 }
 
+#washingtondc {
+  background-image: url("/images/dc.jpeg");
+}
+
 #boston section {
   padding-top: 26em;
 }
 
 #atlanta section {
   padding-top: 2em;
+}
+
+#washingtondc section {
+  padding-top: 26em;
 }
 
 .airport-code {
@@ -44,6 +52,10 @@
 
 .airport-code h3 {
   color: hsla(45, 29.8%, 90%, .7);
+}
+
+#washingtondc .airport-code h3 {
+  color: hsla(200, 31.2%, 15%, .7);
 }
 
 #personal p {
@@ -60,6 +72,11 @@
 #atlanta p {
   background-color: hsla(200, 31.2%, 15%, .75);
   color: hsl(45, 29.8%, 100%);
+}
+
+#washingtondc p {
+  background-color: hsla(45, 29.8%, 90%, .75);
+  color: hsl(200, 31.2%, 15%);
 }
 
 #more-info {
