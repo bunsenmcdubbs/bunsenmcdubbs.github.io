@@ -84,7 +84,7 @@ h1, h2, h3, h4 {
 }
 
 section {
-  margin: 1em 0;
+  margin: 1.5em 0;
 }
 
 section:first-child {
@@ -92,7 +92,6 @@ section:first-child {
 }
 
 h2 {
-  /*text-decoration: underline;*/
   font-style: italic;
   /*font-weight: bold;*/
   border-bottom: 1px solid grey;
