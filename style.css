@@ -1,6 +1,5 @@
 #mid {
   padding-top: 1.5em;
-  /*box-shadow: 0 0 20px #aaa;*/
 }
 
 .icon {
@@ -8,79 +7,8 @@
   max-height: 128px;
 }
 
-#personal {
-  /*background-color: #F0F4C3;*/
-  /*padding-top: 5em;*/
-}
-
-#personal > .city {
-  display: block;
-  min-height: 40em;
-  background-size: cover;
-}
-
-#boston {
-  background-image: url("/images/home.jpg");
-  background-position: 50% 70%;
-}
-
-#atlanta {
-  background-image: url("/images/new-atl.jpg");
-  background-position: 50% 0%;
-}
-
-#washingtondc {
-  background-image: url("/images/dc.jpeg");
-}
-
-#boston section {
-  padding-top: 26em;
-}
-
-#atlanta section {
-  padding-top: 2em;
-}
-
-#washingtondc section {
-  padding-top: 26em;
-}
-
-.airport-code {
-  width: 85%;
-  margin: 0 auto;
-}
-
-.airport-code h3 {
-  color: hsla(45, 29.8%, 90%, .7);
-}
-
-#washingtondc .airport-code h3 {
-  color: hsla(200, 31.2%, 15%, .7);
-}
-
-#personal p {
-  font-family: Open Sans;
-  background-clip: padding-box;
-  padding: 3% 5%;
-}
-
-#boston p {
-  background-color: hsla(45, 29.8%, 90%, .75);
-  color: hsl(200, 31.2%, 15%);
-}
-
-#atlanta p {
-  background-color: hsla(200, 31.2%, 15%, .75);
-  color: hsl(45, 29.8%, 100%);
-}
-
-#washingtondc p {
-  background-color: hsla(45, 29.8%, 90%, .75);
-  color: hsl(200, 31.2%, 15%);
-}
-
-#more-info {
-  padding: 2.5em 0;
+#mid p {
+  
 }
 
 #hire-me {
@@ -136,6 +64,10 @@
   position: relative;
   top: -4px;
   left: -4px;
+}
+
+footer {
+  box-shadow: none;
 }
 
 @media screen and (min-width: 35.5em) {
