@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lets talk hackathon logistics and technology"
+title: "Let&rsquo;s talk hackathon logistics and technology"
 tags: [hackgt, hackathon]
 date: 2016-09-17
 ---
