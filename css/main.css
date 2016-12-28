@@ -8,7 +8,15 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: white;
+}
+
+#bgimage {
+	position: fixed;
+	z-index: -100;
+	min-height: 100%;
+	margin: 0;
+	top: 0;
+	left: 0;
 }
 
 html, button, input, select, textarea, body, .pure-g [class *="pure-u"] {
@@ -55,20 +63,6 @@ header {
 	left: 0;
 	top: 0;
 	z-index: 20;
-	background-image: url("/images/clouds.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-
-	height: 60vmin;
-
-	box-shadow: 0 0 20px #aaa;
-}
-
-@media screen and (min-aspect-ratio: 1/1) {
-  header {
-    height: 100vh;
-  }
 }
 
 header > #main-title > span.big {
@@ -78,11 +72,7 @@ header > #main-title > span.big {
 /* Custom footer */
 footer {
 	text-align: center;
-	/*border-top: 1px solid #666;*/
-
-	box-shadow: 0 -2px 40px #999;
-
-	background-color: lightgray;
+	/*background-color: lightgray;*/
 	padding-top: 2em;
 	padding-bottom: 3em;
 }
@@ -126,12 +116,6 @@ footer #last {
 		text-align: left;
 		padding-left: 1em;
 		padding-right: 1em;
-	}
-
-	@media (min-height: 35.5em){
-		header {
-			height: 60vmin;
-		}
 	}
 }
 

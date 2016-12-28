@@ -37,22 +37,26 @@
 <body>
 
   <header>
-  	<nav class="pure-g container">
-  		<div class="pure-u-1-4 nav-item"><a href="/">about</a></div>
-  		<div class="pure-u-1-4 nav-item"><a href="/blog/">blog</a></div>
-  		<div class="pure-u-1-4 nav-item"><a href="/projects/">projects</a></div>
-  		<div class="pure-u-1-4 nav-item"><a href="/archive/">archive</a></div>
-  	</nav>
-  	<div id="main-title" class="container vert-center">
-  		{% if page.customTitle %}
-  		{{ page.customTitle }}
-  		{% else %}
-  		<span class="big">{{ page.title }}</span>
-  		{% endif %}
-  	</div>
+    <nav class="pure-g container">
+      <div class="pure-u-1-4 nav-item"><a href="/">about</a></div>
+      <div class="pure-u-1-4 nav-item"><a href="/blog/">blog</a></div>
+      <div class="pure-u-1-4 nav-item"><a href="/projects/">projects</a></div>
+      <div class="pure-u-1-4 nav-item"><a href="/archive/">archive</a></div>
+    </nav>
   </header>
 
-  {{ content }}
+  <img id="bgimage" src="/images/clouds.jpg" alt="">
+
+  <div class="container">
+    <div id="main-title" class="container vert-center">
+      {% if page.customTitle %}
+        {{ page.customTitle }}
+      {% else %}
+      <span class="big">{{ page.title }}</span>
+      {% endif %}
+    </div>
+    {{ content }}
+  </div>
 
   <footer>
     <div class="container pure-g">

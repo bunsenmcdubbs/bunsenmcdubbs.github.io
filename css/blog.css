@@ -1,12 +1,12 @@
-
+/*
 @media screen and (min-width: 64em)	{
   .container {
     max-width: 63em;
   }
 }
-
+*/
 #main-title {
-  width: 60vmin;
+  /*width: 60vmin;*/
 }
 
 .posts {
