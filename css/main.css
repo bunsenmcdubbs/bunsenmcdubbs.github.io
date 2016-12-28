@@ -12,11 +12,14 @@ body {
 
 #bgimage {
   position: fixed;
-  z-index: -100;
-  min-height: 100%;
-  margin: 0;
   top: 0;
   left: 0;
+  margin: 0;
+
+  z-index: -100;
+
+  min-height: 100%;
+  min-width: 100%;
 }
 
 html, button, input, select, textarea, body, .pure-g [class *="pure-u"] {
@@ -39,7 +42,7 @@ p {
 }
 
 /* fixing up images */
-img {
+.content img {
   display: block;
   margin: 1.5em auto;
   max-width: 100%;
@@ -65,7 +68,7 @@ header {
   z-index: 20;
 }
 
-header > #main-title > span.big {
+#main-title > span.big {
   pointer-events: none;
 }
 
