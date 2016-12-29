@@ -3,69 +3,6 @@
   max-height: 128px;
 }
 
-#mid p {
-
-}
-
-#hire-me {
-  background-color: #E1F5FE;
-  box-shadow: 0 -2px 30px #888888;
-}
-
-#hire-me .banner {
-  padding-top: 3em;
-  padding-bottom: 2em;
-  background-color: #01579B;
-}
-
-#hire-me .big {
-  margin: 0;
-  color: #E1F5FE;
-  text-shadow: 1px 1px #0288D1,
-    2px 2px #0288D1,
-    3px 3px #0288D1,
-    4px 4px #0288D1,
-    5px 5px #0288D1,
-    6px 6px #0288D1;
-}
-
-#resume {
-  display: block;
-  background-color: #0288D1;
-  padding: 1.25em 1.5em;
-  text-align: center;
-  color: #E1F5FE;
-  /*box-shadow: 0 -2px 20px #888;*/
-}
-
-#resume > a.big {
-  width: 8em;
-  margin: 0 auto;
-  transition: all .12s ease-out;
-  text-shadow: 1px 1px #01579B,
-    2px 2px #01579B,
-    3px 3px #01579B,
-    4px 4px #01579B;
-}
-
-#resume > a.big:hover {
-  /*color: #80D8FF;*/
-  text-shadow: 1px 1px #01579B,
-    2px 2px #01579B,
-    3px 3px #01579B,
-    4px 4px #01579B,
-    5px 5px #01579B,
-    6px 6px #01579B;
-
-  position: relative;
-  top: -4px;
-  left: -4px;
-}
-
-footer {
-  box-shadow: none;
-}
-
 @media screen and (min-width: 35.5em) {
 
   #intro p {
