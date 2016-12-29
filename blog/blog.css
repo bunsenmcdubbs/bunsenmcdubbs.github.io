@@ -1,0 +1,44 @@
+/*.posts-1 > div:nth-of-type(1) > :first-child:before {
+  content: '[Latest Post]';
+  display: block;
+  font-family: Courier, monospace;
+  margin-bottom: .4em;
+}*/
+
+.listing {
+  font-size: 1.2em;
+}
+
+.posts-entry {
+  box-sizing: border-box;
+  padding: .5em 0;
+}
+
+.excerpt {
+  display: block;
+  margin: .75em 0 .3em 0;
+  max-height: 6.5em;
+  overflow: hidden;
+}
+
+.excerpt p {
+  font-style: normal;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* paginator links */
+.pagination {
+  text-align: center;
+  display: block;
+  margin: 1em auto 0 auto;
+  font-size: 20px;
+}
+
+.pagination a {
+  text-decoration: none;
+}
+
+.pagination .curr-page {
+  text-decoration: underline;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }} | Andrew Dai | BunsenMcDubbs</title>
+  <meta name="viewport" content="width=device-width">
+
+  <!-- normalize.css (not needed - included in purecss)-->
+  <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
+
+  <!-- pure css - purecss.io -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/grids-responsive-min.css">
+
+  <!-- font awesome -->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+  {% if page.customCSS %}
+  <link rel="stylesheet" href="{{ page.customCSS }}">
+  {% endif %}
+
+  <!-- Fonts: Open Sans and Merriweather -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="http://en.gravatar.com/userimage/43242946/99ef6a0172bffefbe4c08416d432eef0.png?size=64">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<header class="container">
+  <nav class="pure-g">
+    <div class="pure-u-1-4 nav-item"><a href="/">home</a></div>
+    <div class="pure-u-1-4 nav-item"><a href="/blog/">blog</a></div>
+    <div class="pure-u-1-4 nav-item"><a href="/projects/">projects</a></div>
+    <div class="pure-u-1-4 nav-item"><a href="/resume/">resume</a></div>
+  </nav>
+</header>
+
+<img id="bgimage" src="/images/clouds.jpg" alt="">
+
+<div class="container content">
+  <div id="main-title">
+    {% if page.customTitle %}
+      {{ page.customTitle }}
+    {% else %}
+    <h1>{{ page.title }}</h1>
+    {% endif %}
+  </div>
+  {{ content }}
+</div>
+
+<footer>
+  <div class="pure-g">
+    <div id="meta" class="pure-u-1">
+      <p>This site is hosted on
+        <a href="http://pages.github.com">Github Pages</a> and uses
+        <a href="http://jekyllrb.com">Jekyll</a>.
+        <br />The source can be found on my
+        <a href="http://github.com/bunsenmcdubbs/bunsenmcdubbs.github.io/">Github</a>.
+      </p>
+    </div>
+    <div class="pure-u-1">
+      <a href="https://github.com/bunsenmcdubbs" class="no-line">
+        <i class="fa fa-github fa-2x fa-fw" id="github"></i></a>
+      <a href="https://linkedin.com/in/daiandrew" class="no-line">
+        <i class="fa fa-linkedin-square fa-2x fa-fw" id="linkedin"></i></a>
+      <a href="https://instagram.com/bunsenmcdubbs/" class="no-line">
+        <i class="fa fa-instagram fa-2x fa-fw" id="instagram"></i></a>
+      <a href="/blog" class="no-line">
+        <i class="fa fa-pencil-square fa-2x fa-fw" id="blog"></i></a>
+
+      <!-- <a href="https://github.com/bunsenmcdubbs" class="no-style">
+        <i class="fa fa-github fa-2x fa-fw" id="github"></i></a>
+      <a href="https://linkedin.com/in/daiandrew" class="no-style">
+        <i class="fa fa-linkedin-square fa-2x fa-fw" id="linkedin"></i></a>
+      <a href="https://instagram.com/bunsenmcdubbs/" class="no-style">
+        <i class="fa fa-instagram fa-2x fa-fw" id="instagram"></i></a>
+      <a href="/blog" class="no-style">
+        <i class="fa fa-pencil-square fa-2x fa-fw" id="blog"></i></a> -->
+    </div>
+    <div class="pure-u-1">
+      <p>Also known as BunsenMcDubbs. 2016.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-20508277-4', 'auto');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
+</body>
+</html>

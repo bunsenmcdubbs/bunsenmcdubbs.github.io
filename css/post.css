@@ -68,19 +68,8 @@ article > p:first-child {
 }
 
 @media screen and (min-width: 64em)	{
-
-  .container {
-    max-width: 63em;
-  }
-
   .articleInfo, .post {
     box-sizing: border-box;
-  }
-
-  .content:after {
-    content: "";
-    display: table;
-    clear: both;
   }
 
   .articleInfo {

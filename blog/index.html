@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: base
 title: "Blog"
-customCSS: "/css/blog.css"
+customCSS: "/blog/blog.css"
 ---
 
 <div class="posts posts-{{ paginator.page }} pure-g">
@@ -12,15 +12,12 @@ customCSS: "/css/blog.css"
 	{% endif %} -->
 
 	{% for post in paginator.posts %}
-	<div class="pure-u-lg-1-2 pure-u-1 posts-entry">
+	<div class="pure-u-1 posts-entry">
 		<div>
-			<a href="{{ post.url }}" class="listing">{{ post.title }}</a>
-			<div class="excerpt">{{ post.excerpt }}</div>
+			<h2 class="listing"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 			<span class="meta">{{ post.date | date_to_string }}</span>
+			<div class="excerpt">{{ post.excerpt }}</div>
 		</div>
-		<!-- {% if post.thumb %}
-		<img class="thumb img-circle" src="{{ post.thumb }}">
-		{% endif %} -->
 	</div>
 	{% endfor %}
 </div>
