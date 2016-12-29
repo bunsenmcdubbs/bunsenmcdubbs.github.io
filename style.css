@@ -2,19 +2,3 @@
   max-width: 128px;
   max-height: 128px;
 }
-
-@media screen and (min-width: 35.5em) {
-
-  #intro p {
-    padding: 0;
-  }
-
-  #intro p.text-pad-left {
-    margin-left: 10%;
-  }
-
-  p.text-pad-left {
-    box-sizing: border-box;
-    margin-left: 1em;
-  }
-}
