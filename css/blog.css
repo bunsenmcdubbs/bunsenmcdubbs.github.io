@@ -1,80 +1,17 @@
-
-/* TODO remove? */
-/*
-@media screen and (min-width: 64em)	{
-  .container {
-    max-width: 63em;
-  }
-}
-*/
-#main-title {
-  /*width: 60vmin;*/
-}
-
-.posts {
-  padding: 0;
-}
-
-.posts-1 > div:nth-of-type(1) {
-  display: inline-flex;
-}
-
-.posts-1 > div:nth-of-type(1) > :first-child:before {
+/*.posts-1 > div:nth-of-type(1) > :first-child:before {
   content: '[Latest Post]';
   display: block;
   font-family: Courier, monospace;
   margin-bottom: .4em;
-}
-
-.posts-1 > div:nth-of-type(1) > :first-child {
-  margin: auto 0;
-}
-
-/*.posts-1 > div:nth-of-type(2) > .thumb {
-  display: none;
-}
-
-@media screen and (min-width: 64em) {
-  .posts-1 > div:nth-of-type(2) > :first-child {
-    max-width: calc(100% - 128px);
-  }
-
-  .posts-1 > div:nth-of-type(2) > .thumb {
-    display: inline-block;
-    max-width: 128px;
-    max-height: 128px;
-    margin: auto 0;
-  }
 }*/
 
-.posts-1 > div:nth-of-type(2) .excerpt {
-  max-height: 100%;
-}
-
-.listing {
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
-}
-
-/* listing info */
 .listing {
   font-size: 1.2em;
 }
 
-.listing:hover{
-  text-decoration: underline;
-}
-
-/* Custom post listings */
 .posts-entry {
   box-sizing: border-box;
-  display: inline-flex;
-  padding: 1em;
-  float: left;
-}
-
-.posts-entry:hover {
-  background-color: #ededed;
+  padding: .5em 0;
 }
 
 .excerpt {
@@ -94,18 +31,12 @@
 .pagination {
   text-align: center;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1em auto 0 auto;
   font-size: 20px;
 }
 
 .pagination a {
   text-decoration: none;
-}
-
-.pagination a:hover {
-  font-weight: inherit;
-  text-decoration: underline;
 }
 
 .pagination .curr-page {
