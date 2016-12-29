@@ -1,4 +1,4 @@
-# This is my website, v3.0ish
+# This is my website, v4.0ish beta
 
 It's built with Atom, Vim, and Git on top of Jekyll, jQuery and PureCSS.
 The site is also constantly on the brink of being changed because I am never
@@ -8,9 +8,6 @@ happy with the design.
 
  - FontAwesome is used for the icons on the home page.
  - Open Sans and Merriweather are hosted on Google Fonts.
- - Main title
-   - League Gothic is used for the main titles.
-   - [slabText](http://freqdec.github.io/slabText/) for resizing
 
 ## Blog Posts
 
@@ -28,9 +25,8 @@ Hand coded with love in pure HTML and CSS
 ## Tools used
 
  - [Atom text editor](http://atom.io)
- - Vim, Git
+ - Vim, Git, iTerm
  - Chrome Dev Tools &lt;3
  - Pen and Paper
  - Discontent, Boredom
  - [f.lux](https://justgetflux.com/)
-
