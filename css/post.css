@@ -77,12 +77,6 @@ article > p:first-child {
     box-sizing: border-box;
   }
 
-  .content:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
   .articleInfo {
     width: 33.333%;
     float: left;

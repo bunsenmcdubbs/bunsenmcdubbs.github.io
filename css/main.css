@@ -10,31 +10,14 @@ body {
   padding: 0;
 }
 
-#bgimage {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
-
-  z-index: -100;
-
-  min-height: 100%;
-  min-width: 100%;
-}
-
 html, button, input, select, textarea, body, .pure-g [class *="pure-u"] {
   font-family: Merriweather, Georgia, Times, serif;
-  color: hsla(0, 0%, 0%, .87);
-  font-size: 14px;
+  font-size: 18px;
 }
 
 h1, h2, h3 {
   font-family: "Open Sans","Futura", "Helvetica Neue", sans-serif;
   font-weight: 700;
-}
-
-.big, h1, h2, h3 {
-  color: #232323;
 }
 
 p {
@@ -55,13 +38,25 @@ p {
   border-radius: 50%;
 }
 
+#bgimage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+
+  z-index: -100;
+
+  min-height: 100%;
+  min-width: 100%;
+}
+
 .container, nav.container {
   margin: 0 auto;
   padding: 0 .75em 0 .75em;
+  max-width: 35.5em;
 }
 
 header {
-  border-bottom: 1px solid #e5e5e5;
   position: relative;
   left: 0;
   top: 0;
@@ -72,9 +67,15 @@ header {
   pointer-events: none;
 }
 
+.content {
+  background: white;
+
+}
+
 /* Custom footer */
 footer {
   text-align: center;
+  color: white;
   /*background-color: lightgray;*/
   padding-top: 2em;
   padding-bottom: 3em;
@@ -88,40 +89,23 @@ footer ul {
 
 footer li {
   text-align: center;
-  margin-bottom: .75em;
-  padding-top: .25em;
-  padding-bottom: .25em;
-}
-
-footer li:hover {
-  background-color: #ddd;
 }
 
 footer li a {
   display: block;
 }
 
-footer #meta > h3 {
-  margin-bottom: 0;
-}
-
-footer #last {
-  margin: 1em auto;
+footer li i:after {
+  content: "/";
 }
 
 @media screen and (min-width: 35.5em) {
-  .container, nav.container, footer .container {
-  max-width: 35.5em;
-  margin: 0 auto;
-  }
-
   footer li {
-  text-align: left;
-  padding-left: 1em;
-  padding-right: 1em;
+    text-align: left;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
-
 
 a {
   color: inherit;
@@ -160,12 +144,6 @@ nav .nav-item a {
   display: block;
   text-decoration: none;
   color: #ffffff;
-}
-
-.meta {
-  font-family: Courier, monospace;
-  font-size: 90%;
-  margin-top: 1.5em;
 }
 
 /* Code snippets */
