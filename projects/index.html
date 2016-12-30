@@ -5,61 +5,63 @@ custom_css: "/projects/style.css"
 ---
 
 <div class="project-entry">
-<h3>Dust and Magnet</h3>
-<p>Made at MHacksV with Koushik Krishnan. <a href="https://github.com/AlternativeHeroes/dust-and-magnet">Source</a></p>
-<p><a href="https://github.com/BunsenMcDubbs/d3-dust-and-magnet">d3.js and Firebase version</a></p>
+<h2>Dust and Magnet</h2>
+  <p>Made at MHacksV with Koushik Krishnan.
+  <a href="https://github.com/AlternativeHeroes/dust-and-magnet">Source</a>,
+  <a href="https://github.com/BunsenMcDubbs/d3-dust-and-magnet">d3.js and Firebase version</a>
+  </p>
 </div>
 
 <div class="project-entry">
-<h3>NCEduVis: <small>North Carolina Education Visualization <span class="text-info">[In Limbo]</span></small></h3>
+<h2>NCEduVis: <small>North Carolina Education Visualization</small></h2>
 <p>Despite the clunky name we tried to make an attractive data visualization to analyse the
-	relative cost effectiveness of various school districts. Churned out at HackDuke, this
-	project was a labor of learning d3.js and processing megabytes of shoddily formatted
-	government Excel spreadsheets.</p>
+  relative cost effectiveness of various school districts. Churned out at HackDuke, this
+  project was a labor of learning d3.js and processing megabytes of shoddily formatted
+  government Excel spreadsheets.</p>
 <p>This project may be revisted in the future and fine tuned for more functionality and
-	more rigorous methodology for our metrics. Critique the hacked-together source on
-	<a href="http://github.com/AlternativeHeroes/nceduviz">Github</a>.</p>
+  more rigorous methodology for our metrics. Critique the hacked-together source on
+  <a href="http://github.com/AlternativeHeroes/nceduviz">Github</a>.</p>
 <p><a href="http://alternativeheroes.github.io/nceduviz">View the live demo.</a></p>
 <ul class="posts">
-	{% for post in site.tags.hackduke %}
-	<li>
-		<span class="meta">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-	</li>
-	{% endfor %}
+  {% for post in site.tags.hackduke %}
+  <li>
+  <a href="{{ post.url }}">{{ post.title }}</a> <span class="meta">{{ post.date | date_to_string }}</span>
+  </li>
+  {% endfor %}
 </ul>
 </div>
 
 <div class="project-entry">
-<h3>Pickl: <small>instead of money, bet away your dignity! Social media integrated <span class="text-info">[In Limbo]</span></small></h3>
+<h2>Pickl: <small>instead of money, bet away your dignity!</small></h2>
 <ul class="posts">
-	{% for post in site.tags.pickl %}
-	<li>
-		<span class="meta">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-	</li>
-	{% endfor %}
+  {% for post in site.tags.pickl %}
+  <li>
+  <a href="{{ post.url }}">{{ post.title }}</a> <span class="meta">{{ post.date | date_to_string }}</span>
+  </li>
+  {% endfor %}
 </ul>
 </div>
 
 <div class="project-entry">
-<h3>DropPhone: <small>an Android Phone utility that screams when your phone is dropped. <span class="text-info">[Finished]</span></small></h3>
+<h2>DropPhone: <small>an Android Phone utility that screams when your phone is dropped</small></h2>
 <p>Written at MHacks, this project has two main parts. There is an actual Andriod
-	app as well as a website that displays where the app has been activated in real time.
-	Take a look at where we dropped our phones (hint: Ann Arbor and Atlanta) at
-	<a href="http://alternativeheroes.github.io/dropped-site/">alternativeheroes.github.io/dropped-site</a>.
-	I did the front end for the website and it runs entirely on Firebase, jQuery and Leaflet.
-	The source code for
-	<a href="https://github.com/AlternativeHeroes/dropped-app">both</a>
-	<a href="https://github.com/AlternativeHeroes/dropped-site">parts</a>
-	can be found on Github.</p>
+  app as well as a website that displays where the app has been activated in real time.
+  Take a look at where we dropped our phones (hint: Ann Arbor and Atlanta) at
+  <a href="http://alternativeheroes.github.io/dropped-site/">alternativeheroes.github.io/dropped-site</a>.
+  I did the front end for the website and it runs entirely on Firebase, jQuery and Leaflet.
+  The source code for
+  <a href="https://github.com/AlternativeHeroes/dropped-app">both</a>
+  <a href="https://github.com/AlternativeHeroes/dropped-site">parts</a>
+  can be found on Github.</p>
 </div>
 
 <div class="project-entry">
-<h3>BeagleCar: <small>a BeagleBone Black powered autonomous RC car. <span class="text-info">[In Limbo]</span></small></h3>
+<h2>BeagleCar: <small>a BeagleBone Black powered autonomous RC car.</small></h2>
 <ul class="posts">
-	{% for post in site.categories.beaglecar %}
-	<li>
-		<span class="meta">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-	</li>
-	{% endfor %}
+  {% for post in site.categories.beaglecar %}
+  <li>
+  <a href="{{ post.url }}">{{ post.title }}</a> <span class="meta">{{ post.date | date_to_string }}</span>
+  </li>
+  {% endfor %}
 </ul>
 </div>
