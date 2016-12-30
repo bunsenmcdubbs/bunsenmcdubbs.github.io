@@ -33,6 +33,10 @@
   margin: 0;
 }
 
+.excerpt img {
+  display: none;
+}
+
 /* paginator links */
 .pagination {
   text-align: center;
