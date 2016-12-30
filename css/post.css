@@ -1,53 +1,18 @@
-.articleInfo {
-  /*border-bottom: 1px solid #e5e5e5;*/
-}
-
-/* Custom header */
-.articleInfo-top {
-  padding: .7em 0;
-  /* margin: .7em 0; */
-  border-bottom: 1px solid #e5e5e5;
-  font-size: 20px;
-}
-
-#toc-sticky-wrapper {
-  display: none;
-}
-
 #toc ul {
   list-style: none;
-  /*font-family: "Open Sans", "Futura", "Helvetica Neue", sans-serif;*/
-  /*font-family: Courier, monospace;*/
-  font-family: Merriweather, Georgia, Times, serif;
-  font-size: 1.1em;
   line-height: 2;
-  margin: 0;
-  padding: 0;
-  /*text-align: right;*/
-}
-
-#toc a {
-  text-decoration: none;
-  display: block;
-  width: auto;
-}
-
-#toc li:hover, #toc .toc-active {
-  background-color: #eee;
-  font-weight: bold;
 }
 
 #toc .toc-h2 {
-  /*margin-left: .5em;*/
   padding-left: .75em;
 }
 
 #toc .toc-h3 {
-  /*margin-left: 1.5em;*/
   padding-left: 1.25em;
 }
-.thumb {
-  max-width: 100%;
+
+#toc .toc-h4 {
+  padding-left: 1.75em;
 }
 
 /* custom lede paragraphs (copying bootstrap lede style)*/
