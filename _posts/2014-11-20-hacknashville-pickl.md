@@ -12,7 +12,7 @@ all signed up and less than a month later we were on a van to Nashville. This is
 
 ## The Idea
 
-We came with an concept for a light-hearted web app that faciliated (friendly)
+We came with an concept for a light-hearted web app that facilitated (friendly)
 competition. It's simple. Integrate an everyday part of life more seamlessly
 with web technologies and social media.
 

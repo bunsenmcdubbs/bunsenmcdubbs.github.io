@@ -14,7 +14,7 @@ The project set out to gather all the reports and investigations made by
 the Inspector Generals. The majority of them are available online but they are
 each in their own custom website with different organization and formatting.
 The solution was to custom write a program, called scrapers, for each Inspector
-General website that analysed the website and pulled links to the pdf's of the
+General website that analyzed the website and pulled links to the pdf's of the
 publicly available documents.
 
 I wrote a scraper for the Office of Personnel Management (OPM). The whole

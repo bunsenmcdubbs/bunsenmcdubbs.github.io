@@ -16,7 +16,7 @@ encouraged participants to create projects that benefited society.
 ## HackDuke Begins
 
 We woke up to a beautiful morning on the road just outside Duke campus and
-after an opening ceremony featuring former IBM engineer and current Durham 
+after an opening ceremony featuring former IBM engineer and current Durham
 Mayor, Bill Bell, I set my sights on&hellip; socializing. I used the opportunity
 to meet and talk to my brilliant fellow hackers and learn from some of the
 mentors.
@@ -33,7 +33,7 @@ the data to visualize.
 
 ## Googling Searching, Scripting and Data Parsing
 
-We spent quite a bit of time Google&rsquo;ing and looking for data sets. 
+We spent quite a bit of time Google&rsquo;ing and looking for data sets.
 Since we didn&rsquo;t set out with a specific final product in mind, it was a
 bit of a challenge. A lot of time was sunk into looking at various school
 district websites and looking for data sets.
@@ -42,7 +42,7 @@ We finally found the [North Carolina Public Schools](http://www.ncpublicschools.
 website and downloaded quite a few excel spreadsheets. From there we split
 up, tackling both the visualization and the data parsing at the same time.
 
-Thinking that doing that data parsing &ldquo;wouldn&rsquo;t take that 
+Thinking that doing that data parsing &ldquo;wouldn&rsquo;t take that
 long&rdquo; was the biggest misconception we had. Despite having (relatively)
 well-formatted Excel spreadsheets, each of them were slightly different,
 changing year to year, and made Michael&rsquo;s life a nightmare.
@@ -74,20 +74,20 @@ and a lack of expertise in the topic we couldn&rsquo;t do that effectively.
 Instead we generated the same map for different years and let the viewer
 switch between them to see the change from map to map.
 
-Knowing that socio-economic status plays an enormous factor in academic 
+Knowing that socio-economic status plays an enormous factor in academic
 performance (especially in standardized testing), we tried to control for it
 by making two categories &ldquo;wealthy&rdquo; and &ldquo;not-wealthy&rdquo;
-demarkated by the federal Title 1 designation. Although this seemed reasonable
+demarcated by the federal Title 1 designation. Although this seemed reasonable
 at first, it also ended up being a major confounding factor. 
 
 The crux of the ineffectiveness comes from the individual year maps.
-Because we never accounted for year-over-year changes, changes in Title 1 
+Because we never accounted for year-over-year changes, changes in Title 1
 designation could drastically change the indicated success of a district.
 
 As the economy plummeted in the late 2000&rsquo;s many districts gained the
 Title 1 designation. When this happened, many districts previously judged as
 under-performing low-end wealthy schools became high-performing high-end
-not-wealthy schools and heavily skewed both their own perceived standing and 
+not-wealthy schools and heavily skewed both their own perceived standing and
 that of the entire data set.
 
 I seriously doubt the validity of our choice in metrics because in the end, our main data point boils down to SAT point per dollar spent. It ignores many
