@@ -7,7 +7,7 @@ happy with the design.
 ## Typography
 
  - FontAwesome is used for the icons on the home page.
- - Open Sans and Merriweather are hosted on Google Fonts.
+ - Open Sans and Lora are hosted on Google Fonts.
 
 ## Blog Posts
 
