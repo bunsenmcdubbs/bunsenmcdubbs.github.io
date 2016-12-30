@@ -13,7 +13,7 @@ custom_css: "/projects/style.css"
   Microsoft Pixelsense multitouch screen and was presented at IEEE Vis2015.
 </p>
 <ul>
-  <li><a href="https://github.com/AlternativeHeroes/dust-and-magnet">Original source (Java/Processing)</a></li>
+  <li><a href="https://github.com/AlternativeHeroes/dust-and-magnet">Original source from MHacks (Java/Processing)</a></li>
   <li><a href="https://github.com/BunsenMcDubbs/d3-dust-and-magnet">d3.js and Firebase demo</a></li>
   <li><a href="https://bunsenmcdubbs.github.io/dustandmagnet-presentation">Slides presented at GT before IEEE Vis2015</a></li>
   <li><a href="https://www.dropbox.com/s/rsjke41iuiufyiy/VIS%20Poster.pdf?dl=0">Poster for IEEE Vis2015</a></li>
@@ -29,23 +29,19 @@ custom_css: "/projects/style.css"
 <p>This project may be revisted in the future and fine tuned for more functionality and
   more rigorous methodology for our metrics. Critique the hacked-together source on
   <a href="http://github.com/AlternativeHeroes/nceduviz">Github</a>.</p>
-<p><a href="http://alternativeheroes.github.io/nceduviz">View the live demo.</a></p>
-<ul class="posts">
-  {% for post in site.tags.hackduke %}
-  <li>
-  <a href="{{ post.url }}">{{ post.title }}</a> <span class="meta">{{ post.date | date_to_string }}</span>
-  </li>
+<ul>
+  <li><a href="http://alternativeheroes.github.io/nceduviz">View the live demo.</a></li>
+  {% for post in site.tags.nceduviz %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="meta">{{ post.date | date_to_string }}</span></li>
   {% endfor %}
 </ul>
 </div>
 
 <div class="project-entry">
 <h2>Pickl: <small>instead of money, bet away your dignity!</small></h2>
-<ul class="posts">
+<ul>
   {% for post in site.tags.pickl %}
-  <li>
-  <a href="{{ post.url }}">{{ post.title }}</a> <span class="meta">{{ post.date | date_to_string }}</span>
-  </li>
+  <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="meta">{{ post.date | date_to_string }}</span></li>
   {% endfor %}
 </ul>
 </div>
@@ -65,11 +61,9 @@ custom_css: "/projects/style.css"
 
 <div class="project-entry">
 <h2>BeagleCar: <small>a BeagleBone Black powered autonomous RC car.</small></h2>
-<ul class="posts">
+<ul>
   {% for post in site.categories.beaglecar %}
-  <li>
-  <a href="{{ post.url }}">{{ post.title }}</a> <span class="meta">{{ post.date | date_to_string }}</span>
-  </li>
+  <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="meta">{{ post.date | date_to_string }}</span></li>
   {% endfor %}
 </ul>
 </div>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Data Visualization at HackDuke"
-tags: [datavis, hackduke, nceduviz, hackathon]
+tags: [datavis, hackduke, nceduviz, hackathon, education]
 date: 2015-01-23
 ---
 ![Screenshot of data viz](http://i.imgur.com/DWLwnMv.png?1)
