@@ -15,11 +15,8 @@ custom_css: "/css/post.css"
   var selectors = 'h2, h3, h4';
   if ($('.post').find(selectors).length != 0) {
     $('#toc').toc({
-      'selectors': selectors,
-      'container': '.post',
-      'anchorName': function(i, heading, prefix) {
-        return $(heading).text().replace(/[^a-z0-9]/ig, ' ').replace(/\s+/g, '-').toLowerCase();
-      }
+      selectors: selectors,
+      container: '.post'
     });
   } else {
     $('#toc').remove();
