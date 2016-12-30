@@ -5,13 +5,19 @@
   margin-bottom: .4em;
 }*/
 
+.posts-entry {
+  box-sizing: border-box;
+  padding: .5em 0;
+}
+
 .listing {
   font-size: 1.2em;
 }
 
-.posts-entry {
-  box-sizing: border-box;
-  padding: .5em 0;
+.meta {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: .7em;
 }
 
 .excerpt {
