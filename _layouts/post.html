@@ -3,7 +3,6 @@ layout: base
 custom_css: "/css/post.css"
 ---
 <div class="articleInfo">
-  {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
   <p class="meta">written on {{ page.date | date_to_string }} by {{ site.author }}</p>
   <div id="toc"></div>
 </div>

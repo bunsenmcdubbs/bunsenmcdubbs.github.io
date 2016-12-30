@@ -1,18 +1,10 @@
-.articleInfo p {
+p.meta {
   text-align: center;
   margin: 0;
   margin-bottom: .5em;
-}
-
-p.subtitle {
-  font-weight: 700;
-  font-size: 1.2em;
-  margin-top: .5em;
-}
-
-p.meta {
   font-family: Open Sans;
   font-weight: 400;
+  font-size: .7em;
 }
 
 #toc {

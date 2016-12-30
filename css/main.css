@@ -57,12 +57,16 @@ header, footer {
 
 #main-title {
   text-align: center;
-  font-size: 1.3em;
 }
 
 #main-title > h1 {
   font-family: Lora;
   margin: 0;
+}
+
+p.subtitle {
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .content {
