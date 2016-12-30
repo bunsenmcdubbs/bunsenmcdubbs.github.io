@@ -2,11 +2,9 @@
 layout: post
 title: "Data Visualization at HackDuke"
 tags: [datavis, hackduke, nceduviz, hackathon]
-thumb: "http://i.imgur.com/DWLwnMv.png?1"
-thumb-circle: "false"
 date: 2015-01-23
 ---
-
+![Screenshot of data viz](http://i.imgur.com/DWLwnMv.png?1)
 We gathered outside at some ungodly hour of the morning, shivering and weighed
 down by backpacks. Soon we&rsquo;d be on our way to Durham, North Carolina for
 HackDuke, a hackathon unlike any other I&rsquo;d attended. Instead of the usual
@@ -78,7 +76,7 @@ Knowing that socio-economic status plays an enormous factor in academic
 performance (especially in standardized testing), we tried to control for it
 by making two categories &ldquo;wealthy&rdquo; and &ldquo;not-wealthy&rdquo;
 demarcated by the federal Title 1 designation. Although this seemed reasonable
-at first, it also ended up being a major confounding factor. 
+at first, it also ended up being a major confounding factor.
 
 The crux of the ineffectiveness comes from the individual year maps.
 Because we never accounted for year-over-year changes, changes in Title 1

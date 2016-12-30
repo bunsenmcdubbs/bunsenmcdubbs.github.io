@@ -3,10 +3,9 @@ layout: post
 title: Photo Award!
 tags: [photography, photo, award]
 date: 2014-12-24
-thumb: "/images/massauduboncontestlogo.png"
-thumb-circle: "false"
 ---
 
+![Contest Logo](/images/massauduboncontestlogo.png)
 I won the _18 and under_ award in the &ldquo;People in Nature&rdquo; category
 of Mass Audubon Society&rsquo;s 2014 photo contest!
 The photo, along with other winners, can be found at [Mass Audubon](http://www.massaudubon.org/news-events/photo-contest/2014-winners).
