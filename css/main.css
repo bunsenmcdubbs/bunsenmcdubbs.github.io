@@ -22,7 +22,7 @@ p {
   display: block;
   margin: 1.5em auto;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 600px;
   width: auto;
   height: auto;
 }
@@ -131,10 +131,22 @@ nav .nav-item a {
   border-width: 4px;
 }
 
+li {
+  line-height: 1.5em;
+}
+
 /* Code snippets */
 pre {
   max-height: 45em;
+  background-color: #ededed;
   overflow: scroll;
+  padding: 1em 2em;
+}
+
+code {
+  background-color: #ededed;
+  padding: 0.1em 0.25em;
+  border-radius: 6px;
 }
 
 .list-unstyled {
