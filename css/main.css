@@ -33,13 +33,13 @@ p {
 
 #bgimage > img {
   position: fixed;
-  top: -5px;
-  left: -5px;
+  top: -10px;
+  left: -10px;
   margin: 0;
   z-index: -100;
   min-height: 105%;
   min-width: 105%;
-	filter: blur(3px);
+	filter: blur(5px);
 }
 
 #bgimage:after {
