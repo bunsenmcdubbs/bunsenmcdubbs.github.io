@@ -5,7 +5,7 @@ tags: [hackgt, hackathon]
 date: 2016-09-17
 ---
 
-Running a hackathon is a log of work. A lot of logistics, a lot of people.
+Running a hackathon is a lot of work. A lot of logistics, a lot of people.
 A lot of headaches that can be solved with&hellip; wait for it&hellip;
 *technology*. We&rsquo;ve been to hackathons, we know how to build web-apps,
 why not try solving some of those headaches?
