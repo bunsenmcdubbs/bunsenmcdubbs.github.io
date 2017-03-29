@@ -49,6 +49,12 @@ header {
   }
 }
 
+@media screen {
+    .print-only {
+        display: none;
+    }
+}
+
 
 header ul {
   list-style: none;
