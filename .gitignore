@@ -2,3 +2,5 @@ _site
 .project
 
 .jekyll-metadata
+
+*.swp
