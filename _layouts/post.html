@@ -3,11 +3,11 @@ layout: base
 custom_css: "/css/post.css"
 ---
 <div class="articleInfo">
-  <p class="meta">written on {{ page.date | date_to_string }} by {{ site.author }}</p>
+  <p class="meta">written on {{ page.date | date_to_string }} by {% if page.author %}{{ page.author}}{% else %}{{ site.author }}{% endif %}</p>
   <div id="toc"></div>
 </div>
 
-<main><article class="post">{{ content }}</article></main>
+<main><article class="post {% if page.no-lede %}no-lede{% endif %}">{{ content }}</article></main>
 
 <script src="/js/jquery.toc.min.js" charset="utf-8"></script>
 <script>
