@@ -1,0 +1,25 @@
+#instagram-pictures {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#instagram-pictures > .instagram-post {
+  width: 13em;
+  flex: 1 0 auto;
+  padding: .5em;
+}
+
+.instagram-post a {
+  border: none;
+  color: inherit;
+}
+
+.instagram-post img {
+  /*display: inline-block;*/
+  margin: 0 auto;
+}
+
+.instagram-post p.caption {
+  /* TODO magic multi-line css only ellipsis (without extra mumbojumbo)*/
+}
