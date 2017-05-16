@@ -24,6 +24,8 @@
     let tmpl = document.getElementById("template-instagram-post");
     let insta_posts = document.getElementById("instagram-pictures");
 
+    insta_posts.querySelector('.wait-spinner').hidden = true;
+
     let MAX_INSTAGRAMS = 3;
     for (let i = 0; i < MAX_INSTAGRAMS && i < data.length; i++) {
       let post = data[data.length - i - 1];
