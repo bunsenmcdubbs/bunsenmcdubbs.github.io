@@ -31,7 +31,7 @@
       let post = data[data.length - i - 1];
       tmpl.content.querySelector('a').href = post.post_url;
       tmpl.content.querySelector('img').src = post.image_url;
-      tmpl.content.querySelector('.caption').textContent = post.caption;
+      tmpl.content.querySelector('.caption').textContent = post.caption.split('\n')[0];
       tmpl.content.querySelector('.meta').textContent = post.date;
       insta_posts.appendChild(document.importNode(tmpl.content, true));
     }
