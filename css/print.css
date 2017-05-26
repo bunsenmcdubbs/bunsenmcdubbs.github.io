@@ -1,0 +1,22 @@
+html, button, input, select, textarea, body, .pure-g [class *="pure-u"] {
+  font-size: 12px;
+}
+
+#bgimage {
+  display: none;
+}
+
+header {
+  display: none;
+}
+
+footer {
+  color: black;
+}
+
+.container.content {
+  max-width: 100%;
+  margin: 0;
+  box-shadow: none;
+  border-bottom: 1px solid black;
+}
