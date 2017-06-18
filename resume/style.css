@@ -140,11 +140,6 @@ h3 {
   /*font-style: italic;*/
 }
 
-/* this is a hand-tuned adjustment to vertically align the date*/
-.resume-edu .entry .date, .resume-work .entry .date {
-  line-height: 17px;
-}
-
 .entry .des {
   font-style: italic;
 }
