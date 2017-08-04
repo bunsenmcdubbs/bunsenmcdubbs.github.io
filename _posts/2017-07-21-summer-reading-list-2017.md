@@ -23,7 +23,7 @@ I have no real intention on actually reading all of the following titles this su
 Books and materials are added haphazardly and at anytime. Without further ado:
 
 ## Books I&rsquo;ve Read
-### June - _March (Trilogy)_ by John Lewis, Andrew Aydin, and Nate Powell
+### _March (Trilogy)_ by John Lewis, Andrew Aydin, and Nate Powell
 
 I had been intending to read this graphic novel for several years but never got
 around to it (and wasn&rsquo;t reading that much anyway). But then as fate
@@ -31,7 +31,7 @@ would have it, Square was distributing copies of the first book in their
 onboarding process. It was a quick, gripping read and purchasing and reading
 the remaining parts was a no-brainer.
 
-### July - _Hackers and Painters_ by Paul Graham
+### _Hackers and Painters_ by Paul Graham
 
 Another long-awaited read. I read a couple of Graham&rsquo;s essays online a
 while back and they really caught my attention. _Hackers and Painters_ is a
@@ -48,8 +48,12 @@ conclusions:
  
 It has inspired me to learn Racket (a Lisp).
 
+### _The Holy or the Broken_ by Alan Light
+
+I read half of this book. It was pretty good but a _lot_ about just one song.
+
 ## Currently reading
- - _The Holy or the Broken_ by Alan Light
+ - _The American Census: A Social History_ by Margo J. Anderson
  - [_Beautiful Racket_ by Matthew Butterick](
 http://beautifulracket.com) (See above lessons from _Hackers and Painters_)
 
@@ -58,3 +62,5 @@ http://beautifulracket.com) (See above lessons from _Hackers and Painters_)
  - _The Art of the Metaobject Protocol_ by Gregor Kiczales, Jim des Rivieres, and Daniel G. Bobrow
  - _The Mythical Man Month_ by Fred Brooks
  - _Man&rsquo;s Search For Meaning_ by Viktor Frankl
+ - [_Distributed Systems 3rd Edition_ by Maarten van Steen and Andrew Tanenbaum](p)
+ - [teachyourselfcs.com](https://teachyourselfcs.com/)
