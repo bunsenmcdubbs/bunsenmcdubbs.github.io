@@ -88,7 +88,7 @@
       [Infinity]
     ];
 
-    if (delta < 30) {
+    if (delta <= 60) {
       return 'just now';
     }
     let idx;
@@ -96,7 +96,10 @@
     idx--;
     let unit = breakpoints[idx][0];
     let plural = Math.floor(delta / unit) > 1;
-    return `${Math.floor(delta / unit)} ${breakpoints[idx][plural ? 2 : 1]} ago`;
+    if (!plural) {
+      return `a ${breakpoints[idx][1]} ago`
+    }
+    return `${Math.floor(delta / unit)} ${breakpoints[idx][2]} ago`;
   }
 
   function render_github_time_ago(parent_elem, time_ago) {
