@@ -5,7 +5,7 @@ custom_title: Andrew Dai
 subtitle: A little about me, what I've done, and what I'm up to...
 custom_css: "/style.css"
 ---
-
+{% raw %}
 <section id="intro">
   <img class="img-circle" src="/images/me.jpg" />
   <p>
@@ -18,7 +18,7 @@ custom_css: "/style.css"
   <p>
     Currently,
     I am the Director of <a href="https://hack.gt">HackGT</a>
-    and this summer
+    and this past summer
     I am working at
     <del><a href="https://concord.org">Concord Consortium</a></del>
     <del><a href="https://intersystems.com">InterSystems Corporation</a></del>
@@ -38,7 +38,7 @@ custom_css: "/style.css"
 
   <template id="template-instagram-post">
     <div class="instagram-post">
-      <a href="#">
+      <a>
         <img src="" alt="">
         <p class="caption"></p>
         <p class="meta"></p>
@@ -47,10 +47,39 @@ custom_css: "/style.css"
   </template>
 </section>
 
-<!-- TODO implement recent github activity tracker -->
-<!-- <section>
+<section>
   <h2>Github - <a href="https://github.com/BunsenMcDubbs">BunsenMcDubbs</a></h2>
-</section> -->
+  <div id="github-feed">
+    <div class="wait-spinner">
+      <i class="fa fa-spinner fa-3x spin" aria-hidden="true"></i>
+    </div>
+  </div>
+  <a href="https://github.com/bunsenmcdubbs">See more&hellip;</a>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+  <template id="template-github-time-ago">
+    <div class="github-event github-time-ago"><span class="meta"></span></div>
+  </template>
+  <template id="template-github-pushed">
+    <div class="github-event">
+      Pushed <span class="num_commits"></span> to <a class="repository"></a>
+    </div>
+  </template>
+  <template id="template-github-issue">
+    <div class="github-event">
+      <span class="action"></span> issue
+      <a class="issue_id"></a>
+      on <a class="repository"></a>
+    </div>
+  </template>
+  <template id="template-github-pull-request">
+    <div class="github-event">
+      <span class="action"></span> pull request
+      <a class="pr_id"></a>
+      on <a class="repository"></a>
+    </div>
+  </template>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
 <script src="/script.js" charset="utf-8"></script>
+{% endraw %}

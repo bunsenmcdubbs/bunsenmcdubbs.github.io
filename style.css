@@ -43,3 +43,25 @@
 .instagram-post p.caption {
   /* TODO magic multi-line css only ellipsis (without extra mumbojumbo)*/
 }
+
+#github-feed {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.github-event {
+  line-height: 1.7em;
+  padding-left: 1em;
+}
+
+.github-event.github-time-ago {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.github-event.github-time-ago ~ .github-event.github-time-ago{
+  margin-top: 1em;
+  border-top: 1px lightgray solid;
+}
