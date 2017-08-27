@@ -10,6 +10,10 @@ what I have read and what I *plan* on reading.
 Yes, it is a bit late in the summer to be writing a summer reading list. But
 then again, this is really more for me than for you isn&rsquo;t it?
 
+_**Update 8/19/2017:**_ Flying back to Atlanta means that Summer 2017 has officially
+come to an end. The "Up Next" list will be punted for a little while to make
+time for HackGT, the job search ([hire me!](/resume)), and school generally.
+
 It all started on the first day of onboarding at Square when all new-hires
 received John Lewis&rsquo;s graphic novel memoir about the Civil Rights movement.
 After that, I got a library card at the San Francisco Public Library and here
@@ -50,10 +54,30 @@ It has inspired me to learn Racket (a Lisp).
 
 ### _The Holy or the Broken_ by Alan Light
 
-I read half of this book. It was pretty good but a _lot_ about just one song.
+This is an entire book about the song _Hallelujah_, written and initially
+performed by Leonard Cohen and rerecorded, adapted, and reimaged by dozens 
+of artists. I read half of this book. It was pretty good but a _lot_ about just
+one song.
 
-## Currently reading
- - _The American Census: A Social History_ by Margo J. Anderson
+### _The American Census: A Social History_ by Margo J. Anderson
+
+(Only read the first third - time ran out!). _The American Census_ is arranged
+chronologically, starting with the founding of our nation and telling the
+history of the census and the nation through the unique perspective of a
+relatively novel institution.
+
+Having only read the first third of the book, I learned about the role the
+census played in shaping the country from its founding through Reconstruction.
+Readers are given a first row seat to the debates about who should be counted,
+how they are counted, who does the counting, and why this is all important in the
+first place as the nation grows, expands, and struggles with the complexities of
+self-governance.
+
+I hope to resume reading this book and catch up to current day - the 2010
+census - to get a background on what is about to happen with the 2020 census
+(it&rsquo;s not looking good - look it up&hellip;).
+
+## Currently reading - in hiatus
  - [_Beautiful Racket_ by Matthew Butterick](
 http://beautifulracket.com) (See above lessons from _Hackers and Painters_)
 
