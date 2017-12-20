@@ -154,6 +154,16 @@ li {
   line-height: 1.5em;
 }
 
+blockquote {
+  margin: 0;
+  padding: 0;
+
+  margin-left: .5em;
+  border-left: .25em solid lightgray;
+  padding-left: 1em;
+  color: gray;
+}
+
 /* Code snippets */
 pre {
   max-height: 45em;
