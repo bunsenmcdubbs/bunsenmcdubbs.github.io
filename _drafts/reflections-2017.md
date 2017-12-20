@@ -6,7 +6,7 @@ title: Reflecting on 2017
 Airline travel gets a bad reputation these days. The mystery is gone.
 The romance of being packed like sardines in an aluminum tube and shooting
 through the air has been exposed for exactly what it is - just another way to
-get from point A to B.
+get from point A to point B.
 
 Flying is a chore; airlines are the worst;
 and the seats in economy are a crime against humanity (or at least my knees).
@@ -24,8 +24,8 @@ The view outside becomes magical.
 The recognizable landscapes, clouds, mountains, bodies of water,
 and cities transform into a beautiful abstraction. It is peaceful and
 wonderful in the truest sense of the world. Mountains and clouds are visible
-only at the mercy of the moon and stars. The stars and cities take turns
-twinkling in the silent darkness.
+only at the mercy of the moon and stars. The lights in the sky and on the ground
+take turns twinkling in the silent darkness.
 
 By its very nature, flying embodies transition. One flight can be many
 different things for many different people but the next stop for every person
@@ -38,7 +38,7 @@ from Atlanta to Boston.
 <hr>
 
 Sometime at the end of the summer (likely on my flight from San Francisco to Atlanta)
-I wrote this list of thoughts, advice received, and lessons from the summer:
+I jotted down this list of thoughts, advice received, and lessons from the summer:
 
 >Reflections. In bullet form.
 >
@@ -54,11 +54,19 @@ I wrote this list of thoughts, advice received, and lessons from the summer:
 >     - Switch positions
 >     - Switch jobs
 
+I was planning on writing a full blog post reflecting on my summer, mostly
+for my own benefit, and outlining goals or themes I wanted to keep in mind
+going into my last year at Georgia Tech. That did not happen. These notes
+were all that came of it.
+
 Looking back at this short list, the first thing that jumps out at me is the
 almost singular focus on career that I held/hold. This is not to say that
-it is the only thing I think about but it is pretty much the only thing I wrote
-down. The perspective is especially evident in the last bullet point. It reads
-"Life advice received" and continues to outline only career advice.
+it is the only thing I think about. But it is pretty much the only thing I wrote
+down. Four of the five points are career or education focused.
+The perspective is especially evident in the last bullet point.
+It reads "Life advice received" and continues to outline only career advice.
+
+What do I think this says about my state of mind? Who knows?
 
 I (willingly/intentionally?) lack the introspective skills necessary to analyze
 this point further.
