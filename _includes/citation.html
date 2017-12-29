@@ -1,0 +1,10 @@
+&mdash;
+{% if include.citation.source %}
+<a href="{{ include.citation.source }}">{{ include.citation.title }}</a>,
+{% else %}
+{{ include.citation.title }},
+{% endif %}
+{{ include.citation.author }}
+{% if include.citation.published_date %}
+({{ include.citation.published_date | date_to_string }})
+{% endif %}

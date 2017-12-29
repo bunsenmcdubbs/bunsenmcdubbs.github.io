@@ -45,16 +45,17 @@
 <div id="bgimage">
   <img src="/images/clouds.jpg" alt="">
 </div>
-
 <div class="container content">
-  <div id="main-title">
-    {% if page.custom_title %}
-      <h1>{{ page.custom_title }}</h1>
-    {% else %}
-      <h1>{{ page.title }}</h1>
-    {% endif %}
-    {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
-  </div>
+  {% if layout.hide_title != true %}
+    <div id="main-title">
+      {% if page.custom_title %}
+        <h1>{{ page.custom_title }}</h1>
+      {% else %}
+        <h1>{{ page.title }}</h1>
+      {% endif %}
+      {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
+    </div>
+  {% endif %}
   {{ content }}
 </div>
 
@@ -79,14 +80,6 @@
       <a href="/blog" class="no-line">
         <i class="fa fa-pencil-square fa-2x fa-fw" id="blog"></i></a>
 
-      <!-- <a href="https://github.com/bunsenmcdubbs" class="no-style">
-        <i class="fa fa-github fa-2x fa-fw" id="github"></i></a>
-      <a href="https://linkedin.com/in/daiandrew" class="no-style">
-        <i class="fa fa-linkedin-square fa-2x fa-fw" id="linkedin"></i></a>
-      <a href="https://instagram.com/bunsenmcdubbs/" class="no-style">
-        <i class="fa fa-instagram fa-2x fa-fw" id="instagram"></i></a>
-      <a href="/blog" class="no-style">
-        <i class="fa fa-pencil-square fa-2x fa-fw" id="blog"></i></a> -->
     </div>
     <div class="pure-u-1">
       <p>Also known as BunsenMcDubbs. 2017.</p>

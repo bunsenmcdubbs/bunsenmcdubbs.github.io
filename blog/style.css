@@ -5,13 +5,22 @@
   margin-bottom: .4em;
 }*/
 
-.posts-entry {
+.entry {
+  margin-top: 1em;
   box-sizing: border-box;
-  padding: .5em 0;
+}
+
+.quote blockquote:hover {
+  border-left-color: #357efc;
+}
+
+.quote blockquote p {
+  margin-top: 0;
 }
 
 .listing {
-  font-size: 1.2em;
+  margin-top: 0;
+  font-size: 1.1em;
 }
 
 .excerpt {

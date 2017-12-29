@@ -5,22 +5,25 @@ subtitle: Musings, Updates, and Ongoing Work. Irregularly Updated.
 custom_css: "/blog/style.css"
 ---
 
-<div class="posts posts-{{ paginator.page }} pure-g">
-  <!-- {% if paginator.page == 1 %}
-  <div class="jumbotron pure-u-lg-1-2 pure-u-1">
-    <span class="big">Blog</span>
-  </div>
-  {% endif %} -->
-
+<div class="posts posts-{{ paginator.page }}">
   {% for post in paginator.posts %}
-  <div class="pure-u-1 posts-entry">
-    <div>
-      <h2 class="listing">
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <span class="meta">{{ post.date | date_to_string }}</span>
-      </h2>
+  <div class="entry pure-g">
+    <div class="pure-u-1-6">
+      <span class="meta">{{ post.date | date_to_string }}</span>
+    </div>
+    {% if post.categories contains 'quote' %}
+    <div class="pure-u-5-6 quote-entry">
+      <div class="quote">
+        <a href="{{ post.url }}"><blockquote><p>{{ post.quote }}</p></blockquote></a>
+        <p>{% include citation.html citation=post %}</p>
+      </div>
+    </div>
+    {% else %}
+    <div class="pure-u-5-6 posts-entry">
+      <h2 class="listing"><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <div class="excerpt">{{ post.excerpt }}</div>
     </div>
+    {% endif %}
   </div>
   {% endfor %}
 </div>

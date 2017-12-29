@@ -1,0 +1,8 @@
+#main-title > h1 {
+  text-align: left;
+  font-size: 1.5em;
+}
+
+a blockquote.quote:hover {
+  border-left-color: #357efc;
+}

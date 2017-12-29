@@ -1,0 +1,25 @@
+---
+layout: base
+hide_title: true
+custom_css: "/css/quote.css"
+---
+<div id="main-title"><h1>
+  {% include citation.html citation=page %}
+</h1></div>
+
+<main><article>
+{% if page.source %}
+<a href="{{ page.source }}">
+  <blockquote class="quote">
+    <p>{{ page.quote }}</p>
+  </blockquote>
+</a>
+{% else %}
+  <blockquote class="quote">
+    <p>{{ page.quote }}</p>
+  </blockquote>
+{% endif %}
+
+{{ content }}
+
+</article></main>
