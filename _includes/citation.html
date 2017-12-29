@@ -4,7 +4,9 @@
 {% else %}
 {{ include.citation.title }},
 {% endif %}
+{% if include.citation.author %}
 {{ include.citation.author }}
-{% if include.citation.published_date %}
-({{ include.citation.published_date | date_to_string }})
+{% endif %}
+{% if include.citation.date %}
+({{ include.citation.date | date_to_string }})
 {% endif %}

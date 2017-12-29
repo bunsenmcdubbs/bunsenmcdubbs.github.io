@@ -3,24 +3,26 @@ layout: base
 hide_title: true
 custom_css: "/css/quote.css"
 ---
+
 <div id="main-title"><h1>
-  {% include citation.html citation=page %}
+  {% include citation.html citation=page.quote %}
 </h1></div>
 
 <main><article>
-{% if page.source %}
-<a href="{{ page.source }}">
+{% if page.quote.source %}
+<a href="{{ page.quote.source }}">
   <blockquote class="quote">
-    <p>{{ page.quote }}</p>
+    <p>{{ page.quote.text }}</p>
   </blockquote>
 </a>
 {% else %}
   <blockquote class="quote">
-    <p>{{ page.quote }}</p>
+    <p>{{ page.quote.text }}</p>
   </blockquote>
 {% endif %}
 
 <section class="post">
+  <p class="meta">shared on {{ page.date | date_to_string }} by {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</p>
   {{ content }}
 </section>
 

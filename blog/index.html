@@ -14,8 +14,8 @@ custom_css: "/blog/style.css"
     {% if post.categories contains 'quote' %}
     <div class="pure-u-5-6 quote-entry">
       <div class="quote">
-        <a href="{{ post.url }}"><blockquote><p>{{ post.quote }}</p></blockquote></a>
-        <p>{% include citation.html citation=post %}</p>
+        <a href="{{ post.url }}"><blockquote><p>{{ post.quote.text }}</p></blockquote></a>
+        <p>{% include citation.html citation=post.quote %}</p>
       </div>
     </div>
     {% else %}

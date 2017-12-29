@@ -1,17 +1,20 @@
 ---
 layout: quote
 category: quote
+title: "patio11: Year in Review"
 date: 2017-12-29
-title: Kalzumeus Software Year in Review 2016
 tags: [reflection, writing, software, career]
-author: patio11 (Patrick McKenzie)
-source: "https://www.kalzumeus.com/2016/12/30/kalzumeus-software-year-in-review-2016/"
-published_date: 2016-12-30
-quote: "&hellip;one of my favorite reasons to have a written journal: all I need to do is compare what I wrote prior to starting and what I think now, having a bit more context."
+author: Andrew Dai
+quote:
+  title: Kalzumeus Software Year in Review 2016
+  author: patio11 (Patrick McKenzie)
+  source: "https://www.kalzumeus.com/2016/12/30/kalzumeus-software-year-in-review-2016/"
+  date: 2016-12-30
+  text: "&hellip;one of my favorite reasons to have a written journal: all I need to do is compare what I wrote prior to starting and what I think now, having a bit more context."
 ---
 
-I&rsquo;m very excited to find this blog; it immediately falls under the
-category of blogs-that-generally-cover-my-areas-of-interest-and-have-compelling-narratives-and-writing-styles-I-want-to-copy. [^1]
+I&rsquo;m very excited to find this blog; [^1] it immediately falls under the
+category of blogs-that-generally-cover-my-areas-of-interest-and-have-compelling-narratives-and-writing-styles-I-want-to-copy. [^2]
 I also strongly agree with this point: I write for future-me to remember
 what current-me thinks.
 
@@ -32,7 +35,8 @@ in the future and especially when I start full-time at Heap.
 To note: I initially found this blog through a link to his 2012 essay on
 [salary negotiation](https://www.kalzumeus.com/2012/01/23/salary-negotiation/).
 
-[^1]:
+[^1]: Linked from [Andrew Hoang&rsquo;s post on finding a job](https://blog.andrewhoang.me/how-to-be-emily/)
+[^2]:
     Other blogs that also fall under this category include but are not limited to:
     [Joel on Software](https://www.joelonsoftware.com/),
     [Matt Might](http://matt.might.net/),
