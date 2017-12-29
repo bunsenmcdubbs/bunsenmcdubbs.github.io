@@ -4,7 +4,7 @@ title: "Data Visualization at HackDuke"
 tags: [datavis, hackduke, nceduviz, hackathon, education]
 date: 2015-01-23
 ---
-![Screenshot of data viz](http://i.imgur.com/DWLwnMv.png?1)
+![Screenshot of data viz](/images/nceduvis-screenshot.png)
 We gathered outside at some ungodly hour of the morning, shivering and weighed
 down by backpacks. Soon we&rsquo;d be on our way to Durham, North Carolina for
 HackDuke, a hackathon unlike any other I&rsquo;d attended. Instead of the usual
