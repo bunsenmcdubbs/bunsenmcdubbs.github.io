@@ -95,6 +95,10 @@ p.subtitle {
   color: #357efc;
 }
 
+.footnotes {
+  border-top: 3px double #888;
+}
+
 footer {
   text-align: center;
   padding-top: 2em;

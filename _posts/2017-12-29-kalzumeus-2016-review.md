@@ -32,9 +32,9 @@ in the future and especially when I start full-time at Heap.
 To note: I initially found this blog through a link to his 2012 essay on
 [salary negotiation](https://www.kalzumeus.com/2012/01/23/salary-negotiation/).
 
-[^1] Other blogs that also fall under this category include but are not
-limited to:
-[Joel on Software](https://www.joelonsoftware.com/),
-[Matt Might](http://matt.might.net/),
-[Anil Dash](http://anildash.com/),
-and [The Book Buzzer](http://thebookbuzzer.blogspot.com/)
+[^1]:
+    Other blogs that also fall under this category include but are not limited to:
+    [Joel on Software](https://www.joelonsoftware.com/),
+    [Matt Might](http://matt.might.net/),
+    [Anil Dash](http://anildash.com/),
+    and [The Book Buzzer](http://thebookbuzzer.blogspot.com/)
