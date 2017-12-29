@@ -6,3 +6,7 @@
 a blockquote.quote:hover {
   border-left-color: #357efc;
 }
+
+section.post {
+  border-top: 1px solid #888;
+}
