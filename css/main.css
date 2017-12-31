@@ -158,6 +158,22 @@ li {
   line-height: 1.5em;
 }
 
+table {
+  width: 100%;
+}
+
+thead {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+td {
+  padding: .5em;
+}
+
 blockquote {
   margin: 0;
   padding: 0;

@@ -97,7 +97,7 @@
     let unit = breakpoints[idx][0];
     let plural = Math.floor(delta / unit) > 1;
     if (!plural) {
-      return `a ${breakpoints[idx][1]} ago`
+      return `a ${breakpoints[idx][1]} ago`;
     }
     return `${Math.floor(delta / unit)} ${breakpoints[idx][2]} ago`;
   }

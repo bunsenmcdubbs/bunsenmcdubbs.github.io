@@ -19,13 +19,13 @@
 }
 
 .listing {
-  margin-top: 0;
+  margin: 0;
   font-size: 1.1em;
 }
 
 .excerpt {
   display: block;
-  margin: .75em 0 .3em 0;
+  margin: .3em 0;
   max-height: 6.5em;
   overflow: hidden;
 }
