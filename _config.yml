@@ -1,8 +1,15 @@
-name: Andrew Dai
+title: "Andrew Dai's Blog"
+description: "Musings, Updates, and Ongoing Work. Irregularly Updated."
 author: Andrew Dai
+url: "https://andrewdai.co/blog"
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+
 markdown: kramdown
-plugins: [jekyll-gist, jekyll-paginate]
-highlighter: "rouge"
+highlighter: rouge
 permalink: none
 paginate: 12
 paginate_path: "blog/page:num/"
