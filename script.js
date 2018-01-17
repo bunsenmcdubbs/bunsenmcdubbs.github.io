@@ -1,6 +1,6 @@
 (function() {
   instagram_url = "https://docs.google.com/spreadsheets/d/1cJK_7uqOTtSR8zgc8toomNwcJObXFFPeR-U0QNBsklA/pubhtml";
-  github_url = "https://api.github.com/users/bunsenmcdubbs/events"
+  github_url = "https://api.github.com/users/bunsenmcdubbs/events";
 
   function tabletop_init(google_sheets_url, callback) {
     Tabletop.init({
@@ -30,13 +30,9 @@
     let MAX_INSTAGRAMS = 3;
     for (let i = 0; i < MAX_INSTAGRAMS && i < data.length; i++) {
       let post = data[data.length - i - 1];
-      // hacky way of requesting a standard resolution image (640x640)
-      let url_parts = post.image_url.split('/');
-      url_parts.splice(4, 0, 's640x640');
-      let image_url = url_parts.join('/');
 
       tmpl.content.querySelector('a').href = post.post_url;
-      tmpl.content.querySelector('img').src = image_url;
+      tmpl.content.querySelector('img').src = post.image_url;
       tmpl.content.querySelector('.caption').textContent = post.caption.split('\n')[0];
       tmpl.content.querySelector('.meta').textContent = post.date;
 
