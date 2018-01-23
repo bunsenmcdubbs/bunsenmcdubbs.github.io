@@ -3,6 +3,10 @@ layout: post
 title: How to Haskell
 ---
 
+This might never be completed/published... the Haskell journey continues
+
+- Starting in Junior year of high school (2013ish)... woefully unprepared
+
 ## Installing Haskell! (on Mac)
 
 Install haskell-platform with homebrew. [^1]

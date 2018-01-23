@@ -1,0 +1,47 @@
+---
+layout: post
+title: "2018 Update: January"
+author: Andrew Dai
+tags: [2018, reflection, changelog, goals, travel, career]
+date: 2018-01-23
+---
+
+"Days are slow, weeks fly by" - Nick
+
+## General updates
+- Ended part-time position at Square
+- Started working part-time at Heap
+- Hendrick's Gin in great!
+
+More updates outlined in next section about my progress on goals and plans
+outlined in 2017 Changelog.
+
+## Progress on goals/plans
+
+- Volunteering - None
+  - TODO: plans?
+- Lifestyle improvements
+  - Better/more consistent sleep schedule
+  - Running regularly, ~3 runs/~6 miles/week
+  - Cooking and eating mostly vegetables (and pasta). Canned tomatoes (paste, crushed, whole, puree) are great! So are eggplants, cabbages, and squash.
+  - Plans:
+    - More running - build up to 10k (no longer aiming for 1/2 marathon in March)
+    - TODO more
+- Cooking more regularly and starting making sauerkraut
+  - Plans:
+    - More fermentation! (Kvass?)
+    - Lox!
+    - Add pancakes/crepes to regular rotation
+- Technical goals
+  - Starting to use/learn emacs orgmode
+  - Physics 2 homework is a lot easier with Jupyter Notebooks
+  - TODO: plan to start on a project (adding to Orgzly?, quantified self with orgmode?)
+- Travel! - weekend trip to Nashville, planning spring break roadtrip across the South
+- Read more!
+  - Finished _Fahrenheit 451_
+  - TODO: Plans?
+- Write more!
+  - Posted some quotes from readings and my thoughts about them
+  - Writing this blog post in long form
+  - Plans:
+    - Submit an application to [NYTimes The Edit](https://www.nytimes.com/interactive/2018/jobs/nyt-job-theedit-young-writers.html)?
