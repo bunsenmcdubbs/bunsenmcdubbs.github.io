@@ -15,10 +15,15 @@ Ideas for cooking and baking and related projects in a living document. More for
 - [Cultured Butter, NYTimes Cooking](https://cooking.nytimes.com/recipes/1016206-cultured-butter)
 - [Crème Fraîche, Serious Eats](https://www.seriouseats.com/recipes/2011/02/how-to-make-creme-fraiche-in-1-easy-step.html)
 
-Things I want to buy for my kitchen, foolish and otherwise
+Things I want to buy for my (yet-to-be-established aka totally empty) kitchen, foolish and otherwise
 - [All-Clad Fry Pan](https://thewirecutter.com/reviews/the-best-skillet/)
+- dutch oven
+- cast iron pan
 - something something sous-vide
 - assorted jars and bottles
+- cocktail shaker
+- dutch oven
+- immersion blender
 
 _Sources_
 - [NYTimes Cooking "Things You Should Make, Not Buy"](https://cooking.nytimes.com/68861692-nyt-cooking/369703-things-you-should-make-not-buy)

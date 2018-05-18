@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Summer 2017 Reading List"
-tags: [books, reading, summer2017]
+tags: [books, reading, summer2017, summer, plan]
 date: 2017-07-21
 ---
 
@@ -49,13 +49,13 @@ conclusions:
  1. learn Lisp
  2. languages are very interesting (learn Lisp) and
  3. Graham is a libertarian.
- 
+
 It has inspired me to learn Racket (a Lisp).
 
 ### _The Holy or the Broken_ by Alan Light
 
 This is an entire book about the song _Hallelujah_, written and initially
-performed by Leonard Cohen and rerecorded, adapted, and reimaged by dozens 
+performed by Leonard Cohen and rerecorded, adapted, and reimaged by dozens
 of artists. I read half of this book. It was pretty good but a _lot_ about just
 one song.
 
