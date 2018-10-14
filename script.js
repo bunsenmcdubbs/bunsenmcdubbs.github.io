@@ -60,7 +60,7 @@
         }
         handlers[e.type](github_feed_elem, e);
       }
-    })
+    });
   }
 
   // Thank you StackOverflow
@@ -124,9 +124,9 @@
   }
 
   function render_github_pr_event(parent_elem, data) {
-    let tmpl = document.getElementById('template-github-pull-request')
+    let tmpl = document.getElementById('template-github-pull-request');
     tmpl.content.querySelector('.action').textContent = capitalize(data.payload.action);
-    tmpl.content.querySelector('.pr_id').textContent = `#${data.payload.number}`
+    tmpl.content.querySelector('.pr_id').textContent = `#${data.payload.number}`;
     tmpl.content.querySelector('.pr_id').href = data.payload.pull_request.html_url;
     tmpl.content.querySelector('.repository').href = `https://github.com/${data.repo.name}`;
     tmpl.content.querySelector('.repository').textContent = data.repo.name;
