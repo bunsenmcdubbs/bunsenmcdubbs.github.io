@@ -1,7 +1,7 @@
 body {
   padding: 0 1em;
   margin: 0;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 a {
@@ -16,7 +16,6 @@ a {
 #name {
   float: left;
   text-align: left;
-  /*border-bottom: 5px double darkgrey;*/
 }
 
 #contact, #objective {
