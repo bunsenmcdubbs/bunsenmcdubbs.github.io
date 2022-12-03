@@ -1,5 +1,6 @@
 ---
 layout: post
+hidden: true
 title: Cooking Goals
 author: Andrew Dai
 tags: [cooking, diy, baking]

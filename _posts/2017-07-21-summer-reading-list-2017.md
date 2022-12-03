@@ -3,6 +3,7 @@ layout: post
 title: "Summer 2017 Reading List"
 tags: [books, reading, summer2017, summer, plan]
 date: 2017-07-21
+hidden: true
 ---
 
 This is a living document (for the duration of the Summer 2017) to track

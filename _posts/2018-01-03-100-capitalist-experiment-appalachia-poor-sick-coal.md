@@ -11,6 +11,7 @@ quote:
   source: "https://qz.com/1167671/the-100-year-capitalist-experiment-that-keeps-appalachia-poor-sick-and-stuck-on-coal/"
   date: 2017-12-30
   text: "&hellip;part of coal’s legacy in central Appalachia is that, as with their economic opportunities, individuals often don’t have much control over whether they are healthy or not. Between drugs, poverty, social isolation, and lack of educational opportunities, there is any number of hazards that can derail, or even end, a person’s life. &hellip; The media and lawmakers are increasingly drawing connections between economic stagnation and destructive behaviors like opioid abuse and other “deaths of despair”"
+hidden: true
 ---
 
 The article details at length the methods by which coal companies

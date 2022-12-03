@@ -10,6 +10,7 @@ quote:
   source: "https://www.politico.com/magazine/story/2018/05/06/most-unlikely-district-attorney-in-america-mark-gonzalez-218322"
   date: 2018-05-06
   text: "By the mid-2010s, Gonzalez had started to win cases—a lot of them. Soon, he’d be known as the “Mexican Moses,” the man who could persuade the system to let his people go."
+hidden: true
 ---
 
 This was a feel-good inspiring profile on a lower-profile (to me at least) member

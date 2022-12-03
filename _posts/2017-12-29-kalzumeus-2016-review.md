@@ -11,6 +11,7 @@ quote:
   source: "https://www.kalzumeus.com/2016/12/30/kalzumeus-software-year-in-review-2016/"
   date: 2016-12-30
   text: "&hellip;one of my favorite reasons to have a written journal: all I need to do is compare what I wrote prior to starting and what I think now, having a bit more context."
+hidden: true
 ---
 
 I&rsquo;m very excited to find this blog; [^1] it immediately falls under the

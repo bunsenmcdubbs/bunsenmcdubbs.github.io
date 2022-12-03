@@ -10,6 +10,7 @@ quote:
   source: "https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/"
   date: 2015-06-11
   text: "Programming has twin cults of genius and youth. One of the ways Google acquired its reputation was by hiring fresh-faced whizzes. Ph.D.s from Stanford, Cal Tech, MIT, and Carnegie Mellon were table stakes. The true programmer began to code in utero and has an IQ of at least 10,000."
+hidden: true
 ---
 
 I've been coming back to this piece several times in the past couple years since
