@@ -1,92 +1,24 @@
 ---
-layout: base
-title: Hello, World!
-custom_title: Andrew Dai
-subtitle: A little about me, what I've done, and what I'm up to...
-custom_css: "/style.css"
 ---
-{% raw %}
-<section id="intro">
-  <img class="img-circle" src="/images/me.jpg" />
-  <p>
-    I am a <a href="https://github.com/bunsenmcdubbs">software engineer</a>
-    interested in distributed computing, databases, and promoting diversity and inclusion.
-    I work at <a href="https://heapanalytics.com">Heap</a>
-    as a software engineer on the infrastructure team improving
-    database relability and query performance.
-    Outside of the office, I enjoy
-    <a href="https://www.instagram.com/bunsenmcdubbs/">photography</a>,
-    cooking and eating,
-    roadtrips,
-    and <a href="https://www.goodreads.com/bunsenmcdubbs">reading</a>.
-  </p>
-  <p>
-    In a (recent) past life, I graduated from
-    the <a href="https://gatech.edu">Georgia Institute of Technology</a>
-    with a degree in Computer Science and minor in Sociology.
-    I've also served as the Director of <a href="https://hack.gt">HackGT</a>
-    and had internships at
-    <a href="https://squareup.com">Square</a>,
-    <a href="https://predictivetechnologies.com">Applied Predictive Technologies</a>,
-    <a href="https://intersystems.com">InterSystems Corporation</a>,
-    and <a href="https://concord.org">Concord Consortium</a>.
-  </p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Andrew Dai (@bunsenmcdubbs)</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="shortcut icon" href="https://en.gravatar.com/userimage/43242946/99ef6a0172bffefbe4c08416d432eef0.png?size=64">
+    {% include heap.html %}
+</head>
 
-<section>
-  <h2>Photos on Instagram - <a href="https://instagram.com/bunsenmcdubbs">@bunsenmcdubbs</a></h2>
-  <div id="instagram-pictures">
-    <div class="wait-spinner">
-      Follow me on Instagram! <a href="https://instagram.com/bunsenmcdubbs">@bunsenmcdubbs</a>
-      <i class="fa fa-spinner fa-3x spin" aria-hidden="true"></i>
-    </div>
-  </div>
-
-  <template id="template-instagram-post">
-    <div class="instagram-post">
-      <a>
-        <img src="" alt="">
-        <p class="caption"></p>
-        <p class="meta"></p>
-      </a>
-    </div>
-  </template>
-</section>
-
-<section>
-  <h2>Public contributions on Github - <a href="https://github.com/bunsenmcdubbs">bunsenmcdubbs</a></h2>
-  <div id="github-feed">
-    <div class="wait-spinner">
-      Fork me on Github! <a href="https://github.com/bunsenmcdubbs">bunsenmcdubbs</a>
-      <i class="fa fa-spinner fa-3x spin" aria-hidden="true"></i>
-    </div>
-  </div>
-  <a href="https://github.com/bunsenmcdubbs">See more&hellip;</a>
-
-  <template id="template-github-time-ago">
-    <div class="github-event github-time-ago"><span class="meta"></span></div>
-  </template>
-  <template id="template-github-pushed">
-    <div class="github-event">
-      Pushed <span class="num_commits"></span> to <a class="repository"></a>
-    </div>
-  </template>
-  <template id="template-github-issue">
-    <div class="github-event">
-      <span class="action"></span> issue
-      <a class="issue_id"></a>
-      on <a class="repository"></a>
-    </div>
-  </template>
-  <template id="template-github-pull-request">
-    <div class="github-event">
-      <span class="action"></span> pull request
-      <a class="pr_id"></a>
-      on <a class="repository"></a>
-    </div>
-  </template>
-</section>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
-<script src="/script.js" charset="utf-8"></script>
-{% endraw %}
+<body>
+<div style="padding: 1em 2em">
+    <h1>Andrew Dai <span style="font-size: .8em">(@bunsenmcdubbs) is a senior 💪 software engineer 🧑‍💻 with a great personality.</span></h1>
+    <p>Check out my <a href="./resume">resume</a> and offer me a sick job in mid-2023.</p>
+    <ul>
+        <li><a href="https://github.com/bunsenmcdubbs/">beep booping on github</a></li>
+        <li><a href="https://www.instagram.com/bunsenmcdubbs/">posting highlight reel on instagram</a></li>
+        <li><a href="https://www.twitter.com/bunsenmcdubbs/">occasionally posting lukewarm takes on twitter</a></li>
+    </ul>
+</div>
+</body>
+</html>
