@@ -1,7 +1,8 @@
 body {
   font-family: Georgia;
   font-size: 14px;
-  padding: 2em 4em;
+  padding: 1em;
+  line-height: 1.6;
 }
 
 .container, header, footer {
@@ -29,8 +30,6 @@ header {
 #name {
   font-size: 2.6em;
   font-variant: small-caps;
-  /*font-style: italic;*/
-  padding-bottom: .1em;
 }
 
 #objective {
@@ -38,14 +37,22 @@ header {
 }
 
 @media screen and (min-width: 72em) {
+  body {
+    padding: 2em 4em;
+    line-height: inherit;
+  }
+
   #name {
     float: left;
     text-align: left;
-    /*border-bottom: 5px double darkgrey;*/
   }
 
   #contact, #objective {
     text-align: right;
+  }
+
+  .entry .date {
+    float: right;
   }
 }
 
@@ -133,11 +140,6 @@ h3 {
 
 .entry .loc {
   font-style: italic;
-}
-
-.entry .date {
-  float: right;
-  /*font-style: italic;*/
 }
 
 .entry .des {
