@@ -48,6 +48,19 @@
     <h2>Experience</h2>
 
     <div class="entry">
+      <h3>Current Job</h3>
+      <span class="role">Senior Software Engineer</span>
+      <span class="loc">San Francisco, California (Hybrid)</span>
+      <span class="date">July 2023 - <i>present</i></span>
+      <ul>
+<!--        <li><p>Proposed, designed, and led several large projects</p></li>-->
+        <li><p>Repeatedly improved CI latency as system and organizational complexity ballooned and implemented OpenTelemetry trace collection</p></li>
+        <li><p>Solved show-stopping performance bottlenecks in applications and database queries</p></li>
+        <li><p>Developed and promoted continuous delivery principles, project management and roadmapping processes</p></li>
+      </ul>
+    </div>
+
+    <div class="entry">
       <h3><a href="https://andrewdai.co">Andrew Helps You for a Reasonable Fee</a></h3>
       <span class="role">Consultant</span>
       <span class="loc">Remote</span>
@@ -71,8 +84,7 @@
       <span class="loc">San Francisco, California</span> and <span class="loc">Remote</span>
       <span class="date">June 2021 - July 2022</span>
       <ul>
-        <li><p>Led implementation and aided design of core next-gen control plane infrastructure and services (device configuration, RPC mechanism, message bus integration, access point management)</p></li>
-        <li><p>Helped automate legacy provisioning to dramatically improve deployment capabilities (>2x more reliable, >10x faster)</p></li>
+        <li><p>Led implementation and aided design of core next-gen control plane infrastructure and services (configuration, RPC protocol, message bus)</p></li>
         <li><p>Entirely rebuilt continuous integration system (>2x faster, same cost, more self-serve)</p></li>
         <li><p>Socialized best practice team, process, and project-organizing techniques by leading a book club and discussion group</p></li>
         <li><p>In-house PostgreSQL expert and de facto Terraform/AWS owner</p></li>
@@ -87,10 +99,10 @@
       <ul>
         <li><p>Spearheaded adoption of Golang and worked on modernizing legacy codebase via service and API-first approach</p></li>
         <li><p>Owned a petabyte-scale PostgreSQL cluster &mdash; improved reliability by >10x, query performance by >2x, saved millions $/year, and led backend development of new analysis features, including <a href="https://www.producthunt.com/posts/paths-by-heap">Path Analysis</a> </p></li>
-        <li><p>Established systems and processes for understanding and controlling AWS spend</p></li>
-        <li><p>Wore many other hats including
+        <li><p>Also a
           <a href="https://heap.io/blog/engineering/applying-textbook-data-structures-for-real-life-wins">blog post author</a>,
           <a href="https://github.com/wal-g/wal-g/commits?author=bunsenmcdubbs">open source contributor</a>,
+          AWS spend watcher,
           and DEI advocate. I also onboarded my entire team, and interviewed ~90% of new grads in 2019 and most engineering management</p></li>
       </ul>
     </div>
@@ -102,21 +114,7 @@
       <span class="date">Summer 2017, October 2017 - January 2018</span>
       <ul>
         <li><p>Updated <a href="https://github.com/square/p2">tools</a> and utilities for host maintenance, application monitoring, and deployment configuration management</p></li>
-        <li><p>Created a health monitoring service used in critical infrastructure, reducing network load</p></li>
       </ul>
-    </div>
-
-    <div class="entry">
-        <h3><a href="https://hack.gt">HackGT</a></h3>
-        <span class="role">Director, formerly Tech Team</span>
-        <span class='loc'>Georgia Tech, Atlanta, Georgia</span>
-        <span class='date'>December 2015 - November 2017</span>
-        <ul>
-            <li><p>Led a team of students who raised over $250,000 in sponsorship funding and organized events for over 1,000 students</p></li>
-            <li><p>Started a &ldquo;<a href="https://catalyst.hack.gt">learnathon</a>&rdquo; to address disparities in local K12 CS education &mdash; 300+ high school students attended</p></li>
-            <li><p>Shifted outreach focus to under-represented minorities in STEM and created beginner-friendly environments</p></li>
-            <li><p>Doubled the size of the organization and increased the scope to better serve undergraduates at Georgia Tech</p></li>
-        </ul>
     </div>
 
     <div class="entry">
@@ -125,8 +123,7 @@
       <span class='loc'>Washington, D.C.</span>
       <span class='date'>Summer 2016</span>
       <ul class="no-print">
-        <li><p>Migrated core SQL Server schema to increase extensibility while maintaining backwards compatibility</p></li>
-        <li><p>Created a new homepage for the core product to enable more complex analysis and increase feature adoption</p></li>
+        <li><p>Migrated core SQL Server schema and launched new analysis homepage</p></li>
       </ul>
     </div>
 
@@ -150,6 +147,7 @@
       <p class="des">Bachelors of Science in Computer Science with Highest Honors and a minor in Sociology</p>
       <ul>
         <li><p><span class="label">Research:</span> Developed <a href="https://andrewdai.co/dustandmagnet-presentation">novel data visualizations</a> at the Information Interfaces Lab under the direction of Dr. John Stasko</p></li>
+        <li><p><span class="label">Volunteer:</span> <a href="https://hack.gt">HackGT</a> Director. Raised over $250,000 in funding for events with over 1,000 attendees and started event for local high school students</p></li>
       </ul>
     </div>
   </section>
@@ -160,20 +158,21 @@
     <ul>
       <li><p><span class="label">Languages:</span>
         Golang,
-        JavaScript (Typescript and, unfortunately, Coffeescript),
+        Typescript,
         SQL,
         Python,
-        Rust,
-        Scala,
-        Elixir
+        Java,
+        Scala
       </p></li>
 
       <li><p><span class="label">Tools:</span>
-        PostgreSQL (CitusDB),
+        Kubernetes,
+        Argo CD,
+        NATS,
+        PostgreSQL,
         Linux,
         Terraform,
-        AWS (EC2, ECS, RDS, S3, SQS...),
-        Buildroot,
+        AWS, GCP,
         Ansible,
         Docker,
         Redis
@@ -185,7 +184,7 @@
 </div>
 
 <footer>
-  <small><a href="https://github.com/bunsenmcdubbs/bunsenmcdubbs.github.io/commits/master/resume/index.html">v5.1.1-20240812</a></small>
+  <small>v5.1.1-20240812</small>
 </footer>
 
 {% include googleAnalytics.html %}
