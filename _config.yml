@@ -13,5 +13,3 @@ highlighter: rouge
 permalink: none
 paginate: 12
 paginate_path: "blog/page:num/"
-
-googleAnalyticsId: "UA-20508277-4"
