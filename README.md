@@ -2,4 +2,4 @@
 
 Nothing special, just a personal website.
 
-Serve with `bundle exec -- jekyll serve --incremental`.
+Serve (locally) with `pnpm dev`.

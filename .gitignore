@@ -1,8 +1,7 @@
 _site
 .project
-
 .jekyll-metadata
 
-*.swp
-
-.idea/
+node_modules/
+.astro/
+dist/
