@@ -1,0 +1,101 @@
+---
+layout: "../layouts/post.astro"
+title: "Journal 4: Week of May 9th"
+date: 2014-05-09
+category: beaglecar
+tags: [localization, pid]
+---
+
+This week I've worked on a lot of the programming for my project. Most of the
+navigation and localization code for my project. The problem is that I haven't
+had a chance to test the logic on the car itself... so bugs are just waiting
+to happen. I need to add more mundane code pertaining to debugging and logging
+information to help me figure out what went wrong when it doesn't work.
+
+## Localization: a Tale of Bayesian State Estimation
+
+I finished the localization node of the car by adding in a portion to handle
+IMU data. It fills in the gaps between GPS updates with relative measurements
+and contributes a little to the final estimates. It is most useful for smoothing
+out the position estimates from the GPS, both because of the time lag and
+because of jumps caused by constellation changes.
+
+The localization estimates utilize Bayesian State Estimation to combine the two
+sources of data. The main idea is that since both/all sensors are noisy and
+inaccurate, the goal of any localization program is just to provide the most
+useful estimate for the purpose of the project. Some projects my sacrifice
+absolute accuracy over relative consistency while others need the extra accuracy
+and don't mind having position estimates jump around. The main improvements in
+this field try to optimize all aspects as much as possible without making any
+major sacrifices. In this juxtaposition, my project is really trivial since it
+isn't a very precise operation. I've (semi-arbitrarily) chosen to emphasize more
+absolute accuracy by heavily utilizing the GPS data and adding in the IMU only
+supplementally. Testing might prove otherwise.
+
+There are many complex algorithms and high level mathematics in this field but
+I've chosen to stick with one of the simplier methods: Bayesian State
+Estimation. It's really just a long name for weighted averages. I (arbitrarily)
+chose values for the weight (between 0 and 1 inclusive that sum to 1) based on
+the level of "trust" I have for the data source. Since I'm depending on the GPS
+more, it's weight in normal operation is much higher than the IMU (ex: 0.9 vs
+0.1). So the "formula" for the position estimate is
+
+> final estimate = 0.9 * (gps estimate) + 0.1 * (imu estimate)
+
+But there are many cases in which the "trust" changes for the two sources.
+When there is a constellation change in GPS satellites, I have place much more
+trust in the more consistent and smooth relative estimates from the IMU and less
+trust in the jumpy GPS data. Over time, since I still use the GPS data (just
+less), the estimate wanders back towards the raw GPS again and then the trust
+returns to normal.
+
+I detect jumps by seeing if the current GPS estimate was within a certain
+threshold of the previous one. Rather than use the vanilla distance formula, I
+square both sides so
+
+> a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+
+This is because multiplication is a lot less costly than the square root
+function on the computer. The actual line of code looks like this
+
+{% highlight python %}
+if math.pow(xGuess - easting, 2) + math.pow(yGuess - northing, 2) > 9:
+{% endhighlight %}
+
+and the `9` at the end is actually 3 squared (arbitrarily chosen). Since I know
+the car can't go 3 meters a second, that seems like a reasonable threshold to
+reliably detect jumps. More testing and fine tuning is needed to actually
+determine the right balance between catching all the jumps and getting
+false positives.
+
+## Navigation: PID control
+
+The navigation node is really just a steering program. Its main job is to point
+the car in the direction of the next waypoint. It does this by taking the
+difference in current position and target position in the x and y direction and
+taking the arctan.
+
+Simple trigonometry gives us the angle of the line drawn between current
+position and target position. The `arctan2` function is extremely convenient
+for this purpose. Rather than the semi-ambiguous `arctan` function, `arctan2`
+takes 2 arguments (y and x) so it knows what quadrant the answer should be
+in and shifts the radian answer to match. I used this function in the
+localization node as well to find the current heading from estimate to estimate.
+
+Knowing both the desired heading and the current heading, I take the difference
+and send that to the PID controller. Just turning the car's "steering wheel" to
+point directly at the target doesn't actually work (just think about doing that
+in real life) because it will result in an extremely wobbly and aggressive
+steering strategy. Instead the difference (aka the amount I have to turn the
+steering wheel from 0/straight forward) is multiplied by a constant (0 to 1) to
+scale down the "severity" of the steering and allow for a more sane and smooth
+drive. By taking a proportion of the actual difference, that was the "P" of
+"PID" control.
+
+Sometimes just a proportional control isn't enough. Imagine driving an
+unfamiliar car. You don't know how tight the steering is. Exactly how far do you
+have to turn the wheel for the car to make that 90 degree turn? My program
+doesn't know this either. That's where the derivative ("D" of "PID") comes in.
+By taking the rate of change of heading, we can add that to the P part to make
+a "PD" controller. The "I" is for integral and I won't be using it for right
+now.

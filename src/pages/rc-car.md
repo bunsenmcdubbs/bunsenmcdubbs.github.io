@@ -1,0 +1,123 @@
+---
+layout: "../layouts/post.astro"
+title: "RC Car Modifications"
+date: 2014-01-29 12:00 UTC-5
+category: beaglecar
+tags: [rc car, beaglebone, servo, motor controller]
+---
+
+_[Update 2014-02-13](/beaglecar/rc-mod-update.html): added information about
+servo and motor controller_
+
+This entire tutorial/post can be skipped with the use of a hobby-grade RC Car.
+They can easily be identified by either the price tag or high quality
+interchangeable parts in the car itself. The mods outlined here are to upgrade
+cheaper toy-grade RC cars to resemble the functionality of their hobby-grade
+counterparts.
+
+## Choosing a car
+
+In my experience, it is far easier to use a smaller or regular sized RC car
+rather than the enormous (1:6 scale+) toys. The larger toys are both more
+expensive (especially when it inevitably breaks), less convenient to tear
+apart and harder to modify. In terms of modifications, my main concern was
+hacking together the motor controller. In smaller cars (powered by AA's)
+the voltages are much smaller and the controllers are made from transistors
+and smaller voltage components (read: cheaper and easier). Larger toys
+have relays which, in addition to being slightly more difficult to control,
+switch slower than transistors. This makes speed control far more
+inaccurate and difficult since it needs a rapid on/off cycle to mix
+speeds (aka PWM - pulse width modulated signal).
+
+## Tearing Apart the Car
+
+Pretty self explanatory. Take off the fluff and outer shells. Keep the
+electronics in place (for now). Get to the core ("chassis") of the toy.
+Locate the major components (and separate if desired).
+
+![Bare RC Car without cover]({{ site.url }}/images/LabeledParts.jpg)
+
+## Modifications
+
+There are several modifications necessary to emulate the driving functionality
+of a real car. First, as mentioned above, is the motor controller. This way
+the toy has more controls than just 100% forwards, 100% backwards and neutral.
+Similarly, a servo-based steering control will replace the binary left-right
+steering on the toy and allows for (gasp) varying turning angles.
+
+### Motor Controller
+
+Rather than trying to reverse engineer the electronics inside the the car, I
+choose to start over. I got a [TI SN754410 dual H-bridge](http://datasheet.octopart.com/L293NE-Texas-Instruments-datasheet-8627554.pdf)
+from [Sparkfun](https://www.sparkfun.com/products/315).
+
+[NYU](http://itp.nyu.edu/physcomp/Labs/DCMotorControl) has a really nice
+tutorial on how to use this chip with an Arduino.
+
+I wired up the H-bridge and tested it with my DIY lab bench power supply and
+everything worked perfectly. The problem is that the inputs must be 5v and up.
+Since the Beaglebone has a 3v3 logic level, I will have to use transistors to
+amplify the 3v3 from the BBB to 5v for the H Bridge. From there I can input
+whatever voltage I need (probably ~6v aka 4 AA batteries) and drive the motors.
+
+### Servo Steering
+
+Toy RC cars are extremely limited in their steering options, typically only
+turning hard left or right from center. When the car is going forwards
+(not turning left or right), the front wheels are pulled to the center with springs.
+By using a servo that constantly maintains control over steering angle, the car
+has a much stronger and finer grip on steering.
+
+To install the servo, I tore out the existing motor and used a thin piece of
+aluminum as a flat baseplate. Small strips of brass connected the servo horn
+to the steering rack on the car.
+
+![Servo steering modification on a toy rc car]({{ site.url }}/images/Steering-top.jpg)
+
+Next the servo needed to be connected to the Beaglebone. An external 5v power
+supply is used to power the servo and common ground is shared between the
+Beaglebone and the power supply. The PWM signal is connected to pin 8_13 via
+an optional 1k ohm resistor.
+
+![Servo wiring schematic]({{ site.url }}/images/SteeringServoSchematic.jpg)
+
+A quick python script tested the functionality of the servo.
+
+{% highlight python %}
+# Code from Adafruit's Tutorials on Servo Usage with BBB
+# Updated to work with the new PWM duty funtionality in the
+# Adafruit_BBIO library
+
+import Adafruit_BBIO.PWM as PWM
+
+servo_pin = "P8_13"
+duty_min = 3
+duty_max = 14.5
+duty_span = duty_max - duty_min
+
+PWM.start(servo_pin, (duty_max), 60.0)
+
+while True:
+    angle = raw_input("Angle (0 to 180 x to exit):")
+    if angle == 'x':
+        PWM.stop(servo_pin)
+        PWM.cleanup()
+        break
+    angle_f = float(angle)
+    duty = ((angle_f / 180) * duty_span + duty_min)
+    PWM.set_duty_cycle(servo_pin, duty)
+{% endhighlight %}
+
+The servo can now turn the wheels back and forth.
+
+I've tried to mount the servo horn so straight forward approximately 90
+degrees. Superb accuracy is not paramount (and might not even be possible
+since the servo's range of motion is actually a little greater than 180
+degrees). PID control will correct for any minor mounting inaccuracies. Given
+the imperfect connection between the servo horn and the steering rack,
+relying just on a good mount will actually be detrimental in the long run as
+the joints loosen. Intelligent and adaptive algorithms are needed to ensure
+reliable performance.
+
+Now I will need to impose some kind of hard limits on the PWM signal so the
+servos don't oversteer and trash itself. Maybe a limit switch of some kind...
