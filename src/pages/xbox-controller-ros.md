@@ -6,8 +6,8 @@ tags: [joystick, ros, ubuntu]
 ---
 
 Curiosity struck again and so I decided to try and use an wired Xbox controller
-I had laying around as an alternate input method (typing in numbers wasn't
-doing it for me anymore).
+I had laying around as an alternate input method (typing in numbers wasn't doing
+it for me anymore).
 
 ## xboxdrv
 
@@ -15,11 +15,13 @@ Thankfully most of the hard-work has already been done for me. Although Ubuntu
 (LTS 12.04 on my testing desktop and 13.04 ARM on the Beaglebone Black) already
 has default drivers for joysticks/gamepads and the Xbox controller specifically,
 general internet consensus is that a third-party user-space driver called
-[xboxdrv](http://pingus.seul.org/~grumbel/xboxdrv/) is a much better alternative.
+[xboxdrv](http://pingus.seul.org/~grumbel/xboxdrv/) is a much better
+alternative.
 
 ### Disabling and blacklisting the kernel driver
 
-_The blacklisting technique is from [Jonas Wagner](http://29a.ch/2013/2/24/xbox-controller-with-ubuntu-steam-xboxdrv)._
+_The blacklisting technique is from
+[Jonas Wagner](http://29a.ch/2013/2/24/xbox-controller-with-ubuntu-steam-xboxdrv)._
 
 Before using `xboxdrv`, the default driver must be unloaded or blacklisted or
 both. In case the default `xpad` driver is already loaded
@@ -68,15 +70,14 @@ unable to claim the device. Trying a different USB port solved the problem.
 ## Joy of ROS
 
 And with ROS, once again the hard-work has already been done for me. The ROS
-package joy translates Xbox (old/360) (wired/wireless) inputs into ROS
-messages in the `joy` topic. I had trouble following the tutorial on setting
-up the `turtlesim` demo since it was written for `groovy` and also a general
-lack of familiarity with C++.
+package joy translates Xbox (old/360) (wired/wireless) inputs into ROS messages
+in the `joy` topic. I had trouble following the tutorial on setting up the
+`turtlesim` demo since it was written for `groovy` and also a general lack of
+familiarity with C++.
 
 Using the ROS tutorials on writing publishers and subscribers, I wrote a node
 that converted Xbox controller inputs from `joy` into commands for the
 `turtlesim` node.
-
 
     {% highlight python %}
     #!/usr/bin/env python
@@ -113,18 +114,20 @@ that converted Xbox controller inputs from `joy` into commands for the
         start()
     {% endhighlight %}
 
-_Also on my [Github](https://raw.github.com/BunsenMcDubbs/beaglecar/master/src/joystick-tests/turtle_teleop_joy.py)_
+_Also on my
+[Github](https://raw.github.com/BunsenMcDubbs/beaglecar/master/src/joystick-tests/turtle_teleop_joy.py)_
 
 ### Actually running the test
 
 1. Install ROS and setup the catkin workspace
 
-2. Making a new project with the right dependencies (rospy, std_msgs, joy)
-or just cloning my repository into the `src` folder of the workspace
+2. Making a new project with the right dependencies (rospy, std_msgs, joy) or
+   just cloning my repository into the `src` folder of the workspace
 
 3. Installing `xboxdrv`
 
-4. Make sure the node is executable. `chmod +x src/joystick-tests/turtle\_teleop\_joy.py`
+4. Make sure the node is executable.
+   `chmod +x src/joystick-tests/turtle\_teleop\_joy.py`
 
 5. Start everything!
 
@@ -148,5 +151,5 @@ _2014-02-21: I haven't actually tested this code on the Beaglebone yet since the
 BBB's install of ROS doesn't include `turtlesim` or any of the graphical tools._
 </strike>
 
-I tested this by writing a [teleop test]({{ site.url }}/beaglecar/rc-mod-update-2.html)
-for my beaglecar. Spoiler: it works!
+I tested this by writing a [teleop test](./beaglecar/rc-mod-update-2.html) for
+my beaglecar. Spoiler: it works!

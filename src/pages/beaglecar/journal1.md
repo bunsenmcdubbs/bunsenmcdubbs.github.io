@@ -59,9 +59,9 @@ me it was `BB-UART1` since those are the pins I'm using).
 > `echo BB-UART2 > /sys/devices/bone_capemgr.????/slots`
 
 To handle the nitty-gritty details of UART communication and NMEA parsing, I
-used the ROS Node `nmea_navsat_driver`. I had [previously]({{ site.url
-}}/beaglecar/sensors-and-interfaces.html) setup my system with the intention of
-using `gpsd` to parse the data but that didn't work well with ROS. The
+used the ROS Node `nmea_navsat_driver`. I had
+[previously](./sensors-and-interfaces.html) setup my system with the intention
+of using `gpsd` to parse the data but that didn't work well with ROS. The
 nmea_navsat_driver works very similarly to gpsd, reading and parsing NMEA
 sentences from a serial port, but instead publishes the parsed readings to ROS
 topics.
