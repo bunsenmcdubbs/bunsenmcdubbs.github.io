@@ -2,10 +2,13 @@
 const { frontmatter } = Astro.props;
 ---
 <div class="articleInfo">
+<h1>{ frontmatter.title }</h1>
   <p class="meta">written on { new Date(frontmatter.date).toDateString() }</p>
   <!-- TODO table of contents -->
   <div id="toc"></div>
 </div>
-
-<!-- TODO title -->
-<main><article class="post"><slot /></article></main>
+<main>
+<article class="post">
+<slot />
+</article>
+</main>
