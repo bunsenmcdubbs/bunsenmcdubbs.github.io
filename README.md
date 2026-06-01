@@ -12,10 +12,10 @@ Serve (locally) with `pnpm dev`.
   - [x] Update slugs to match old urls
     - [x] Check `permalink` field
   - [ ] Fix symbol rendering
-  - [ ] Fix intra-site links
+  - [ ] Fix code blocks
+  - [x] Fix intra-site links
   - [x] Hide hidden pages
   - [x] Delete/curate pages
-  - [ ] Redirect all active pages to archive.org
 - [x] Images
 - [x] Migrate blog listing page; SKIP
 - [ ] Integrate git status into build info (HTTP header, embed into resume)
