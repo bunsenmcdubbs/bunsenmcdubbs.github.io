@@ -18,6 +18,7 @@ Serve (locally) with `pnpm dev`.
   - [x] Delete/curate pages
 - [x] Images
 - [x] Migrate blog listing page; SKIP
+- [ ] Fix resume page print css style
 - [ ] Integrate git status into build info (HTTP header, embed into resume)
 - [ ] Wrangler -> Cloudflare Workers. Goal: Deploy via Cloudflare Workers with
       CI/CD triggered from repo push.

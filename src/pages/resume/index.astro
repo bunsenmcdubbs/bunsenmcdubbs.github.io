@@ -1,4 +1,8 @@
 ---
+import '../../assets/normalize.css'
+import '../../assets/resume/style.css'
+import printStylesUrl from '../../assets/resume/print.css?url'
+// TODO fix print style
 ---
 <html>
   <head>
@@ -8,9 +12,7 @@
       content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"
     />
     <title>Andrew Dai&rsquo;s Resume</title>
-    <link rel="stylesheet" href="/normalize.css">
-    <link rel="stylesheet" href="/resume/style.css">
-    <link rel="stylesheet" href="/resume/print.css" media="print">
+    <link rel="stylesheet" href={printStylesUrl} media="print">
     <link
       rel="shortcut icon"
       href="https://en.gravatar.com/userimage/43242946/99ef6a0172bffefbe4c08416d432eef0.png?size=64"
@@ -21,7 +23,7 @@
     <header>
       <div class="no-print">
         <a
-          href="./Andrew Dai's Resume.pdf"
+          href="./resume/Andrew Dai's Resume.pdf"
           style="display: block; border: none; background: #ededed; padding: 0.5em; border-radius: 1em; margin-bottom: 2em; width: 7em; box-shadow: 0 0 2px black"
         >
           PDF version
