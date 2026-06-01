@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/post.astro"
+layout: "../../layouts/post.astro"
 title: "Journal 1: Week of April 11th"
 category: beaglecar
 date: 2014-04-10

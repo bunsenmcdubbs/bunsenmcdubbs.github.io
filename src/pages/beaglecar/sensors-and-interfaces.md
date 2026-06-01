@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/post.astro"
+layout: "../../layouts/post.astro"
 title:  "Sensors and Interfaces with the Beaglebone Black"
 date:   2014-01-12 12:00 UTC-5
 category: beaglecar

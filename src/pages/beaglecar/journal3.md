@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/post.astro"
+layout: "../../layouts/post.astro"
 title: "Journal 3: Week of May 2nd"
 date: 2014-05-02
 category: beaglecar

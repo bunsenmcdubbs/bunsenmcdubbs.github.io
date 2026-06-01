@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/post.astro"
+layout: "../../layouts/post.astro"
 title: "RC Car Modifications"
 date: 2014-01-29 12:00 UTC-5
 category: beaglecar

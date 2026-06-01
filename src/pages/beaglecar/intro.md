@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/post.astro"
+layout: "../../layouts/post.astro"
 title:  "The BeagleCar: Introduction"
 subtitle: "An Autonomous RC Car Controlled by a Beaglebone Black"
 date:   2014-01-05 17:44:56 UTC-5
