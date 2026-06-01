@@ -10,14 +10,15 @@ Serve (locally) with `pnpm dev`.
   - [x] Move pages
   - [ ] Render in template
   - [x] Update slugs to match old urls
+    - [ ] Check `permalink` field
   - [ ] Fix symbol rendering
   - [ ] Hide hidden pages
-  - [ ] Delete/curate pages
+  - [x] Delete/curate pages
 - [ ] Migrate blog listing page
 - [ ] Integrate git status into build info (HTTP header, embed into resume)
 - [ ] Wrangler -> Cloudflare Workers. Goal: Deploy via Cloudflare Workers with
       CI/CD triggered from repo push.
-  - [ ] 404 page
+- [ ] 404 page
 
 ```sh
 # Update layout tag
