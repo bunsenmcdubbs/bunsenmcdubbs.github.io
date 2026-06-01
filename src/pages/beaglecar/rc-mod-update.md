@@ -24,24 +24,25 @@ complexity.
 The code consists of 2 ROSNodes. One to read and publish Z-axis rotatation rates
 and another to receive and integrate the rates into a relative angular position.
 The receiver node then turns the servo to that angle. Both nodes use the
-Adafruit BBIO library to interface with sensors and servos respectively.
-Both nodes for the test can be found in my [Github](https://github.com/BunsenMcDubbs/beaglecar/tree/master/src/gyro-tests).
+Adafruit BBIO library to interface with sensors and servos respectively. Both
+nodes for the test can be found in my
+[Github](https://github.com/BunsenMcDubbs/beaglecar/tree/master/src/gyro-tests).
 
-The rate at which I retrieved gyro data was arbitrarily chosen, more testing
-is needed to determine an optimal rate that produces continuous, smooth readings
+The rate at which I retrieved gyro data was arbitrarily chosen, more testing is
+needed to determine an optimal rate that produces continuous, smooth readings
 and minimizes lag. Although gyroscopic drift is a well documented issue with
 rate gyroscopes like the ones in the MPU-6050, I am not concerned about its
-effects in this small scale test because this is more of a proof-of-concept.
-My later tests and final project will require a way to deal with the drift and
+effects in this small scale test because this is more of a proof-of-concept. My
+later tests and final project will require a way to deal with the drift and
 cumulative measurement error.
 
 ## Motor Controller and Motor-Gyro Test
 
 Driving the motor controller is surprisingly similar to the servo. For these
-simple motors, the only way to control the speed of an electric motor is by varying
-the voltage. This is pretty hard to do on its own. Instead I will use pulse
-width modulated signals, or PWM. By pulsing the power on and off faster than the
-motor can react, the PWM signals simulate a varying voltage source.
+simple motors, the only way to control the speed of an electric motor is by
+varying the voltage. This is pretty hard to do on its own. Instead I will use
+pulse width modulated signals, or PWM. By pulsing the power on and off faster
+than the motor can react, the PWM signals simulate a varying voltage source.
 
 At first I was concerned that the TI SN754410 used 5v logic levels since the
 Beaglebone Black had 3v3 logic. But it turns out that 3v3 was designed to be
@@ -61,7 +62,7 @@ The Beaglebone, unlike an Arduino, does not have the power to run a motor. Thus,
 VCC2 - motor power supply - must use an external source. For testing, I used my
 lab bench power supply that made from an old computer PSU.
 
-[<img src="/images/motor-gyro.jpg" alt="Motor and gyro connected to the Beaglebone" height="400" width="600">](/images/motor-gyro.jpg)
+![Motor and gyro connected to the Beaglebone](../../assets/motor-gyro.jpg)
 
 For this initial test, I only ran the motor one way. The rotation rates from the
 gyro control the PWM signal - and thus the speed - of the motor. To run the
@@ -72,7 +73,7 @@ tie the other line to ground.
 ### Next Steps
 
 Now with the parts working, I need to start installing them into the car and
-writing up more robust code (rather than just cobbling together examples).
-I also will need to start writing the fancy complex algorithms that actually
+writing up more robust code (rather than just cobbling together examples). I
+also will need to start writing the fancy complex algorithms that actually
 navigate and drive the car. Finally, the electronics need to move from a
 breadboard to a perfboard on the car. I'll also need to look into batteries.

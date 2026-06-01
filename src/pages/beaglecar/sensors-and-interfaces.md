@@ -144,7 +144,7 @@ receive (RX) pin of the other and vice versa. Knowing this, I connected TX on
 the breakout to RX of UART1 (pin 9\_26) on the Beaglebone and RX to TX (pin
 9\_24). VIN connects to 3.3v (pin 9\_3) and Gnd to ground (pin 9\_1)
 
-![Schematic showing how to connect the GPS to a Beaglebone Black]({{ site.url }}/images/GPS_to_BBB_bb.png)
+![Schematic showing how to connect the GPS to a Beaglebone Black](../../assets/GPS_to_BBB_bb.png)
 
 ### Installing and Using gpsd
 

@@ -11,7 +11,7 @@ cool results. In hindsight I realize that I probably should've used existing
 frameworks such as cinder, Processing, or openFrameworks rather than build an
 entirely new project.
 
-[<img src="{{ site.url }}/images/java-art1.png" alt="Circular Patterns" height="400">]({{ site.url }}/images/java-art1.png)
+![Circular Patterns](../assets/java-art1.png)
 
 ## Fractals and Fractal Landscapes
 
@@ -19,28 +19,26 @@ Fractals are cool. I hacked together a fairly simplistic set of Java programs
 that recursively altered lines to make interesting patterns. Due to the bad
 programming, there are severe limitations on the level of detail.
 
-[<img src="{{ site.url }}/images/java-art3.png" alt="Circular Patterns" height="400">]({{ site.url }}/images/java-art3.png)
+![Circular Patterns](../assets/java-art3.png)
 
 Fractal landscapes use recursive processes to generate detailed and realistic
 textures. [GameProgrammer.com](http://www.gameprogrammer.com/fractal.html) has a
 good article on the details of the algorithms in use. Based heavily on the
 recursive processes of fractals, fractal landscape algorithms add in a little
-(or a lot) of randomness at each step, generating a more natural form. Here
-the "heights" of each pixel/location are mapped to a color value ranging from
-white to blue making cloud patterns
+(or a lot) of randomness at each step, generating a more natural form. Here the
+"heights" of each pixel/location are mapped to a color value ranging from white
+to blue making cloud patterns
 
-[<img src="{{ site.url }}/images/java-art7.png" alt="fractal clouds" height="300">]({{ site.url }}/images/java-art7.png)
-_a small 17x17 grid to show detail_
+![fractal clouds](../assets/java-art7.png) _a small 17x17 grid to show detail_
 
-[<img src="{{ site.url }}/images/java-art8.png" alt="fractal clouds" height="300">]({{ site.url }}/images/java-art8.png)
-_a much more detailed 513x513 grid_
+![fractal clouds](../assets/java-art8.png) _a much more detailed 513x513 grid_
 
 ## 3 Dimensions!
 
 After working in 2 dimensions, the natural next step is adding depth. Naive and
-bored (a fatal combination) I set out to code a 3 dimensional visualization
-with perspective. Rather than use existing libraries I decided (once a again)
-to write my own code - a habit I seek to break.
+bored (a fatal combination) I set out to code a 3 dimensional visualization with
+perspective. Rather than use existing libraries I decided (once a again) to
+write my own code - a habit I seek to break.
 
 I decided that I would try to rotate a wireframe cube (solving the hidden
 surface problem was beyond the scope of what I wanted to do). First was the
@@ -56,8 +54,9 @@ point in space intersected with the plane and drawing that point on the screen.
 A couple hours were devoted to manually adjusting the variables to properly size
 and scale the perspective.
 
-[<img src="{{ site.url }}/images/java-art9.png" alt="3d Cube perspective" height="300">]({{ site.url }}/images/java-art9.png)
-_the dot in the center is the origin and the magenta lines form the back of the
-cube_
+![3D cube perspective](../assets/java-art3.png) _the dot in the center is the
+origin and the magenta lines form the back of the cube_
 
-All the code can be found on my [Github](http://github.com/BunsenMcDubbs/3DimensionalDangerzone). Soon to be documented...
+All the code can be found on my
+[Github](http://github.com/BunsenMcDubbs/3DimensionalDangerzone). Soon to be
+documented...

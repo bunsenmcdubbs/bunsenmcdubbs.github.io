@@ -35,7 +35,7 @@ Pretty self explanatory. Take off the fluff and outer shells. Keep the
 electronics in place (for now). Get to the core ("chassis") of the toy.
 Locate the major components (and separate if desired).
 
-![Bare RC Car without cover]({{ site.url }}/images/LabeledParts.jpg)
+![Bare RC Car without cover](../../assets/LabeledParts.jpg)
 
 ## Modifications
 
@@ -72,14 +72,14 @@ To install the servo, I tore out the existing motor and used a thin piece of
 aluminum as a flat baseplate. Small strips of brass connected the servo horn
 to the steering rack on the car.
 
-![Servo steering modification on a toy rc car]({{ site.url }}/images/Steering-top.jpg)
+![Servo steering modification on a toy rc car](../../assets/Steering-top.jpg)
 
 Next the servo needed to be connected to the Beaglebone. An external 5v power
 supply is used to power the servo and common ground is shared between the
 Beaglebone and the power supply. The PWM signal is connected to pin 8_13 via
 an optional 1k ohm resistor.
 
-![Servo wiring schematic]({{ site.url }}/images/SteeringServoSchematic.jpg)
+![Servo wiring schematic](../../assets/SteeringServoSchematic.jpg)
 
 A quick python script tested the functionality of the servo.
 

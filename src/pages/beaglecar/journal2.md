@@ -24,7 +24,7 @@ a pinching tingling feeling (electric shock) and broke the fuses in the 5v and
 ground lines in the PSU. I had to replace the fuses and check for more shorts
 before finishing the motor controller.
 
-![Perfboard test setup]({{ site.url }}/images/PerfboardTest1.jpg)
+![Perfboard test setup](../../assets/PerfboardTest1.jpg)
 
 Since the indicator lights on my PSU is on a separate circuit, I actually had
 no way of telling if the fuse was broken or if the power supply was functioning
@@ -32,7 +32,7 @@ normally. Because of this, I had to use a multimeter to read the voltage being
 outputted by the 5v line on the PSU. This is what you see above. Any wild
 fluctuations or sudden drops in voltage would signal a problem in the circuit.
 
-![Perfboard test setup closeup]({{ site.url }}/images/PerfboardTest2.jpg)
+![Perfboard test setup closeup](../../assets/PerfboardTest2.jpg)
 
 To avoid burning up my relatively delicate Beaglebone Black with a short or
 improperly wired connection, I avoided using it in the first stage of testing.

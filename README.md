@@ -16,7 +16,7 @@ Serve (locally) with `pnpm dev`.
   - [x] Hide hidden pages
   - [x] Delete/curate pages
   - [ ] Redirect all active pages to archive.org
-- [ ] Images
+- [x] Images
 - [x] Migrate blog listing page; SKIP
 - [ ] Integrate git status into build info (HTTP header, embed into resume)
 - [ ] Wrangler -> Cloudflare Workers. Goal: Deploy via Cloudflare Workers with
