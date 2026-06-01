@@ -10,11 +10,14 @@ Serve (locally) with `pnpm dev`.
   - [x] Move pages
   - [ ] Render in template
   - [x] Update slugs to match old urls
-    - [ ] Check `permalink` field
+    - [x] Check `permalink` field
   - [ ] Fix symbol rendering
-  - [ ] Hide hidden pages
+  - [ ] Fix intra-site links
+  - [x] Hide hidden pages
   - [x] Delete/curate pages
-- [ ] Migrate blog listing page
+  - [ ] Redirect all active pages to archive.org
+- [ ] Images
+- [x] Migrate blog listing page; SKIP
 - [ ] Integrate git status into build info (HTTP header, embed into resume)
 - [ ] Wrangler -> Cloudflare Workers. Goal: Deploy via Cloudflare Workers with
       CI/CD triggered from repo push.
