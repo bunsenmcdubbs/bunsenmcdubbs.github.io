@@ -4,14 +4,13 @@ import Prose from '../components/Prose.astro'
 import type { MarkdownLayoutProps } from 'astro';
 
 type Props = MarkdownLayoutProps<{
-  // Define frontmatter props here
   title: string;
   date: string;
 }>;
 
 const { frontmatter } = Astro.props;
 ---
-<Layout>
+<Layout title={frontmatter.title + ' | Andrew\'s Blog'}>
   <h1 class="text-3xl font-bold prose dark:prose-invert">{ frontmatter.title }</h1>
   <p class="prose dark:prose-invert">written on { new Date(frontmatter.date).toDateString() }</p>
   <Prose>

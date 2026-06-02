@@ -1,24 +1,9 @@
 ---
-import '../assets/normalize.css'
+import Layout from '../layouts/Layout.astro'
 ---
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-    <title>Andrew Dai</title>
-    <link rel="shortcut icon" href="https://en.gravatar.com/userimage/43242946/99ef6a0172bffefbe4c08416d432eef0.png?size=64">
-    <style>
-        body {
-            padding: 1em 2em;
-        }
-        p, li {
-            line-height: 1.5;
-        }
-    </style>
-</head>
-
-<body>
-<h1>Andrew Dai is a 🧙 senior 💪 software engineer 🧑‍💻 with a great personality.</h1>
+<Layout title='Andrew Dai'>
+<div class='prose dark:prose-invert'>
+<h1 class='text-4xl dark:text-gray-200 font-bold'>Andrew Dai is a 🧙 senior 💪 software engineer 🧑‍💻 with a great personality.</h1>
 <section>
     <p>I've worked as a software engineer in a variety of environments in the Silicon Valley tech industry from small
         and medium startups to large, mature tech companies. I am most experienced with backend, infrastructure, and platform
@@ -31,7 +16,7 @@ import '../assets/normalize.css'
         open source contributions on <a href="https://github.com/bunsenmcdubbs/">github</a>.</p>
 </section>
 <section>
-    <h2>🆘 Andrew helps you out for a reasonable fee 🤝</h2>
+    <h2 class='text-2xl dark:text-gray-200 font-bold'>🆘 Andrew helps you out for a reasonable fee 🤝</h2>
     <p>Among other things, I&apos;m a well-regarded cloud and database-knower. I'm prepared to solve database
         (performance) issues, bootstrap or rework your cloud services, and craft backend services and data
         infrastructure-y components.</p>
@@ -39,5 +24,5 @@ import '../assets/normalize.css'
         reasonable fee and I&apos;m sure we can work something out.</p>
     <p>📧 Emailing a@[this domain] is a great way to get in touch.</p>
 </section>
-</body>
-</html>
+</div>
+</Layout>
