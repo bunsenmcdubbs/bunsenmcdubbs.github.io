@@ -1,0 +1,21 @@
+---
+import '../styles/global.css'
+import type { MarkdownLayoutProps } from 'astro';
+
+type Props = MarkdownLayoutProps<{
+  title?: string;
+}>;
+const {title} = Astro.props
+---
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <title>{title ?? 'untitled'}</title>
+  </head>
+  <body class="">
+    <div class="min-h-screen p-8 bg-white dark:bg-gray-800 dark:text-gray-300">
+      <slot />
+    </div>
+  </body>
+</html>

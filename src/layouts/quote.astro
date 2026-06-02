@@ -1,0 +1,13 @@
+---
+const {frontmatter} = Astro.props;
+---
+
+<main><article>
+<h1>from <a href={frontmatter.quote.source}> {frontmatter.quote.title}</a></h1>
+<blockquote>{frontmatter.quote.text}</blockquote>
+
+<section class="post">
+  <slot />
+</section>
+
+</article></main>
