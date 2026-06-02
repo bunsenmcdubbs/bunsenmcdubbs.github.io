@@ -8,7 +8,8 @@ Serve (locally) with `pnpm dev`.
 
 - [ ] Migrate blog posts
   - [x] Move pages
-  - [ ] Render in template
+  - [x] Render in template
+    - [x] Render with good markdown styling
   - [x] Update slugs to match old urls
     - [x] Check `permalink` field
   - [ ] Fix symbol rendering
